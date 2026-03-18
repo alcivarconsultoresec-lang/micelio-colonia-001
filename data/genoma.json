@@ -1,0 +1,34 @@
+{
+  "capacidades": [
+    "generar_respuesta"
+  ],
+  "energia": 100,
+  "especialidad": "analisis_texto",
+  "estado": "activo",
+  "estrategia": {
+    "estrategia_cognitiva": "directo",
+    "exploracion": 0.3,
+    "tasa_mutacion": 0.1,
+    "temperatura": 0.7
+  },
+  "fitness": 0.95,
+  "generacion": 1,
+  "hash_integridad": "f6f5e1dea4a9905841fb1c2cd6a07e1239193dd8d7bae6f80f494b84c9acc4dd",
+  "id": "g_3d16eb2f",
+  "linaje": "root",
+  "memoria": {
+    "exitos": 0,
+    "fallos": 0,
+    "mejor_fitness": 0.0,
+    "ultimas_acciones": []
+  },
+  "metadatos": {
+    "creacion": "2026-03-17T16:00:00Z",
+    "ultima_actualizacion": "2026-03-17T16:00:00Z",
+    "version_protocolo": "7.0"
+  },
+  "objetivo": "general",
+  "sentidos": [
+    "lenguaje"
+  ]
+}
