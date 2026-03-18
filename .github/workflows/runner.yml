@@ -1,0 +1,30 @@
+﻿name: Ejecutar espora
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'   # cada 30 minutos
+  workflow_dispatch:         # también manual
+
+jobs:
+  run-espora:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: |
+          pip install requests
+      - name: Run espora
+        run: |
+          python runner/espora_runner.py
+      - name: Commit results
+        run: |
+          git config --global user.name "micelio-bot"
+          git config --global user.email "bot@micelio.local"
+          git add output/resultados.json
+          git commit -m "Resultado de ejecución" || echo "No changes"
+          git push
