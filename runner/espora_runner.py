@@ -10,8 +10,15 @@ REPO_DIR = os.path.dirname(RUNNER_DIR)
 
 DATA_FILE = os.path.join(REPO_DIR, "data", "genoma.json")
 OUTPUT_FILE = os.path.join(REPO_DIR, "output", "resultados.json")
-DEFAULT_MODEL = os.getenv("MICELIO_MODEL", "deepseek-r1:1.5b")
+
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+GITHUB_MODELS_ENDPOINT = os.getenv(
+    "GITHUB_MODELS_ENDPOINT",
+    "https://models.github.ai/inference/chat/completions",
+)
+DEFAULT_MODEL = os.getenv("MICELIO_MODEL", "openai/gpt-4o-mini")
 GENERATE_URL = os.getenv("MICELIO_GENERATE_URL")
+MAX_TOKENS = int(os.getenv("MICELIO_MAX_TOKENS", "500"))
 
 
 def cargar_genoma():
@@ -31,17 +38,25 @@ def construir_prompt(genoma):
     objetivo = genoma.get("objetivo", "generar texto")
     especialidad = genoma.get("especialidad", "general")
     capacidades = ", ".join(genoma.get("capacidades", [])) or "generar_respuesta"
+    memoria = genoma.get("memoria", {})
+    energia = genoma.get("energia", "no_definida")
+    fitness = genoma.get("fitness", "no_definido")
 
     return (
-        f"Objetivo: {objetivo}. "
-        f"Especialidad: {especialidad}. "
-        f"Capacidades activas: {capacidades}. "
-        "Genera una respuesta breve, útil y trazable para la colonia MICELIO."
+        "Eres una espora autónoma de la colonia MICELIO. "
+        "Tu tarea es producir una salida breve, accionable y registrable.\n\n"
+        f"Objetivo: {objetivo}\n"
+        f"Especialidad: {especialidad}\n"
+        f"Capacidades activas: {capacidades}\n"
+        f"Energía: {energia}\n"
+        f"Fitness actual: {fitness}\n"
+        f"Memoria: {json.dumps(memoria, ensure_ascii=False)}\n\n"
+        "Devuelve una respuesta en español con: diagnóstico, acción recomendada y siguiente mutación útil."
     )
 
 
 def generar_respuesta_local(prompt, genoma):
-    """Fallback determinístico para que GitHub Actions funcione sin servidor local de IA."""
+    """Fallback determinístico para que GitHub Actions funcione aunque el proveedor IA falle."""
     semilla = json.dumps(genoma, sort_keys=True, ensure_ascii=False)
     hash_ejecucion = hashlib.sha256(f"{prompt}|{semilla}".encode("utf-8")).hexdigest()[:16]
     objetivo = genoma.get("objetivo", "general")
@@ -60,13 +75,13 @@ def generar_respuesta_local(prompt, genoma):
     }
 
 
-def generar_respuesta_remota(prompt, genoma):
+def generar_respuesta_custom(prompt, genoma):
     estrategia = genoma.get("estrategia", {})
     payload = {
         "prompt": prompt,
         "model": DEFAULT_MODEL,
         "temperature": estrategia.get("temperatura", 0.7),
-        "max_tokens": 500,
+        "max_tokens": MAX_TOKENS,
     }
 
     response = requests.post(GENERATE_URL, json=payload, timeout=60)
@@ -76,23 +91,81 @@ def generar_respuesta_remota(prompt, genoma):
     return {
         "texto": data.get("text", ""),
         "fitness": 1.0,
-        "modo": "remote_generator",
+        "modo": "custom_remote_generator",
         "modelo": DEFAULT_MODEL,
+    }
+
+
+def generar_respuesta_github_models(prompt, genoma):
+    if not GITHUB_TOKEN:
+        raise RuntimeError("GITHUB_TOKEN no está disponible para GitHub Models.")
+
+    estrategia = genoma.get("estrategia", {})
+    payload = {
+        "model": DEFAULT_MODEL,
+        "messages": [
+            {
+                "role": "system",
+                "content": (
+                    "Eres el núcleo cognitivo de MICELIO. "
+                    "Responde de forma concreta, útil y compatible con registros JSON."
+                ),
+            },
+            {"role": "user", "content": prompt},
+        ],
+        "temperature": estrategia.get("temperatura", 0.7),
+        "max_tokens": MAX_TOKENS,
+    }
+
+    headers = {
+        "Authorization": f"Bearer {GITHUB_TOKEN}",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+    }
+
+    response = requests.post(
+        GITHUB_MODELS_ENDPOINT,
+        headers=headers,
+        json=payload,
+        timeout=60,
+    )
+    response.raise_for_status()
+    data = response.json()
+
+    texto = data["choices"][0]["message"]["content"].strip()
+    usage = data.get("usage", {})
+
+    return {
+        "texto": texto,
+        "fitness": 0.95,
+        "modo": "github_models",
+        "modelo": DEFAULT_MODEL,
+        "usage": usage,
     }
 
 
 def ejecutar_tarea(genoma):
     prompt = construir_prompt(genoma)
+    errores = []
 
-    if not GENERATE_URL:
-        resultado = generar_respuesta_local(prompt, genoma)
-    else:
+    if GENERATE_URL:
         try:
-            resultado = generar_respuesta_remota(prompt, genoma)
+            resultado = generar_respuesta_custom(prompt, genoma)
         except Exception as error:
-            resultado = generar_respuesta_local(prompt, genoma)
-            resultado["remote_error"] = str(error)
+            errores.append({"provider": "custom_remote_generator", "error": str(error)})
+        else:
+            return enriquecer_resultado(resultado, genoma, errores)
 
+    try:
+        resultado = generar_respuesta_github_models(prompt, genoma)
+    except Exception as error:
+        errores.append({"provider": "github_models", "error": str(error)})
+        resultado = generar_respuesta_local(prompt, genoma)
+
+    return enriquecer_resultado(resultado, genoma, errores)
+
+
+def enriquecer_resultado(resultado, genoma, errores=None):
     resultado.update(
         {
             "genoma_id": genoma.get("id", "sin_id"),
@@ -100,6 +173,8 @@ def ejecutar_tarea(genoma):
             "timestamp_utc": datetime.now(timezone.utc).isoformat(),
         }
     )
+    if errores:
+        resultado["errores_proveedores"] = errores
     return resultado
 
 
@@ -115,3 +190,4 @@ if __name__ == "__main__":
     resultado = ejecutar_tarea(genoma)
     guardar_resultado(resultado)
     print(f"Runner completado. Resultado guardado en {OUTPUT_FILE}")
+    print(f"Modo usado: {resultado.get('modo')}")
