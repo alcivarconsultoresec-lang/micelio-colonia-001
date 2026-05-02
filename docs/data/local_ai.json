@@ -1,0 +1,20 @@
+{
+  "timestamp_utc": "2026-05-02T16:46:58.782411+00:00",
+  "phase": "fase_3_router_ia_local",
+  "success": false,
+  "selected_provider": null,
+  "selected_model": null,
+  "ollama_available": false,
+  "ollama_models": [],
+  "attempts": [
+    {
+      "provider": "ollama",
+      "error": "Ollama está disponible, pero no se detectaron modelos instalados."
+    },
+    {
+      "provider": "openai_compatible_local",
+      "error": "No se detectó endpoint local OpenAI-compatible en 127.0.0.1:5001."
+    }
+  ],
+  "safety": "Solo se usan endpoints locales o explícitamente configurados por el usuario."
+}

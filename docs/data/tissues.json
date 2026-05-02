@@ -1,0 +1,105 @@
+{
+  "timestamp_utc": "2026-05-02T16:47:01.243100+00:00",
+  "phase": "fase_3_tejidos_y_organos_virtuales",
+  "tissues": [
+    {
+      "name": "tejido_estabilidad",
+      "purpose": "conservar linajes robustos y reducir deriva improductiva",
+      "spores_count": 1,
+      "roles": {
+        "estabilizadora": 1
+      },
+      "best_score": 0.8137,
+      "average_score": 0.8137,
+      "members": [
+        {
+          "spore_id": "g_cde30438",
+          "role": "estabilizadora",
+          "status": "elite",
+          "score": 0.8137,
+          "generation": 3
+        }
+      ]
+    },
+    {
+      "name": "tejido_cognitivo",
+      "purpose": "razonar sobre memoria, arquitectura y construcción de nuevos módulos",
+      "spores_count": 5,
+      "roles": {
+        "analista": 5
+      },
+      "best_score": 0.8237,
+      "average_score": 0.7981,
+      "members": [
+        {
+          "spore_id": "g_afd13f3b",
+          "role": "analista",
+          "status": "elite",
+          "score": 0.8237,
+          "generation": 3
+        },
+        {
+          "spore_id": "g_4f89ce64",
+          "role": "analista",
+          "status": "elite",
+          "score": 0.8136,
+          "generation": 2
+        },
+        {
+          "spore_id": "g_75dc461b",
+          "role": "analista",
+          "status": "elite",
+          "score": 0.7962,
+          "generation": 2
+        },
+        {
+          "spore_id": "g_e8f5ed29",
+          "role": "analista",
+          "status": "elite",
+          "score": 0.7853,
+          "generation": 2
+        },
+        {
+          "spore_id": "g_02eb465e",
+          "role": "analista",
+          "status": "survivor",
+          "score": 0.7718,
+          "generation": 3
+        }
+      ]
+    }
+  ],
+  "organs": [
+    {
+      "name": "organo_sensorial",
+      "purpose": "leer entorno local y detectar herramientas disponibles",
+      "tissues": [],
+      "spores_count": 0,
+      "operational_score": 0,
+      "status": "missing_tissue"
+    },
+    {
+      "name": "organo_cognitivo",
+      "purpose": "proponer planes, diseños y autocodificación supervisada",
+      "tissues": [
+        "tejido_cognitivo"
+      ],
+      "spores_count": 5,
+      "operational_score": 0.7981,
+      "status": "virtual_ready"
+    },
+    {
+      "name": "organo_homeostasis",
+      "purpose": "regular límites, memoria, consumo y seguridad",
+      "tissues": [
+        "tejido_estabilidad"
+      ],
+      "spores_count": 1,
+      "operational_score": 0.8137,
+      "status": "virtual_ready"
+    }
+  ],
+  "decision": "organizacion_virtual_creada_sin_despliegue_externo",
+  "next_step": "ejecutar pruebas de razonamiento por organo antes de permitir autocodificacion supervisada",
+  "safety": "Los órganos son agrupaciones virtuales. No crean procesos ni acceden a recursos fuera del alcance autorizado."
+}

@@ -1,0 +1,104 @@
+{
+  "timestamp_utc": "2026-05-02T16:47:01.242136+00:00",
+  "phase": "fase_3_sentidos_moviles",
+  "runtime": "local",
+  "platform": {
+    "system": "Linux",
+    "machine": "x86_64",
+    "python_version": "3.10.20",
+    "cpu_count": 4
+  },
+  "memory": {
+    "MemTotal": "16377700 kB",
+    "MemAvailable": "15138912 kB",
+    "SwapTotal": "3145724 kB",
+    "SwapFree": "3145724 kB"
+  },
+  "resources": {
+    "home": {
+      "path": "/home/runner",
+      "exists": true,
+      "total_mb": 147718.61,
+      "used_mb": 56346.35,
+      "free_mb": 91356.26
+    },
+    "repo": {
+      "path": "/home/runner/work/micelio-colonia-001/micelio-colonia-001",
+      "exists": true,
+      "total_mb": 147718.61,
+      "used_mb": 56346.35,
+      "free_mb": 91356.26
+    },
+    "storage_download": {
+      "path": "/storage/emulated/0/Download",
+      "exists": false
+    }
+  },
+  "tools": {
+    "python": true,
+    "git": true,
+    "curl": true,
+    "termux-info": false,
+    "termux-battery-status": false,
+    "termux-wifi-connectioninfo": false,
+    "ollama": false,
+    "llama-cli": false,
+    "llama-server": false,
+    "node": true,
+    "npm": true,
+    "proot-distro": false,
+    "docker": true,
+    "cloudflared": false
+  },
+  "termux_api": {
+    "battery": {
+      "available": false,
+      "error": "command_not_found"
+    },
+    "wifi": {
+      "available": false,
+      "error": "command_not_found"
+    },
+    "battery_raw_available": false,
+    "wifi_raw_available": false
+  },
+  "local_ai": {
+    "ports": [
+      {
+        "name": "ollama",
+        "host": "127.0.0.1",
+        "port": 11434,
+        "open": false
+      },
+      {
+        "name": "llama_cpp_server",
+        "host": "127.0.0.1",
+        "port": 8081,
+        "open": false
+      },
+      {
+        "name": "openai_compatible_local",
+        "host": "127.0.0.1",
+        "port": 5001,
+        "open": false
+      }
+    ],
+    "ollama": {
+      "binary_available": false,
+      "models": []
+    },
+    "local_ai_available": false
+  },
+  "intent": {
+    "purpose": "convertir_esporas_en_tejidos_y_organos_controlados",
+    "allowed_scope": "solo_entorno_termux_y_rutas_autorizadas_por_usuario",
+    "forbidden_scope": "sin_acceso_a_sandboxes_privados_sin_permiso_sin_persistencia_oculta_sin_exfiltracion",
+    "recommended_actions": [
+      "mantener_modo_local_fallback_hasta_instalar_ia_local_o_configurar_api"
+    ]
+  },
+  "safety": {
+    "mode": "authorized_local_sensing_only",
+    "note": "No se realiza colonización agresiva ni acceso fuera de permisos de Android/Termux."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "timestamp_utc": "2026-05-02T16:47:01.244811+00:00",
+  "phase": "fase_3_autocodificacion_supervisada",
+  "mode": "plan_only",
+  "tasks": [
+    {
+      "priority": "media",
+      "type": "capability_gap",
+      "target": "local_ai",
+      "description": "No se detectó IA local. Mantener fallback o instalar proveedor local autorizado.",
+      "approval_required": true
+    },
+    {
+      "priority": "alta",
+      "type": "organ_test",
+      "target": "organo_cognitivo",
+      "description": "Ejecutar benchmark de razonamiento por órgano usando tejidos cognitivos y roles elite.",
+      "approval_required": false
+    },
+    {
+      "priority": "alta",
+      "type": "selection",
+      "target": "role_balancing",
+      "description": "Ajustar reproducción para conservar diversidad mínima de castas funcionales.",
+      "approval_required": false
+    }
+  ],
+  "guardrails": [
+    "no_modificar_codigo_sin_aprobacion_humana",
+    "no_ejecutar_comandos_arbitrarios_generados_por_ia",
+    "no_desplegar_en_nube_o_docker_sin_permiso_explicito",
+    "no_acceder_a_datos_privados_fuera_de_rutas_autorizadas"
+  ],
+  "next_manual_decision": "aprobar_o_rechazar_tareas_de_autocodificacion"
+}
