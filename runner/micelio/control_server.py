@@ -9,6 +9,8 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlparse
 
+from micelio.construction_manager import ConstructionManager
+
 REPO_DIR = Path(__file__).resolve().parents[2]
 DOCS_DIR = REPO_DIR / "docs"
 MEMORY_DIR = REPO_DIR / "memory"
@@ -138,7 +140,7 @@ def git_commit_if_needed(message):
     subprocess.run(["git", "config", "user.name", "micelio-termux"], cwd=REPO_DIR, check=False)
     subprocess.run(["git", "config", "user.email", "micelio-termux@local"], cwd=REPO_DIR, check=False)
     subprocess.run(
-        ["git", "add", "output", "memory", "docs/data"],
+        ["git", "add", "output", "memory", "docs/data", "docs", "runner", "scripts"],
         cwd=REPO_DIR,
         check=False,
         stdout=subprocess.DEVNULL,
@@ -212,29 +214,35 @@ class ControlHandler(SimpleHTTPRequestHandler):
         raw = self.rfile.read(length).decode("utf-8")
         return json.loads(raw) if raw else {}
 
+    def status_payload(self):
+        cm = ConstructionManager(REPO_DIR)
+        return {
+            "timestamp_utc": now(),
+            "server": STATE,
+            "config": load_config(),
+            "metrics": read_json(OUTPUT_DIR / "colony_metrics.json", {}),
+            "roles": read_json(OUTPUT_DIR / "roles_report.json", {}),
+            "senses": read_json(OUTPUT_DIR / "senses_report.json", {}),
+            "tissues": read_json(OUTPUT_DIR / "tissues_report.json", {}),
+            "autocoder": read_json(OUTPUT_DIR / "autocoder_plan.json", {}),
+            "construction": cm.load_queue(),
+            "local_ai": read_json(OUTPUT_DIR / "local_ai_report.json", {}),
+            "result": read_json(OUTPUT_DIR / "resultados.json", {}),
+        }
+
     def do_GET(self):
         parsed = urlparse(self.path)
         if parsed.path == "/api/status":
-            self.send_json(
-                {
-                    "timestamp_utc": now(),
-                    "server": STATE,
-                    "config": load_config(),
-                    "metrics": read_json(OUTPUT_DIR / "colony_metrics.json", {}),
-                    "roles": read_json(OUTPUT_DIR / "roles_report.json", {}),
-                    "senses": read_json(OUTPUT_DIR / "senses_report.json", {}),
-                    "tissues": read_json(OUTPUT_DIR / "tissues_report.json", {}),
-                    "autocoder": read_json(OUTPUT_DIR / "autocoder_plan.json", {}),
-                    "local_ai": read_json(OUTPUT_DIR / "local_ai_report.json", {}),
-                    "result": read_json(OUTPUT_DIR / "resultados.json", {}),
-                }
-            )
+            self.send_json(self.status_payload())
             return
         if parsed.path == "/api/config":
             self.send_json(load_config())
             return
         if parsed.path == "/api/logs":
             self.send_json({"log_tail": STATE.get("log_tail", [])})
+            return
+        if parsed.path == "/api/construction":
+            self.send_json(ConstructionManager(REPO_DIR).generate_options())
             return
         if parsed.path == "/":
             self.path = "/control.html"
@@ -266,12 +274,28 @@ class ControlHandler(SimpleHTTPRequestHandler):
         if parsed.path == "/api/wakelock":
             self.send_json(wake_lock(bool(data.get("enable", True))))
             return
+        if parsed.path == "/api/construction/generate":
+            self.send_json({"ok": True, "queue": ConstructionManager(REPO_DIR).generate_options()})
+            return
+        if parsed.path == "/api/construction/approve":
+            self.send_json(ConstructionManager(REPO_DIR).approve(data.get("id")))
+            return
+        if parsed.path == "/api/construction/reject":
+            self.send_json(ConstructionManager(REPO_DIR).reject(data.get("id")))
+            return
+        if parsed.path == "/api/construction/apply":
+            result = ConstructionManager(REPO_DIR).apply(data.get("id"))
+            if result.get("ok"):
+                git_commit_if_needed(f"MICELIO construcción aplicada: {data.get('id')}")
+            self.send_json(result)
+            return
         self.send_json({"ok": False, "error": "endpoint_not_found"}, 404)
 
 
 def main():
     ensure_dirs()
     save_config(load_config())
+    ConstructionManager(REPO_DIR).generate_options()
     port = int(os.getenv("MICELIO_CONTROL_PORT", "8080"))
     server = ThreadingHTTPServer(("127.0.0.1", port), ControlHandler)
     append_log(f"MICELIO Control Server iniciado en http://127.0.0.1:{port}/control.html")
