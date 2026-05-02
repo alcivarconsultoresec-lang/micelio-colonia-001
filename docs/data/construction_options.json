@@ -1,0 +1,335 @@
+{
+  "options": [
+    {
+      "id": "build_lineage_view",
+      "title": "Construir vista de linaje dominante",
+      "type": "lineage_view",
+      "priority": "alta",
+      "wave": 1,
+      "status": "pending",
+      "created_at": "2026-05-02T17:33:00.078455+00:00",
+      "question": "¿Quieres que construya esto?",
+      "reasoning": "Visualiza padres, ramas, scores y familias dominantes.",
+      "expected_files": [
+        "docs/lineage.html"
+      ],
+      "verification": {
+        "verified_at": "2026-05-02T17:33:00.078466+00:00",
+        "ok": false,
+        "expected_count": 1,
+        "existing_count": 0,
+        "files": [
+          {
+            "path": "docs/lineage.html",
+            "exists": false,
+            "size_bytes": null,
+            "kind": "missing"
+          }
+        ]
+      },
+      "apply_method": "allowlisted_patch"
+    },
+    {
+      "id": "build_health_monitor",
+      "title": "Crear órgano de salud y homeostasis",
+      "type": "health_monitor",
+      "priority": "alta",
+      "wave": 1,
+      "status": "pending",
+      "created_at": "2026-05-02T17:33:00.078470+00:00",
+      "question": "¿Quieres que construya esto?",
+      "reasoning": "Evalúa disco, generación y presión de selección.",
+      "expected_files": [
+        "runner/micelio/health_monitor.py"
+      ],
+      "verification": {
+        "verified_at": "2026-05-02T17:33:00.078481+00:00",
+        "ok": false,
+        "expected_count": 1,
+        "existing_count": 0,
+        "files": [
+          {
+            "path": "runner/micelio/health_monitor.py",
+            "exists": false,
+            "size_bytes": null,
+            "kind": "missing"
+          }
+        ]
+      },
+      "apply_method": "allowlisted_patch"
+    },
+    {
+      "id": "build_mission_manifest",
+      "title": "Definir propósito operativo",
+      "type": "mission_manifest",
+      "priority": "alta",
+      "wave": 1,
+      "status": "pending",
+      "created_at": "2026-05-02T17:33:00.078484+00:00",
+      "question": "¿Quieres que construya esto?",
+      "reasoning": "Define misión, objetivos y métricas de éxito.",
+      "expected_files": [
+        "memory/evolution_mission.json",
+        "docs/data/mission.json"
+      ],
+      "verification": {
+        "verified_at": "2026-05-02T17:33:00.078505+00:00",
+        "ok": false,
+        "expected_count": 2,
+        "existing_count": 0,
+        "files": [
+          {
+            "path": "memory/evolution_mission.json",
+            "exists": false,
+            "size_bytes": null,
+            "kind": "missing"
+          },
+          {
+            "path": "docs/data/mission.json",
+            "exists": false,
+            "size_bytes": null,
+            "kind": "missing"
+          }
+        ]
+      },
+      "apply_method": "allowlisted_patch"
+    },
+    {
+      "id": "build_termux_ai_probe",
+      "title": "Crear diagnóstico de IA local",
+      "type": "termux_ai_probe",
+      "priority": "media",
+      "wave": 1,
+      "status": "pending",
+      "created_at": "2026-05-02T17:33:00.078508+00:00",
+      "question": "¿Quieres que construya esto?",
+      "reasoning": "Verifica Ollama, puertos locales y modelos disponibles.",
+      "expected_files": [
+        "scripts/termux_ai_probe.sh"
+      ],
+      "verification": {
+        "verified_at": "2026-05-02T17:33:00.078518+00:00",
+        "ok": false,
+        "expected_count": 1,
+        "existing_count": 0,
+        "files": [
+          {
+            "path": "scripts/termux_ai_probe.sh",
+            "exists": false,
+            "size_bytes": null,
+            "kind": "missing"
+          }
+        ]
+      },
+      "apply_method": "allowlisted_patch"
+    },
+    {
+      "id": "build_organism_dashboard_upgrade",
+      "title": "Registrar mejora del mapa",
+      "type": "organism_dashboard_upgrade",
+      "priority": "media",
+      "wave": 1,
+      "status": "pending",
+      "created_at": "2026-05-02T17:33:00.078521+00:00",
+      "question": "¿Quieres que construya esto?",
+      "reasoning": "Marca una mejora visible para el mapa del organismo.",
+      "expected_files": [
+        "docs/data/organism_upgrade.json"
+      ],
+      "verification": {
+        "verified_at": "2026-05-02T17:33:00.078532+00:00",
+        "ok": false,
+        "expected_count": 1,
+        "existing_count": 0,
+        "files": [
+          {
+            "path": "docs/data/organism_upgrade.json",
+            "exists": false,
+            "size_bytes": null,
+            "kind": "missing"
+          }
+        ]
+      },
+      "apply_method": "allowlisted_patch"
+    },
+    {
+      "id": "build_chat_window",
+      "title": "Activar ventana de chat directa",
+      "type": "chat_window",
+      "priority": "alta",
+      "wave": 1,
+      "status": "pending",
+      "created_at": "2026-05-02T17:33:00.078534+00:00",
+      "question": "¿Quieres que construya esto?",
+      "reasoning": "Registra la capacidad de conversación local.",
+      "expected_files": [
+        "docs/data/chat_window.json"
+      ],
+      "verification": {
+        "verified_at": "2026-05-02T17:33:00.078545+00:00",
+        "ok": false,
+        "expected_count": 1,
+        "existing_count": 0,
+        "files": [
+          {
+            "path": "docs/data/chat_window.json",
+            "exists": false,
+            "size_bytes": null,
+            "kind": "missing"
+          }
+        ]
+      },
+      "apply_method": "allowlisted_patch"
+    },
+    {
+      "id": "build_construction_verifier",
+      "title": "Construir verificador de herramientas",
+      "type": "construction_verifier",
+      "priority": "alta",
+      "wave": 2,
+      "status": "pending",
+      "created_at": "2026-05-02T17:33:00.078571+00:00",
+      "question": "¿Quieres que construya esto?",
+      "reasoning": "Comprueba si cada herramienta aprobada realmente escribió archivos.",
+      "expected_files": [
+        "runner/micelio/build_verifier.py",
+        "docs/data/build_verifier.json"
+      ],
+      "verification": {
+        "verified_at": "2026-05-02T17:33:00.078591+00:00",
+        "ok": false,
+        "expected_count": 2,
+        "existing_count": 0,
+        "files": [
+          {
+            "path": "runner/micelio/build_verifier.py",
+            "exists": false,
+            "size_bytes": null,
+            "kind": "missing"
+          },
+          {
+            "path": "docs/data/build_verifier.json",
+            "exists": false,
+            "size_bytes": null,
+            "kind": "missing"
+          }
+        ]
+      },
+      "apply_method": "allowlisted_patch"
+    },
+    {
+      "id": "build_health_dashboard",
+      "title": "Construir panel visual de salud",
+      "type": "health_dashboard",
+      "priority": "alta",
+      "wave": 2,
+      "status": "pending",
+      "created_at": "2026-05-02T17:33:00.078595+00:00",
+      "question": "¿Quieres que construya esto?",
+      "reasoning": "Muestra salud y recursos en una pantalla propia.",
+      "expected_files": [
+        "docs/health.html"
+      ],
+      "verification": {
+        "verified_at": "2026-05-02T17:33:00.078605+00:00",
+        "ok": false,
+        "expected_count": 1,
+        "existing_count": 0,
+        "files": [
+          {
+            "path": "docs/health.html",
+            "exists": false,
+            "size_bytes": null,
+            "kind": "missing"
+          }
+        ]
+      },
+      "apply_method": "allowlisted_patch"
+    },
+    {
+      "id": "build_evolution_changelog",
+      "title": "Construir bitácora tecnológica",
+      "type": "evolution_changelog",
+      "priority": "media",
+      "wave": 2,
+      "status": "pending",
+      "created_at": "2026-05-02T17:33:00.078608+00:00",
+      "question": "¿Quieres que construya esto?",
+      "reasoning": "Muestra historial de aprobaciones, aplicaciones y verificaciones.",
+      "expected_files": [
+        "docs/evolution_log.html"
+      ],
+      "verification": {
+        "verified_at": "2026-05-02T17:33:00.078619+00:00",
+        "ok": false,
+        "expected_count": 1,
+        "existing_count": 0,
+        "files": [
+          {
+            "path": "docs/evolution_log.html",
+            "exists": false,
+            "size_bytes": null,
+            "kind": "missing"
+          }
+        ]
+      },
+      "apply_method": "allowlisted_patch"
+    },
+    {
+      "id": "build_chat_reasoning_upgrade",
+      "title": "Mejorar razonamiento local del chat",
+      "type": "chat_reasoning_upgrade",
+      "priority": "alta",
+      "wave": 2,
+      "status": "pending",
+      "created_at": "2026-05-02T17:33:00.078622+00:00",
+      "question": "¿Quieres que construya esto?",
+      "reasoning": "Hace que el chat entregue diagnóstico, hipótesis y acción recomendada.",
+      "expected_files": [
+        "memory/chat_personality.json",
+        "docs/data/chat_capabilities.json"
+      ],
+      "verification": {
+        "verified_at": "2026-05-02T17:33:00.078640+00:00",
+        "ok": false,
+        "expected_count": 2,
+        "existing_count": 0,
+        "files": [
+          {
+            "path": "memory/chat_personality.json",
+            "exists": false,
+            "size_bytes": null,
+            "kind": "missing"
+          },
+          {
+            "path": "docs/data/chat_capabilities.json",
+            "exists": false,
+            "size_bytes": null,
+            "kind": "missing"
+          }
+        ]
+      },
+      "apply_method": "allowlisted_patch"
+    }
+  ],
+  "history": [],
+  "archived_options": [],
+  "last_generation_context": {
+    "timestamp_utc": "2026-05-02T17:33:00.078648+00:00",
+    "added_options": [
+      "build_lineage_view",
+      "build_health_monitor",
+      "build_mission_manifest",
+      "build_termux_ai_probe",
+      "build_organism_dashboard_upgrade",
+      "build_chat_window",
+      "build_construction_verifier",
+      "build_health_dashboard",
+      "build_evolution_changelog",
+      "build_chat_reasoning_upgrade"
+    ],
+    "verified_tools_total": 1
+  },
+  "last_generate_message": "Nuevas sugerencias agregadas: build_lineage_view, build_health_monitor, build_mission_manifest, build_termux_ai_probe, build_organism_dashboard_upgrade, build_chat_window, build_construction_verifier, build_health_dashboard, build_evolution_changelog, build_chat_reasoning_upgrade",
+  "updated_at": "2026-05-02T17:33:00.078651+00:00"
+}

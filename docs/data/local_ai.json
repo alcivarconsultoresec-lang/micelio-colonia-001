@@ -1,11 +1,18 @@
 {
-  "timestamp_utc": "2026-05-02T16:46:58.782411+00:00",
-  "phase": "fase_3_router_ia_local",
-  "success": false,
-  "selected_provider": null,
-  "selected_model": null,
-  "ollama_available": false,
-  "ollama_models": [],
+  "timestamp_utc": "2026-05-02T17:33:00.062659+00:00",
+  "phase": "fase_4_router_ia_hibrida",
+  "success": true,
+  "selected_provider": "github_models",
+  "selected_model": "openai/gpt-4o-mini",
+  "provider_status": {
+    "ollama_available": false,
+    "ollama_models": [],
+    "openai_local_5001": false,
+    "github_token_configured": true,
+    "github_model": "openai/gpt-4o-mini",
+    "secrets_file_exists": false,
+    "secret_keys": []
+  },
   "attempts": [
     {
       "provider": "ollama",
@@ -16,5 +23,5 @@
       "error": "No se detectó endpoint local OpenAI-compatible en 127.0.0.1:5001."
     }
   ],
-  "safety": "Solo se usan endpoints locales o explícitamente configurados por el usuario."
+  "safety": "Se usan proveedores locales o token configurado explícitamente por el administrador."
 }

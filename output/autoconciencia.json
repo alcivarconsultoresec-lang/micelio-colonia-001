@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-05-02T16:47:01.235046+00:00",
+  "timestamp_utc": "2026-05-02T17:33:00.066589+00:00",
   "identidad": {
     "colony_id": "micelio-colonia-001",
     "genoma_id": "g_3d16eb2f",
@@ -29,6 +29,7 @@
       "runner/espora_runner.py",
       "runner/micelio/__init__.py",
       "runner/micelio/autocoder.py",
+      "runner/micelio/chat_manager.py",
       "runner/micelio/construction_manager.py",
       "runner/micelio/control_server.py",
       "runner/micelio/evolution_engine.py",
@@ -39,12 +40,16 @@
     ],
     "json_files": [
       "data/genoma.json",
+      "docs/data/autocoder.json",
       "docs/data/awareness.json",
       "docs/data/episodes.json",
       "docs/data/local_ai.json",
       "docs/data/metrics.json",
       "docs/data/resultados.json",
+      "docs/data/roles.json",
       "docs/data/selection.json",
+      "docs/data/senses.json",
+      "docs/data/tissues.json",
       "memory/colony_state.json",
       "output/autoconciencia.json",
       "output/colony_metrics.json",
@@ -60,17 +65,17 @@
       "docs/index.html",
       "docs/organism.html"
     ],
-    "total_files_sampled": 37
+    "total_files_sampled": 44
   },
-  "fitness": 0.78,
+  "fitness": 0.6,
   "estado_colonia": {
-    "ciclos": 2,
-    "esporas_virtuales": 6,
+    "ciclos": 3,
+    "esporas_virtuales": 9,
     "replicacion": "virtual_only",
     "seleccion": "elitist_safe_selection_v2",
     "hijas_creadas_en_ciclo": 3,
     "candidatas_activas": 5,
-    "supervivientes": 6,
+    "supervivientes": 9,
     "extintas_total": 0
   },
   "seguridad": {
