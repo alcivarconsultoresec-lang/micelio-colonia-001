@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 
 import requests
 from micelio.evolution_engine import EvolutionEngine
+from micelio.role_specializer import RoleSpecializer
 
 RUNNER_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_DIR = os.path.dirname(RUNNER_DIR)
@@ -197,7 +198,9 @@ if __name__ == "__main__":
     resultado = ejecutar_tarea(genoma)
     engine = EvolutionEngine(REPO_DIR)
     resultado["evolucion"] = engine.evolve(genoma, resultado)
+    resultado["roles"] = RoleSpecializer(REPO_DIR).apply()
     guardar_resultado(resultado)
     print(f"Runner completado. Resultado guardado en {OUTPUT_FILE}")
     print(f"Modo usado: {resultado.get('modo')}")
     print(f"Ciclo evolutivo: {resultado.get('evolucion', {}).get('cycle')}")
+    print("Roles fase 2.2 aplicados")
