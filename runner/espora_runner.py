@@ -4,8 +4,11 @@ import os
 from datetime import datetime, timezone
 
 import requests
+from micelio.autocoder import AutoCoder
 from micelio.evolution_engine import EvolutionEngine
+from micelio.mobile_senses import MobileSenses
 from micelio.role_specializer import RoleSpecializer
+from micelio.tissue_builder import TissueBuilder
 
 RUNNER_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_DIR = os.path.dirname(RUNNER_DIR)
@@ -199,8 +202,12 @@ if __name__ == "__main__":
     engine = EvolutionEngine(REPO_DIR)
     resultado["evolucion"] = engine.evolve(genoma, resultado)
     resultado["roles"] = RoleSpecializer(REPO_DIR).apply()
+    resultado["sentidos"] = MobileSenses(REPO_DIR).scan()
+    resultado["tejidos"] = TissueBuilder(REPO_DIR).build()
+    resultado["autocoder"] = AutoCoder(REPO_DIR).plan()
     guardar_resultado(resultado)
     print(f"Runner completado. Resultado guardado en {OUTPUT_FILE}")
     print(f"Modo usado: {resultado.get('modo')}")
     print(f"Ciclo evolutivo: {resultado.get('evolucion', {}).get('cycle')}")
     print("Roles fase 2.2 aplicados")
+    print("Sentidos móviles, tejidos y autocodificación supervisada fase 3 aplicados")
