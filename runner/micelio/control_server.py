@@ -2,12 +2,20 @@ import json
 import os
 import shutil
 import subprocess
+import sys
 import threading
 import time
 from datetime import datetime, timezone
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlparse
+
+# Permite ejecutar este archivo directamente con:
+# python runner/micelio/control_server.py
+# sin perder imports del paquete micelio.
+RUNNER_DIR = Path(__file__).resolve().parents[1]
+if str(RUNNER_DIR) not in sys.path:
+    sys.path.insert(0, str(RUNNER_DIR))
 
 from micelio.construction_manager import ConstructionManager
 
