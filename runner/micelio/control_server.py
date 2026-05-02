@@ -17,6 +17,7 @@ RUNNER_DIR = Path(__file__).resolve().parents[1]
 if str(RUNNER_DIR) not in sys.path:
     sys.path.insert(0, str(RUNNER_DIR))
 
+from micelio.chat_manager import ChatManager
 from micelio.construction_manager import ConstructionManager
 
 REPO_DIR = Path(__file__).resolve().parents[2]
@@ -148,7 +149,7 @@ def git_commit_if_needed(message):
     subprocess.run(["git", "config", "user.name", "micelio-termux"], cwd=REPO_DIR, check=False)
     subprocess.run(["git", "config", "user.email", "micelio-termux@local"], cwd=REPO_DIR, check=False)
     subprocess.run(
-        ["git", "add", "output", "memory", "docs/data", "docs", "runner", "scripts"],
+        ["git", "add", "output", "memory", "docs/data", "docs", "runner", "scripts", ".gitignore"],
         cwd=REPO_DIR,
         check=False,
         stdout=subprocess.DEVNULL,
@@ -234,6 +235,7 @@ class ControlHandler(SimpleHTTPRequestHandler):
             "tissues": read_json(OUTPUT_DIR / "tissues_report.json", {}),
             "autocoder": read_json(OUTPUT_DIR / "autocoder_plan.json", {}),
             "construction": cm.load_queue(),
+            "chat": ChatManager(REPO_DIR).load_history(),
             "local_ai": read_json(OUTPUT_DIR / "local_ai_report.json", {}),
             "result": read_json(OUTPUT_DIR / "resultados.json", {}),
         }
@@ -283,7 +285,10 @@ class ControlHandler(SimpleHTTPRequestHandler):
             self.send_json(wake_lock(bool(data.get("enable", True))))
             return
         if parsed.path == "/api/construction/generate":
-            self.send_json({"ok": True, "queue": ConstructionManager(REPO_DIR).generate_options()})
+            self.send_json({"ok": True, "queue": ConstructionManager(REPO_DIR).generate_options(force=bool(data.get("force", False)))})
+            return
+        if parsed.path == "/api/construction/clear":
+            self.send_json({"ok": True, "queue": ConstructionManager(REPO_DIR).clear_queue(data.get("mode", "archive_applied"))})
             return
         if parsed.path == "/api/construction/approve":
             self.send_json(ConstructionManager(REPO_DIR).approve(data.get("id")))
@@ -296,6 +301,12 @@ class ControlHandler(SimpleHTTPRequestHandler):
             if result.get("ok"):
                 git_commit_if_needed(f"MICELIO construcción aplicada: {data.get('id')}")
             self.send_json(result)
+            return
+        if parsed.path == "/api/chat":
+            self.send_json(ChatManager(REPO_DIR).ask(data.get("message", "")))
+            return
+        if parsed.path == "/api/chat/clear":
+            self.send_json(ChatManager(REPO_DIR).clear())
             return
         self.send_json({"ok": False, "error": "endpoint_not_found"}, 404)
 
