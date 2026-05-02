@@ -1,0 +1,41 @@
+{
+  "timestamp_utc": "2026-05-02T15:15:56.519200+00:00",
+  "colony_id": "micelio-colonia-001",
+  "cycle": 1,
+  "runtime": "controlled_test",
+  "mode": "local_fallback",
+  "model": null,
+  "fitness": 0.6,
+  "best_score": 0.999,
+  "average_score": 0.999,
+  "selection_pressure": 0,
+  "virtual_spores": 3,
+  "active_candidates": 3,
+  "survivors": 3,
+  "extinct_total": 0,
+  "children_created": 3,
+  "generation": 2,
+  "replication_mode": "virtual_only",
+  "selection_mode": "elitist_safe_selection",
+  "last_decision": "seleccion_natural_controlada",
+  "charts": {
+    "episodes": [
+      {
+        "timestamp_utc": "2026-05-02T15:15:56.519200+00:00",
+        "cycle": 1,
+        "genoma_id": "g_3d16eb2f",
+        "mode": "local_fallback",
+        "fitness": 0.6,
+        "children_created": 3,
+        "virtual_spores_total": 3,
+        "active_candidates": 3,
+        "survivors": 3,
+        "extinct_last_cycle_count": 0,
+        "best_score": 0.999,
+        "average_score": 0.999,
+        "selection_pressure": 0,
+        "decision": "seleccion_natural_controlada"
+      }
+    ]
+  }
+}
