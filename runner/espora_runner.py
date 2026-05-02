@@ -11,6 +11,7 @@ REPO_DIR = os.path.dirname(RUNNER_DIR)
 
 DATA_FILE = os.path.join(REPO_DIR, "data", "genoma.json")
 OUTPUT_FILE = os.path.join(REPO_DIR, "output", "resultados.json")
+DASHBOARD_RESULT_FILE = os.path.join(REPO_DIR, "docs", "data", "resultados.json")
 
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 GITHUB_MODELS_ENDPOINT = os.getenv(
@@ -179,11 +180,16 @@ def enriquecer_resultado(resultado, genoma, errores=None):
     return resultado
 
 
-def guardar_resultado(resultado):
-    os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
-        json.dump(resultado, file, indent=2, ensure_ascii=False)
+def escribir_json(path, data):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as file:
+        json.dump(data, file, indent=2, ensure_ascii=False)
         file.write("\n")
+
+
+def guardar_resultado(resultado):
+    escribir_json(OUTPUT_FILE, resultado)
+    escribir_json(DASHBOARD_RESULT_FILE, resultado)
 
 
 if __name__ == "__main__":
