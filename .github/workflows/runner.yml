@@ -2,8 +2,17 @@ name: Ejecutar espora
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch:
+    inputs:
+      cycles:
+        description: 'Cantidad de ciclos acelerados dentro de una sola ejecución'
+        required: false
+        default: '1'
+      sleep_seconds:
+        description: 'Pausa entre ciclos acelerados'
+        required: false
+        default: '30'
 
 permissions:
   contents: write
@@ -34,24 +43,47 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run espora with GitHub Models
+      - name: Run accelerated evolution
         env:
           GITHUB_TOKEN: ${{ github.token }}
           MICELIO_MODEL: openai/gpt-4o-mini
           MICELIO_MAX_TOKENS: '500'
+          MICELIO_MAX_VIRTUAL_SPORES: '64'
+          MICELIO_MAX_CHILDREN_PER_CYCLE: '3'
+          INPUT_CYCLES: ${{ github.event.inputs.cycles || '1' }}
+          INPUT_SLEEP_SECONDS: ${{ github.event.inputs.sleep_seconds || '30' }}
         run: |
-          python runner/espora_runner.py
+          cycles="$INPUT_CYCLES"
+          sleep_seconds="$INPUT_SLEEP_SECONDS"
+
+          if ! [[ "$cycles" =~ ^[0-9]+$ ]]; then cycles=1; fi
+          if ! [[ "$sleep_seconds" =~ ^[0-9]+$ ]]; then sleep_seconds=30; fi
+
+          if [ "$cycles" -lt 1 ]; then cycles=1; fi
+          if [ "$cycles" -gt 10 ]; then cycles=10; fi
+          if [ "$sleep_seconds" -lt 0 ]; then sleep_seconds=0; fi
+          if [ "$sleep_seconds" -gt 60 ]; then sleep_seconds=60; fi
+
+          echo "Ejecutando $cycles ciclo(s) evolutivo(s), pausa $sleep_seconds segundo(s)."
+
+          for i in $(seq 1 "$cycles"); do
+            echo "Ciclo acelerado $i/$cycles"
+            python runner/espora_runner.py
+            if [ "$i" -lt "$cycles" ]; then
+              sleep "$sleep_seconds"
+            fi
+          done
 
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add output/resultados.json
+          git add output/resultados.json output/autoconciencia.json memory/colony_state.json memory/episodes.jsonl
 
           if git diff --cached --quiet; then
             echo "No changes"
           else
-            git commit -m "Resultado de ejecución IA"
+            git commit -m "Resultado de evolución MICELIO"
             git push
           fi
