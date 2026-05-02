@@ -1,5 +1,4 @@
 import json
-import os
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -7,7 +6,7 @@ from pathlib import Path
 class ConstructionManager:
     """Supervised construction/approval layer for MICELIO.
 
-    It converts reasoning into concrete construction options and applies only
+    Converts reasoning into concrete construction options and applies only
     allowlisted local patches after explicit administrator approval.
     """
 
@@ -34,9 +33,10 @@ class ConstructionManager:
 
     def read_json(self, path, default):
         try:
-            if not Path(path).exists():
+            path = Path(path)
+            if not path.exists():
                 return default
-            return json.loads(Path(path).read_text(encoding="utf-8"))
+            return json.loads(path.read_text(encoding="utf-8"))
         except Exception as error:
             return {"error": str(error), "default": default}
 
@@ -59,9 +59,9 @@ class ConstructionManager:
         return queue
 
     def option_exists(self, queue, option_id):
-        return any(item.get("id") == option_id and item.get("status") in {"pending", "approved"} for item in queue.get("options", []))
+        return any(item.get("id") == option_id and item.get("status") in {"pending", "approved", "applied"} for item in queue.get("options", []))
 
-    def build_option(self, option_id, title, type_name, priority, reason, expected_files, approval_mode="manual"):
+    def build_option(self, option_id, title, type_name, priority, reason, expected_files):
         return {
             "id": option_id,
             "title": title,
@@ -69,7 +69,7 @@ class ConstructionManager:
             "priority": priority,
             "status": "pending",
             "created_at": self.now(),
-            "approval_mode": approval_mode,
+            "approval_mode": "manual_admin_dashboard",
             "reasoning": reason,
             "expected_files": expected_files,
             "risk_level": "controlled_local_write",
@@ -79,7 +79,6 @@ class ConstructionManager:
     def generate_options(self):
         queue = self.load_queue()
         metrics = self.read_json(self.output_dir / "colony_metrics.json", {})
-        senses = self.read_json(self.output_dir / "senses_report.json", {})
         tissues = self.read_json(self.output_dir / "tissues_report.json", {})
         local_ai = self.read_json(self.output_dir / "local_ai_report.json", {})
         autocoder = self.read_json(self.output_dir / "autocoder_plan.json", {})
@@ -90,7 +89,7 @@ class ConstructionManager:
                 "Construir vista de linaje dominante",
                 "lineage_view",
                 "alta",
-                "La colonia ya tiene generaciones activas; necesita visualizar padres, ramas, scores y familias dominantes para decidir qué linajes activar.",
+                "La colonia ya tiene generaciones activas. Necesita visualizar padres, ramas, scores y familias dominantes para decidir qué linajes activar.",
                 ["docs/lineage.html"],
             ),
             self.build_option(
@@ -98,7 +97,7 @@ class ConstructionManager:
                 "Crear órgano de salud y homeostasis",
                 "health_monitor",
                 "alta",
-                "El sistema genera muchos ciclos y commits; necesita un monitor que evalúe batería, memoria, disco, presión evolutiva y señales de saturación.",
+                "El sistema genera ciclos, reportes y commits. Necesita evaluar memoria, disco, presión evolutiva y señales de saturación.",
                 ["runner/micelio/health_monitor.py", "output/health_report.json", "docs/data/health.json"],
             ),
             self.build_option(
@@ -114,16 +113,16 @@ class ConstructionManager:
                 "Construir herramienta de detección IA local",
                 "termux_ai_probe",
                 "media",
-                "Los reportes indican modo local_fallback. Se necesita una herramienta rápida para verificar Ollama, puertos locales, modelos y recomendaciones de instalación manual.",
+                "Los reportes indican modo local_fallback. Se necesita una herramienta rápida para verificar Ollama, puertos locales, modelos y recomendaciones manuales.",
                 ["scripts/termux_ai_probe.sh"],
             ),
             self.build_option(
                 "build_organism_dashboard_upgrade",
-                "Mejorar mapa del organismo con linaje y decisiones",
+                "Mejorar mapa del organismo con decisiones aprobables",
                 "organism_dashboard_upgrade",
                 "media",
                 "El mapa debe mostrar no solo órganos, sino también decisiones de construcción y próximos pasos aprobables por el administrador.",
-                ["docs/organism.html"],
+                ["docs/data/organism_upgrade.json"],
             ),
         ]
 
@@ -158,6 +157,8 @@ class ConstructionManager:
         item = self.find_option(queue, option_id)
         if not item:
             return {"ok": False, "error": "option_not_found"}
+        if item.get("status") == "applied":
+            return {"ok": True, "option": item, "message": "already_applied"}
         item["status"] = "approved"
         item["approved_at"] = self.now()
         queue["history"].append({"timestamp_utc": self.now(), "action": "approved", "option_id": option_id})
@@ -194,7 +195,7 @@ class ConstructionManager:
         return {"ok": True, "option": item, "result": result}
 
     def apply_lineage_view(self):
-        content = r'''<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MICELIO Linaje</title><style>body{margin:0;background:#050816;color:#f7f9ff;font-family:system-ui;padding:14px 14px 80px}.card{background:#0d1730;border:1px solid #8aa4ff33;border-radius:20px;padding:14px;margin:10px 0}.node{background:#14203d;border-radius:14px;padding:10px;margin:8px 0}.muted{color:#9aa8c7;font-size:13px}.bar{height:10px;background:#ffffff14;border-radius:99px;overflow:hidden}.bar div{height:100%;background:linear-gradient(90deg,#55e6ff,#67ffb1)}a{color:#55e6ff}</style></head><body><h1>MICELIO · Linaje</h1><p class="muted">Ramas dominantes, padres y scores.</p><a href="/control.html">Volver al control</a><section class="card"><h2>Linajes elite</h2><div id="lineage">Cargando...</div></section><script>async function load(){const r=await fetch('/api/status');const s=await r.json();const top=s.metrics?.top_role_spores||[];document.getElementById('lineage').innerHTML=top.map(x=>`<div class="node"><b>${x.spore_id}</b><p class="muted">Padre: ${x.parent_id||'root'} · Rol: ${x.role||'—'} · Gen: ${x.generation||'—'}</p><div class="bar"><div style="width:${Math.max(0,Math.min(100,(x.adjusted_score||x.selection_score||0)*100))}%"></div></div><p class="muted">Score: ${(x.adjusted_score||x.selection_score||0).toFixed(4)}</p></div>`).join('')||'Sin linajes todavía.'}load();setInterval(load,3000)</script></body></html>'''
+        content = '''<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MICELIO Linaje</title><style>body{margin:0;background:#050816;color:#f7f9ff;font-family:system-ui;padding:14px 14px 80px}.card{background:#0d1730;border:1px solid #8aa4ff33;border-radius:20px;padding:14px;margin:10px 0}.node{background:#14203d;border-radius:14px;padding:10px;margin:8px 0}.muted{color:#9aa8c7;font-size:13px}.bar{height:10px;background:#ffffff14;border-radius:99px;overflow:hidden}.bar div{height:100%;background:linear-gradient(90deg,#55e6ff,#67ffb1)}a{color:#55e6ff}</style></head><body><h1>MICELIO · Linaje</h1><p class="muted">Ramas dominantes, padres y scores.</p><a href="/control.html">Volver al control</a><section class="card"><h2>Linajes elite</h2><div id="lineage">Cargando...</div></section><script>async function load(){const r=await fetch('/api/status');const s=await r.json();const top=s.metrics?.top_role_spores||[];document.getElementById('lineage').innerHTML=top.map(x=>`<div class="node"><b>${x.spore_id}</b><p class="muted">Padre: ${x.parent_id||'root'} · Rol: ${x.role||'—'} · Gen: ${x.generation||'—'}</p><div class="bar"><div style="width:${Math.max(0,Math.min(100,(x.adjusted_score||x.selection_score||0)*100))}%"></div></div><p class="muted">Score: ${(x.adjusted_score||x.selection_score||0).toFixed(4)}</p></div>`).join('')||'Sin linajes todavía.'}load();setInterval(load,3000)</script></body></html>'''
         path = self.repo_dir / "docs" / "lineage.html"
         path.write_text(content, encoding="utf-8")
         return {"files_written": ["docs/lineage.html"]}
@@ -247,4 +248,3 @@ class ConstructionManager:
         }
         self.write_json(marker, payload)
         return {"files_written": ["docs/data/organism_upgrade.json"]}
-'''
