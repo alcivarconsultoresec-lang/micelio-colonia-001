@@ -10,15 +10,27 @@ export MICELIO_MAX_SURVIVORS="${MICELIO_MAX_SURVIVORS:-24}"
 export MICELIO_MAX_ACTIVE_CANDIDATES="${MICELIO_MAX_ACTIVE_CANDIDATES:-5}"
 export MICELIO_MODEL="${MICELIO_MODEL:-openai/gpt-4o-mini}"
 export MICELIO_MAX_TOKENS="${MICELIO_MAX_TOKENS:-500}"
+export MICELIO_AUTO_PUSH="${MICELIO_AUTO_PUSH:-false}"
 
 python runner/espora_runner.py
 
+# Identidad local para commits generados desde Termux. No requiere credenciales de GitHub.
+git config user.name "micelio-termux" >/dev/null
+git config user.email "micelio-termux@local" >/dev/null
+
 git add output/*.json memory/*.json memory/*.jsonl docs/data/*.json 2>/dev/null || true
+
 if git diff --cached --quiet; then
   echo "[MICELIO] Sin cambios para guardar."
 else
   git commit -m "Ejecución Termux MICELIO" || true
-  git push || echo "[MICELIO] No se pudo hacer push automático. Revisa autenticación GitHub."
+
+  if [ "$MICELIO_AUTO_PUSH" = "true" ]; then
+    git push || echo "[MICELIO] No se pudo hacer push automático. Revisa autenticación GitHub."
+  else
+    echo "[MICELIO] Commit local creado. Push omitido para evitar pedir usuario/token en Termux."
+    echo "[MICELIO] Para subir manualmente: git push"
+  fi
 fi
 
 echo "[MICELIO] Ejecución terminada."
