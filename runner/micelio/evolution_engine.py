@@ -19,7 +19,7 @@ SAFE_LIMITS = {
     "max_exploration": 0.95,
     "min_exploration": 0.05,
     "replication_mode": "virtual_only",
-    "selection_mode": "elitist_safe_selection",
+    "selection_mode": "elitist_safe_selection_v2",
     "allowed_colonies": ["github_actions", "local", "docker", "google_cloud"],
 }
 
@@ -42,6 +42,12 @@ class EvolutionEngine:
     def now(self):
         return datetime.now(timezone.utc).isoformat()
 
+    def write_json(self, path, data):
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "w", encoding="utf-8") as file:
+            json.dump(data, file, indent=2, ensure_ascii=False)
+            file.write("\n")
+
     def load_state(self):
         if not os.path.exists(self.state_file):
             return {
@@ -62,23 +68,23 @@ class EvolutionEngine:
                 },
                 "safety_limits": SAFE_LIMITS,
                 "last_decision": "bootstrap",
+                "engine_version": "2.1",
             }
 
         with open(self.state_file, "r", encoding="utf-8") as file:
             state = json.load(file)
-
         state.setdefault("virtual_spores", [])
         state.setdefault("lineage", [])
         state.setdefault("extinct_total", 0)
         state.setdefault("selection", {})
         state.setdefault("safety_limits", SAFE_LIMITS)
+        state.setdefault("engine_version", "2.1")
         return state
 
     def save_state(self, state):
         state["updated_at"] = self.now()
-        with open(self.state_file, "w", encoding="utf-8") as file:
-            json.dump(state, file, indent=2, ensure_ascii=False)
-            file.write("\n")
+        state["engine_version"] = "2.1"
+        self.write_json(self.state_file, state)
 
     def append_episode(self, episode):
         with open(self.episodes_file, "a", encoding="utf-8") as file:
@@ -106,7 +112,6 @@ class EvolutionEngine:
             "total_files_sampled": 0,
         }
         ignored_dirs = {".git", "__pycache__", ".pytest_cache", ".mypy_cache"}
-
         for root, dirs, files in os.walk(self.repo_dir):
             dirs[:] = [directory for directory in dirs if directory not in ignored_dirs]
             for filename in files:
@@ -120,13 +125,12 @@ class EvolutionEngine:
                     inventory["workflow_files"].append(rel_path)
                 elif rel_path.startswith("docs/"):
                     inventory["dashboard_files"].append(rel_path)
-
         for key in ["python_files", "json_files", "workflow_files", "dashboard_files"]:
             inventory[key] = sorted(inventory[key])[:50]
         return inventory
 
     def detect_environment(self):
-        env = {
+        return {
             "runtime": "github_actions" if os.getenv("GITHUB_ACTIONS") == "true" else "local",
             "python_version": platform.python_version(),
             "system": platform.system(),
@@ -136,58 +140,67 @@ class EvolutionEngine:
             "has_github_token": bool(os.getenv("GITHUB_TOKEN")),
             "has_github_models_endpoint": bool(os.getenv("GITHUB_MODELS_ENDPOINT")),
             "micelio_model": os.getenv("MICELIO_MODEL", "openai/gpt-4o-mini"),
+            "container": "docker_detected" if os.path.exists("/.dockerenv") else "not_detected",
+            "google_cloud_project_detected": bool(os.getenv("GOOGLE_CLOUD_PROJECT")),
             "virtual_spore_limit": SAFE_LIMITS["max_virtual_spores"],
             "replication_mode": SAFE_LIMITS["replication_mode"],
             "selection_mode": SAFE_LIMITS["selection_mode"],
         }
 
-        env["container"] = "docker_detected" if os.path.exists("/.dockerenv") else "not_detected"
-        env["google_cloud_project_detected"] = bool(os.getenv("GOOGLE_CLOUD_PROJECT"))
-        return env
-
     def calculate_fitness(self, genoma, ai_result, environment, state):
-        score = 0.5
+        score = 0.45
         if ai_result.get("modo") == "github_models":
-            score += 0.25
+            score += 0.30
         elif ai_result.get("modo") == "local_fallback":
             score += 0.05
-
         if environment.get("has_github_token"):
-            score += 0.05
+            score += 0.08
         if genoma.get("memoria"):
-            score += 0.05
+            score += 0.04
         if state.get("cycles", 0) > 0:
-            score += 0.05
+            score += 0.03
         if ai_result.get("errores_proveedores"):
-            score -= 0.15
-
+            score -= 0.12
         return round(max(0.01, min(score, 0.99)), 4)
 
-    def mutate_genome(self, parent_genoma, cycle_index):
+    def choose_parent_genome(self, state, base_genoma, cycle_index):
+        candidates = state.get("selection", {}).get("active_candidates") or []
+        survivors = state.get("selection", {}).get("survivors") or []
+        pool_ids = [item.get("spore_id") for item in (candidates or survivors) if item.get("spore_id")]
+        spore_map = {spore.get("spore_id"): spore for spore in state.get("virtual_spores", [])}
+        pool = [spore_map[spore_id] for spore_id in pool_ids if spore_id in spore_map]
+        if not pool:
+            return base_genoma, "root_genoma"
+
+        random.seed(f"parent-{cycle_index}-{len(pool)}-{state.get('cycles', 0)}")
+        parent = random.choice(pool[: min(5, len(pool))])
+        return parent.get("genome", base_genoma), parent.get("spore_id", "elite_parent")
+
+    def mutate_genome(self, parent_genoma, cycle_index, parent_source="root_genoma"):
         child = copy.deepcopy(parent_genoma)
         strategy = child.setdefault("estrategia", {})
-        parent_id = child.get("id", "unknown")
+        parent_id = child.get("id", parent_source or "unknown")
         child_id = f"g_{uuid.uuid4().hex[:8]}"
-
         random.seed(f"{parent_id}-{cycle_index}-{self.now()}-{child_id}")
+
         temperature = float(strategy.get("temperatura", 0.7))
         exploration = float(strategy.get("exploracion", 0.3))
         mutation_rate = float(strategy.get("tasa_mutacion", 0.1))
 
         strategy["temperatura"] = round(
-            min(SAFE_LIMITS["max_temperature"], max(SAFE_LIMITS["min_temperature"], temperature + random.uniform(-0.08, 0.08))),
+            min(SAFE_LIMITS["max_temperature"], max(SAFE_LIMITS["min_temperature"], temperature + random.uniform(-0.10, 0.10))),
             3,
         )
         strategy["exploracion"] = round(
-            min(SAFE_LIMITS["max_exploration"], max(SAFE_LIMITS["min_exploration"], exploration + random.uniform(-0.06, 0.08))),
+            min(SAFE_LIMITS["max_exploration"], max(SAFE_LIMITS["min_exploration"], exploration + random.uniform(-0.08, 0.10))),
             3,
         )
-        strategy["tasa_mutacion"] = round(min(0.5, max(0.01, mutation_rate + random.uniform(-0.02, 0.03))), 3)
+        strategy["tasa_mutacion"] = round(min(0.5, max(0.01, mutation_rate + random.uniform(-0.025, 0.035))), 3)
 
         child["id"] = child_id
         child["linaje"] = parent_id
         child["generacion"] = int(child.get("generacion", 1)) + 1
-        child["fitness"] = round(float(child.get("fitness", 0.5)) * random.uniform(0.92, 1.04), 4)
+        child["fitness"] = round(max(0.05, min(0.99, float(child.get("fitness", 0.5)) * random.uniform(0.90, 1.05))), 4)
         child["estado"] = "latente"
         child.setdefault("metadatos", {})["ultima_actualizacion"] = self.now()
         child.setdefault("memoria", {})["ultimas_acciones"] = child.get("memoria", {}).get("ultimas_acciones", [])[-5:]
@@ -196,6 +209,7 @@ class EvolutionEngine:
         return {
             "spore_id": child_id,
             "parent_id": parent_id,
+            "parent_source": parent_source,
             "generation": child["generacion"],
             "status": "latente",
             "created_at": self.now(),
@@ -212,41 +226,34 @@ class EvolutionEngine:
         strategy = genome.get("estrategia", {})
         base_fitness = float(genome.get("fitness", 0.5) or 0.5)
         generation = int(spore.get("generation", genome.get("generacion", 1)) or 1)
-        age_penalty = min(0.15, max(0, cycle_index - generation) * 0.005)
         exploration = float(strategy.get("exploracion", 0.3) or 0.3)
         temperature = float(strategy.get("temperatura", 0.7) or 0.7)
         mutation_rate = float(strategy.get("tasa_mutacion", 0.1) or 0.1)
 
         strategy_balance = 0.0
-        if 0.2 <= exploration <= 0.8:
-            strategy_balance += 0.06
-        if 0.3 <= temperature <= 1.0:
-            strategy_balance += 0.06
-        if 0.03 <= mutation_rate <= 0.25:
-            strategy_balance += 0.05
-
-        novelty = min(0.08, generation * 0.01)
-        status_bonus = 0.04 if spore.get("status") in {"elite", "survivor", "latente"} else 0
-        score = base_fitness + strategy_balance + novelty + status_bonus - age_penalty
-        return round(max(0.01, min(score, 0.999)), 4)
+        strategy_balance += max(0, 1 - abs(exploration - 0.55) / 0.55) * 0.12
+        strategy_balance += max(0, 1 - abs(temperature - 0.72) / 0.72) * 0.10
+        strategy_balance += max(0, 1 - abs(mutation_rate - 0.14) / 0.14) * 0.08
+        novelty = min(0.10, generation * 0.012)
+        stability = 0.05 if spore.get("status") in {"elite", "survivor", "latente"} else 0
+        age_penalty = min(0.18, max(0, cycle_index - generation) * 0.004)
+        score = (base_fitness * 0.52) + strategy_balance + novelty + stability - age_penalty
+        return round(max(0.01, min(score, 0.97)), 4)
 
     def select_population(self, state, cycle_index):
         population = state.get("virtual_spores", [])
         scored = []
         for spore in population:
-            score = self.score_spore(spore, cycle_index)
-            spore["selection_score"] = score
+            spore["selection_score"] = self.score_spore(spore, cycle_index)
             spore["last_seen_at"] = self.now()
             scored.append(spore)
-
         scored.sort(key=lambda item: item.get("selection_score", 0), reverse=True)
+
         active_count = min(SAFE_LIMITS["max_active_candidates"], len(scored))
         survivor_count = min(SAFE_LIMITS["max_survivors"], len(scored))
-
         active_candidates = scored[:active_count]
         survivors = scored[:survivor_count]
         extinct = scored[survivor_count:]
-
         survivor_ids = {spore["spore_id"] for spore in survivors}
         active_ids = {spore["spore_id"] for spore in active_candidates}
 
@@ -261,19 +268,16 @@ class EvolutionEngine:
         extinct_summary = []
         for spore in extinct:
             spore["status"] = "extinct"
-            extinct_summary.append(
-                {
-                    "spore_id": spore.get("spore_id"),
-                    "parent_id": spore.get("parent_id"),
-                    "selection_score": spore.get("selection_score"),
-                    "generation": spore.get("generation"),
-                    "reason": "outcompeted_by_higher_fitness_variants",
-                }
-            )
+            extinct_summary.append({
+                "spore_id": spore.get("spore_id"),
+                "parent_id": spore.get("parent_id"),
+                "selection_score": spore.get("selection_score"),
+                "generation": spore.get("generation"),
+                "reason": "outcompeted_by_higher_fitness_variants",
+            })
 
         state["virtual_spores"] = [spore for spore in scored if spore.get("spore_id") in survivor_ids]
         state["extinct_total"] = int(state.get("extinct_total", 0)) + len(extinct_summary)
-
         scores = [spore.get("selection_score", 0) for spore in survivors]
         selection = {
             "mode": SAFE_LIMITS["selection_mode"],
@@ -293,28 +297,21 @@ class EvolutionEngine:
         for spore in spores:
             genome = spore.get("genome", {})
             strategy = genome.get("estrategia", {})
-            summary.append(
-                {
-                    "spore_id": spore.get("spore_id"),
-                    "parent_id": spore.get("parent_id"),
-                    "generation": spore.get("generation"),
-                    "status": spore.get("status"),
-                    "selection_score": spore.get("selection_score"),
-                    "fitness": genome.get("fitness"),
-                    "temperature": strategy.get("temperatura"),
-                    "exploration": strategy.get("exploracion"),
-                    "mutation_rate": strategy.get("tasa_mutacion"),
-                    "deployment": spore.get("deployment"),
-                    "reason": spore.get("selection_reason"),
-                }
-            )
+            summary.append({
+                "spore_id": spore.get("spore_id"),
+                "parent_id": spore.get("parent_id"),
+                "parent_source": spore.get("parent_source"),
+                "generation": spore.get("generation"),
+                "status": spore.get("status"),
+                "selection_score": spore.get("selection_score"),
+                "fitness": genome.get("fitness"),
+                "temperature": strategy.get("temperatura"),
+                "exploration": strategy.get("exploracion"),
+                "mutation_rate": strategy.get("tasa_mutacion"),
+                "deployment": spore.get("deployment"),
+                "reason": spore.get("selection_reason"),
+            })
         return summary
-
-    def write_json(self, path, data):
-        os.makedirs(os.path.dirname(path), exist_ok=True)
-        with open(path, "w", encoding="utf-8") as file:
-            json.dump(data, file, indent=2, ensure_ascii=False)
-            file.write("\n")
 
     def mirror_dashboard_data(self, metrics, selection_report, awareness_report, episodes):
         self.write_json(os.path.join(self.dashboard_data_dir, "metrics.json"), metrics)
@@ -326,24 +323,24 @@ class EvolutionEngine:
         state = self.load_state()
         environment = self.detect_environment()
         inventory = self.inventory_files()
-        previous_cycles = int(state.get("cycles", 0))
-        cycle_index = previous_cycles + 1
+        cycle_index = int(state.get("cycles", 0)) + 1
         fitness = self.calculate_fitness(genoma, ai_result, environment, state)
 
         current_count = len(state.get("virtual_spores", []))
         available_slots = max(0, SAFE_LIMITS["max_virtual_spores"] - current_count)
         children_to_create = min(SAFE_LIMITS["max_children_per_cycle"], available_slots)
-
         children = []
-        if children_to_create > 0:
-            for _ in range(children_to_create):
-                children.append(self.mutate_genome(genoma, cycle_index))
+        parent_sources = []
+        for _ in range(children_to_create):
+            parent_genome, parent_source = self.choose_parent_genome(state, genoma, cycle_index)
+            parent_sources.append(parent_source)
+            children.append(self.mutate_genome(parent_genome, cycle_index, parent_source))
 
         state.setdefault("virtual_spores", []).extend(children)
         selection = self.select_population(state, cycle_index)
         state["cycles"] = cycle_index
-        state["generation"] = max([child["generation"] for child in state.get("virtual_spores", [])], default=genoma.get("generacion", 1))
-        state["last_decision"] = "seleccion_natural_controlada"
+        state["generation"] = max([spore.get("generation", 1) for spore in state.get("virtual_spores", [])], default=genoma.get("generacion", 1))
+        state["last_decision"] = "seleccion_natural_controlada_v2"
         state["last_fitness"] = fitness
         state["safety_limits"] = SAFE_LIMITS
         self.save_state(state)
@@ -355,6 +352,7 @@ class EvolutionEngine:
             "mode": ai_result.get("modo"),
             "fitness": fitness,
             "children_created": len(children),
+            "parent_sources": parent_sources,
             "virtual_spores_total": len(state.get("virtual_spores", [])),
             "active_candidates": len(selection.get("active_candidates", [])),
             "survivors": len(selection.get("survivors", [])),
@@ -362,6 +360,7 @@ class EvolutionEngine:
             "best_score": selection.get("best_score", 0),
             "average_score": selection.get("average_score", 0),
             "selection_pressure": selection.get("selection_pressure", 0),
+            "max_generation": state.get("generation"),
             "decision": state["last_decision"],
         }
         self.append_episode(episode)
@@ -375,6 +374,7 @@ class EvolutionEngine:
                 "linaje": genoma.get("linaje"),
                 "generacion_actual": genoma.get("generacion"),
                 "generacion_maxima_colonia": state.get("generation"),
+                "engine_version": state.get("engine_version"),
             },
             "entorno": environment,
             "inventario_arquitectura": inventory,
@@ -393,14 +393,12 @@ class EvolutionEngine:
                 "limites": SAFE_LIMITS,
                 "nota": "La replicación es virtual, seleccionada y controlada. No despliega procesos externos ni coloniza infraestructura sin autorización explícita.",
             },
-            "siguiente_accion_recomendada": (
-                "Activar pruebas comparativas sobre las candidatas elite antes de permitir cualquier despliegue en Docker o nube autorizada."
-            ),
+            "siguiente_accion_recomendada": "Ejecutar 10 ciclos con motor v2.1 y verificar que el score ya no sature en 0.999 y que la generación avance.",
         }
 
         selection_report = {
             "timestamp_utc": self.now(),
-            "phase": "fase_2_seleccion_natural_controlada",
+            "phase": "fase_2_1_seleccion_no_saturada",
             "cycle": cycle_index,
             "decision": state["last_decision"],
             "selection": selection,
@@ -432,9 +430,8 @@ class EvolutionEngine:
             "replication_mode": SAFE_LIMITS["replication_mode"],
             "selection_mode": SAFE_LIMITS["selection_mode"],
             "last_decision": state.get("last_decision"),
-            "charts": {
-                "episodes": episodes,
-            },
+            "engine_version": "2.1",
+            "charts": {"episodes": episodes},
         }
 
         self.write_json(self.report_file, awareness_report)
