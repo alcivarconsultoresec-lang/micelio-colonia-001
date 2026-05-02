@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 
 import requests
 from micelio.autocoder import AutoCoder
+from micelio.construction_manager import ConstructionManager
 from micelio.evolution_engine import EvolutionEngine
 from micelio.local_ai_router import LocalAIRouter
 from micelio.mobile_senses import MobileSenses
@@ -63,7 +64,6 @@ def construir_prompt(genoma):
 
 
 def generar_respuesta_local(prompt, genoma):
-    """Fallback determinístico para que el sistema funcione aunque ningún proveedor IA responda."""
     semilla = json.dumps(genoma, sort_keys=True, ensure_ascii=False)
     hash_ejecucion = hashlib.sha256(f"{prompt}|{semilla}".encode("utf-8")).hexdigest()[:16]
     objetivo = genoma.get("objetivo", "general")
@@ -211,9 +211,9 @@ if __name__ == "__main__":
     resultado["sentidos"] = MobileSenses(REPO_DIR).scan()
     resultado["tejidos"] = TissueBuilder(REPO_DIR).build()
     resultado["autocoder"] = AutoCoder(REPO_DIR).plan()
+    resultado["construccion"] = ConstructionManager(REPO_DIR).generate_options()
     guardar_resultado(resultado)
     print(f"Runner completado. Resultado guardado en {OUTPUT_FILE}")
     print(f"Modo usado: {resultado.get('modo')}")
     print(f"Ciclo evolutivo: {resultado.get('evolucion', {}).get('cycle')}")
-    print("Roles fase 2.2 aplicados")
-    print("Sentidos móviles, tejidos y autocodificación supervisada fase 3 aplicados")
+    print("Roles, sentidos, tejidos, autocoder y construcción aprobable aplicados")
