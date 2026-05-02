@@ -4,6 +4,7 @@ import os
 from datetime import datetime, timezone
 
 import requests
+from micelio.evolution_engine import EvolutionEngine
 
 RUNNER_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_DIR = os.path.dirname(RUNNER_DIR)
@@ -188,6 +189,9 @@ def guardar_resultado(resultado):
 if __name__ == "__main__":
     genoma = cargar_genoma()
     resultado = ejecutar_tarea(genoma)
+    engine = EvolutionEngine(REPO_DIR)
+    resultado["evolucion"] = engine.evolve(genoma, resultado)
     guardar_resultado(resultado)
     print(f"Runner completado. Resultado guardado en {OUTPUT_FILE}")
     print(f"Modo usado: {resultado.get('modo')}")
+    print(f"Ciclo evolutivo: {resultado.get('evolucion', {}).get('cycle')}")
