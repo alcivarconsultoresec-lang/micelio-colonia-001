@@ -1,0 +1,54 @@
+{
+  "texto": "```json\n{\n  \"diagnostico\": \"La capacidad de análisis de texto está activa, pero se requiere un ajuste en la memoria para registrar los éxitos.\",\n  \"accion_recomendada\": \"Implementar un sistema de registro para documentar éxitos y fallos en el análisis de texto.\",\n  \"siguiente_mutacion_util\": \"Mejorar la capacidad de aprendizaje automático para optimizar el análisis de texto, incrementando así el fitness.\"\n}\n```",
+  "fitness": 0.95,
+  "modo": "github_models",
+  "modelo": "openai/gpt-4o-mini",
+  "usage": {
+    "completion_tokens": 96,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 7,
+      "engine_ttft_ms": 38,
+      "engine_ttlt_ms": 745,
+      "pre_inference_ms": 86,
+      "service_tbt_ms": 7,
+      "service_ttft_ms": 607,
+      "service_ttlt_ms": 1306,
+      "total_duration_ms": 1234,
+      "user_visible_ttft_ms": 522
+    },
+    "prompt_tokens": 156,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 252
+  },
+  "genoma_id": "g_3d16eb2f",
+  "objetivo": "general",
+  "timestamp_utc": "2026-05-02T15:57:52.626525+00:00",
+  "evolucion": {
+    "fitness_calculado": 0.85,
+    "children_created": 3,
+    "virtual_spores_total": 3,
+    "active_candidates": 3,
+    "survivors": 3,
+    "extinct_total": 0,
+    "best_score": 0.999,
+    "average_score": 0.999,
+    "selection_pressure": 0.0,
+    "cycle": 1,
+    "colony_decision": "seleccion_natural_controlada",
+    "self_awareness_report": "output/autoconciencia.json",
+    "selection_report": "output/selection_report.json",
+    "metrics_report": "output/colony_metrics.json",
+    "memory_state": "memory/colony_state.json",
+    "episodes": "memory/episodes.jsonl",
+    "dashboard_data": "docs/data"
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "colony_id": "micelio-colonia-001",
+  "created_at": "2026-05-02T15:57:52.626719+00:00",
+  "updated_at": "2026-05-02T15:57:52.627852+00:00",
+  "generation": 2,
+  "cycles": 1,
+  "virtual_spores": [
+    {
+      "spore_id": "g_75dc461b",
+      "parent_id": "g_3d16eb2f",
+      "generation": 2,
+      "status": "elite",
+      "created_at": "2026-05-02T15:57:52.627573+00:00",
+      "last_seen_at": "2026-05-02T15:57:52.627756+00:00",
+      "genome_hash": "257e2c68ec750c336869ecededbd049acba324e6eea1a13758ade604e258b2d9",
+      "genome": {
+        "capacidades": [
+          "generar_respuesta"
+        ],
+        "energia": 100,
+        "especialidad": "analisis_texto",
+        "estado": "latente",
+        "estrategia": {
+          "estrategia_cognitiva": "directo",
+          "exploracion": 0.363,
+          "tasa_mutacion": 0.124,
+          "temperatura": 0.716
+        },
+        "fitness": 0.8859,
+        "generacion": 2,
+        "hash_integridad": "f6f5e1dea4a9905841fb1c2cd6a07e1239193dd8d7bae6f80f494b84c9acc4dd",
+        "id": "g_75dc461b",
+        "linaje": "g_3d16eb2f",
+        "memoria": {
+          "exitos": 0,
+          "fallos": 0,
+          "mejor_fitness": 0.0,
+          "ultimas_acciones": []
+        },
+        "metadatos": {
+          "creacion": "2026-03-17T16:00:00Z",
+          "ultima_actualizacion": "2026-05-02T15:57:52.627520+00:00",
+          "version_protocolo": "7.0"
+        },
+        "objetivo": "general",
+        "sentidos": [
+          "lenguaje"
+        ]
+      },
+      "deployment": "not_deployed_virtual_only",
+      "selection_score": 0.999,
+      "selection_reason": "top_fitness_candidate_for_activation"
+    },
+    {
+      "spore_id": "g_e8f5ed29",
+      "parent_id": "g_3d16eb2f",
+      "generation": 2,
+      "status": "elite",
+      "created_at": "2026-05-02T15:57:52.627664+00:00",
+      "last_seen_at": "2026-05-02T15:57:52.627762+00:00",
+      "genome_hash": "7376350858cc530b07b47417fe1c09e3b4ab55c5e4c5c15940379739f6f411c3",
+      "genome": {
+        "capacidades": [
+          "generar_respuesta"
+        ],
+        "energia": 100,
+        "especialidad": "analisis_texto",
+        "estado": "latente",
+        "estrategia": {
+          "estrategia_cognitiva": "directo",
+          "exploracion": 0.285,
+          "tasa_mutacion": 0.085,
+          "temperatura": 0.647
+        },
+        "fitness": 0.9591,
+        "generacion": 2,
+        "hash_integridad": "f6f5e1dea4a9905841fb1c2cd6a07e1239193dd8d7bae6f80f494b84c9acc4dd",
+        "id": "g_e8f5ed29",
+        "linaje": "g_3d16eb2f",
+        "memoria": {
+          "exitos": 0,
+          "fallos": 0,
+          "mejor_fitness": 0.0,
+          "ultimas_acciones": []
+        },
+        "metadatos": {
+          "creacion": "2026-03-17T16:00:00Z",
+          "ultima_actualizacion": "2026-05-02T15:57:52.627638+00:00",
+          "version_protocolo": "7.0"
+        },
+        "objetivo": "general",
+        "sentidos": [
+          "lenguaje"
+        ]
+      },
+      "deployment": "not_deployed_virtual_only",
+      "selection_score": 0.999,
+      "selection_reason": "top_fitness_candidate_for_activation"
+    },
+    {
+      "spore_id": "g_4f89ce64",
+      "parent_id": "g_3d16eb2f",
+      "generation": 2,
+      "status": "elite",
+      "created_at": "2026-05-02T15:57:52.627742+00:00",
+      "last_seen_at": "2026-05-02T15:57:52.627766+00:00",
+      "genome_hash": "3ab415cdcf3485407a751ffdc000a828e979b8b7f2167bca70054ce54bf91f34",
+      "genome": {
+        "capacidades": [
+          "generar_respuesta"
+        ],
+        "energia": 100,
+        "especialidad": "analisis_texto",
+        "estado": "latente",
+        "estrategia": {
+          "estrategia_cognitiva": "directo",
+          "exploracion": 0.325,
+          "tasa_mutacion": 0.104,
+          "temperatura": 0.708
+        },
+        "fitness": 0.9595,
+        "generacion": 2,
+        "hash_integridad": "f6f5e1dea4a9905841fb1c2cd6a07e1239193dd8d7bae6f80f494b84c9acc4dd",
+        "id": "g_4f89ce64",
+        "linaje": "g_3d16eb2f",
+        "memoria": {
+          "exitos": 0,
+          "fallos": 0,
+          "mejor_fitness": 0.0,
+          "ultimas_acciones": []
+        },
+        "metadatos": {
+          "creacion": "2026-03-17T16:00:00Z",
+          "ultima_actualizacion": "2026-05-02T15:57:52.627721+00:00",
+          "version_protocolo": "7.0"
+        },
+        "objetivo": "general",
+        "sentidos": [
+          "lenguaje"
+        ]
+      },
+      "deployment": "not_deployed_virtual_only",
+      "selection_score": 0.999,
+      "selection_reason": "top_fitness_candidate_for_activation"
+    }
+  ],
+  "lineage": [],
+  "extinct_total": 0,
+  "selection": {
+    "mode": "elitist_safe_selection",
+    "active_candidates": [
+      {
+        "spore_id": "g_75dc461b",
+        "parent_id": "g_3d16eb2f",
+        "generation": 2,
+        "status": "elite",
+        "selection_score": 0.999,
+        "fitness": 0.8859,
+        "temperature": 0.716,
+        "exploration": 0.363,
+        "mutation_rate": 0.124,
+        "deployment": "not_deployed_virtual_only",
+        "reason": "top_fitness_candidate_for_activation"
+      },
+      {
+        "spore_id": "g_e8f5ed29",
+        "parent_id": "g_3d16eb2f",
+        "generation": 2,
+        "status": "elite",
+        "selection_score": 0.999,
+        "fitness": 0.9591,
+        "temperature": 0.647,
+        "exploration": 0.285,
+        "mutation_rate": 0.085,
+        "deployment": "not_deployed_virtual_only",
+        "reason": "top_fitness_candidate_for_activation"
+      },
+      {
+        "spore_id": "g_4f89ce64",
+        "parent_id": "g_3d16eb2f",
+        "generation": 2,
+        "status": "elite",
+        "selection_score": 0.999,
+        "fitness": 0.9595,
+        "temperature": 0.708,
+        "exploration": 0.325,
+        "mutation_rate": 0.104,
+        "deployment": "not_deployed_virtual_only",
+        "reason": "top_fitness_candidate_for_activation"
+      }
+    ],
+    "survivors": [
+      {
+        "spore_id": "g_75dc461b",
+        "parent_id": "g_3d16eb2f",
+        "generation": 2,
+        "status": "elite",
+        "selection_score": 0.999,
+        "fitness": 0.8859,
+        "temperature": 0.716,
+        "exploration": 0.363,
+        "mutation_rate": 0.124,
+        "deployment": "not_deployed_virtual_only",
+        "reason": "top_fitness_candidate_for_activation"
+      },
+      {
+        "spore_id": "g_e8f5ed29",
+        "parent_id": "g_3d16eb2f",
+        "generation": 2,
+        "status": "elite",
+        "selection_score": 0.999,
+        "fitness": 0.9591,
+        "temperature": 0.647,
+        "exploration": 0.285,
+        "mutation_rate": 0.085,
+        "deployment": "not_deployed_virtual_only",
+        "reason": "top_fitness_candidate_for_activation"
+      },
+      {
+        "spore_id": "g_4f89ce64",
+        "parent_id": "g_3d16eb2f",
+        "generation": 2,
+        "status": "elite",
+        "selection_score": 0.999,
+        "fitness": 0.9595,
+        "temperature": 0.708,
+        "exploration": 0.325,
+        "mutation_rate": 0.104,
+        "deployment": "not_deployed_virtual_only",
+        "reason": "top_fitness_candidate_for_activation"
+      }
+    ],
+    "extinct_last_cycle": [],
+    "extinct_last_cycle_count": 0,
+    "best_score": 0.999,
+    "average_score": 0.999,
+    "selection_pressure": 0.0
+  },
+  "safety_limits": {
+    "max_virtual_spores": 64,
+    "max_children_per_cycle": 3,
+    "max_survivors": 24,
+    "max_active_candidates": 5,
+    "max_temperature": 1.2,
+    "min_temperature": 0.1,
+    "max_exploration": 0.95,
+    "min_exploration": 0.05,
+    "replication_mode": "virtual_only",
+    "selection_mode": "elitist_safe_selection",
+    "allowed_colonies": [
+      "github_actions",
+      "local",
+      "docker",
+      "google_cloud"
+    ]
+  },
+  "last_decision": "seleccion_natural_controlada",
+  "last_fitness": 0.85
+}

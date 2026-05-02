@@ -1,0 +1,79 @@
+{
+  "timestamp_utc": "2026-05-02T15:57:52.628437+00:00",
+  "identidad": {
+    "colony_id": "micelio-colonia-001",
+    "genoma_id": "g_3d16eb2f",
+    "linaje": "root",
+    "generacion_actual": 1,
+    "generacion_maxima_colonia": 2
+  },
+  "entorno": {
+    "runtime": "github_actions",
+    "python_version": "3.10.20",
+    "system": "Linux",
+    "machine": "x86_64",
+    "cwd": "/home/runner/work/micelio-colonia-001/micelio-colonia-001",
+    "repo_dir": "/home/runner/work/micelio-colonia-001/micelio-colonia-001",
+    "has_github_token": true,
+    "has_github_models_endpoint": false,
+    "micelio_model": "openai/gpt-4o-mini",
+    "virtual_spore_limit": 64,
+    "replication_mode": "virtual_only",
+    "selection_mode": "elitist_safe_selection",
+    "container": "not_detected",
+    "google_cloud_project_detected": false
+  },
+  "inventario_arquitectura": {
+    "python_files": [
+      "runner/espora_runner.py",
+      "runner/micelio/__init__.py",
+      "runner/micelio/evolution_engine.py"
+    ],
+    "json_files": [
+      "data/genoma.json",
+      "docs/data/episodes.json",
+      "docs/data/metrics.json",
+      "docs/data/selection.json"
+    ],
+    "workflow_files": [
+      ".github/workflows/runner.yml"
+    ],
+    "dashboard_files": [
+      "docs/index.html"
+    ],
+    "total_files_sampled": 16
+  },
+  "fitness": 0.85,
+  "estado_colonia": {
+    "ciclos": 1,
+    "esporas_virtuales": 3,
+    "replicacion": "virtual_only",
+    "seleccion": "elitist_safe_selection",
+    "hijas_creadas_en_ciclo": 3,
+    "candidatas_activas": 3,
+    "supervivientes": 3,
+    "extintas_total": 0
+  },
+  "seguridad": {
+    "limites": {
+      "max_virtual_spores": 64,
+      "max_children_per_cycle": 3,
+      "max_survivors": 24,
+      "max_active_candidates": 5,
+      "max_temperature": 1.2,
+      "min_temperature": 0.1,
+      "max_exploration": 0.95,
+      "min_exploration": 0.05,
+      "replication_mode": "virtual_only",
+      "selection_mode": "elitist_safe_selection",
+      "allowed_colonies": [
+        "github_actions",
+        "local",
+        "docker",
+        "google_cloud"
+      ]
+    },
+    "nota": "La replicación es virtual, seleccionada y controlada. No despliega procesos externos ni coloniza infraestructura sin autorización explícita."
+  },
+  "siguiente_accion_recomendada": "Activar pruebas comparativas sobre las candidatas elite antes de permitir cualquier despliegue en Docker o nube autorizada."
+}
