@@ -6,6 +6,7 @@ from datetime import datetime, timezone
 import requests
 from micelio.autocoder import AutoCoder
 from micelio.evolution_engine import EvolutionEngine
+from micelio.local_ai_router import LocalAIRouter
 from micelio.mobile_senses import MobileSenses
 from micelio.role_specializer import RoleSpecializer
 from micelio.tissue_builder import TissueBuilder
@@ -62,7 +63,7 @@ def construir_prompt(genoma):
 
 
 def generar_respuesta_local(prompt, genoma):
-    """Fallback determinístico para que GitHub Actions funcione aunque el proveedor IA falle."""
+    """Fallback determinístico para que el sistema funcione aunque ningún proveedor IA responda."""
     semilla = json.dumps(genoma, sort_keys=True, ensure_ascii=False)
     hash_ejecucion = hashlib.sha256(f"{prompt}|{semilla}".encode("utf-8")).hexdigest()[:16]
     objetivo = genoma.get("objetivo", "general")
@@ -153,6 +154,11 @@ def generar_respuesta_github_models(prompt, genoma):
 def ejecutar_tarea(genoma):
     prompt = construir_prompt(genoma)
     errores = []
+
+    try:
+        return enriquecer_resultado(LocalAIRouter(REPO_DIR).generate(prompt, genoma), genoma, errores)
+    except Exception as error:
+        errores.append({"provider": "local_ai_router", "error": str(error)})
 
     if GENERATE_URL:
         try:
