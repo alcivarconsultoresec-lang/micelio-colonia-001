@@ -1,71 +1,71 @@
 {
-  "timestamp_utc": "2026-05-02T20:57:31.579130+00:00",
+  "timestamp_utc": "2026-05-02T21:39:40.278601+00:00",
   "phase": "fase_3_tejidos_y_organos_virtuales",
   "tissues": [
     {
       "name": "tejido_cognitivo",
       "purpose": "razonar sobre memoria, arquitectura y construcción de nuevos módulos",
-      "spores_count": 16,
+      "spores_count": 19,
       "roles": {
-        "analista": 16
+        "analista": 19
       },
-      "best_score": 0.8565,
-      "average_score": 0.8088,
+      "best_score": 0.8645,
+      "average_score": 0.8077,
       "members": [
+        {
+          "spore_id": "g_030aa337",
+          "role": "analista",
+          "status": "elite",
+          "score": 0.8645,
+          "generation": 4
+        },
         {
           "spore_id": "g_5f871e2e",
           "role": "analista",
           "status": "elite",
-          "score": 0.8565,
+          "score": 0.8525,
           "generation": 5
         },
         {
           "spore_id": "g_acdcaaf6",
           "role": "analista",
           "status": "elite",
-          "score": 0.8466,
+          "score": 0.8426,
           "generation": 4
         },
         {
           "spore_id": "g_5df53c00",
           "role": "analista",
           "status": "elite",
-          "score": 0.842,
+          "score": 0.838,
           "generation": 3
         },
         {
           "spore_id": "g_3ed2dce2",
           "role": "analista",
           "status": "elite",
-          "score": 0.833,
+          "score": 0.829,
           "generation": 3
         },
         {
           "spore_id": "g_82cb0911",
           "role": "analista",
-          "status": "elite",
-          "score": 0.8223,
+          "status": "survivor",
+          "score": 0.8183,
           "generation": 4
         },
         {
           "spore_id": "g_006de730",
           "role": "analista",
           "status": "survivor",
-          "score": 0.8222,
+          "score": 0.8182,
           "generation": 4
         },
         {
           "spore_id": "g_2641cda2",
           "role": "analista",
           "status": "survivor",
-          "score": 0.8176,
-          "generation": 5
-        },
-        {
-          "spore_id": "g_53afcab7",
-          "role": "analista",
-          "status": "survivor",
-          "score": 0.8143,
+          "score": 0.8136,
           "generation": 5
         }
       ]
@@ -77,42 +77,42 @@
       "roles": {
         "estabilizadora": 5
       },
-      "best_score": 0.8225,
-      "average_score": 0.7979,
+      "best_score": 0.8185,
+      "average_score": 0.7939,
       "members": [
         {
           "spore_id": "g_29cde676",
           "role": "estabilizadora",
           "status": "survivor",
-          "score": 0.8225,
+          "score": 0.8185,
           "generation": 3
         },
         {
           "spore_id": "g_54f446b9",
           "role": "estabilizadora",
           "status": "survivor",
-          "score": 0.8096,
+          "score": 0.8056,
           "generation": 3
         },
         {
           "spore_id": "g_7c52bbe7",
           "role": "estabilizadora",
           "status": "survivor",
-          "score": 0.8011,
+          "score": 0.7971,
           "generation": 4
         },
         {
           "spore_id": "g_cde30438",
           "role": "estabilizadora",
           "status": "survivor",
-          "score": 0.7977,
+          "score": 0.7937,
           "generation": 3
         },
         {
           "spore_id": "g_efddc670",
           "role": "estabilizadora",
           "status": "survivor",
-          "score": 0.7586,
+          "score": 0.7546,
           "generation": 4
         }
       ]
@@ -133,8 +133,8 @@
       "tissues": [
         "tejido_cognitivo"
       ],
-      "spores_count": 16,
-      "operational_score": 0.8088,
+      "spores_count": 19,
+      "operational_score": 0.8077,
       "status": "virtual_ready"
     },
     {
@@ -144,7 +144,7 @@
         "tejido_estabilidad"
       ],
       "spores_count": 5,
-      "operational_score": 0.7979,
+      "operational_score": 0.7939,
       "status": "virtual_ready"
     }
   ],
