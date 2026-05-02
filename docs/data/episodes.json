@@ -102,5 +102,27 @@
     "selection_pressure": 0.0,
     "max_generation": 4,
     "decision": "seleccion_natural_controlada_v2"
+  },
+  {
+    "timestamp_utc": "2026-05-02T20:07:44.497199+00:00",
+    "cycle": 6,
+    "genoma_id": "g_3d16eb2f",
+    "mode": "remote_ai_github_models",
+    "fitness": 0.6,
+    "children_created": 3,
+    "parent_sources": [
+      "g_3ed2dce2",
+      "g_3ed2dce2",
+      "g_3ed2dce2"
+    ],
+    "virtual_spores_total": 18,
+    "active_candidates": 5,
+    "survivors": 18,
+    "extinct_last_cycle_count": 0,
+    "best_score": 0.8386,
+    "average_score": 0.7907,
+    "selection_pressure": 0.0,
+    "max_generation": 4,
+    "decision": "seleccion_natural_controlada_v2"
   }
 ]

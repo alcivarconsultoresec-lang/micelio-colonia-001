@@ -1,7 +1,75 @@
 {
-  "timestamp_utc": "2026-05-02T19:36:13.278236+00:00",
+  "timestamp_utc": "2026-05-02T20:07:44.508694+00:00",
   "phase": "fase_3_tejidos_y_organos_virtuales",
   "tissues": [
+    {
+      "name": "tejido_cognitivo",
+      "purpose": "razonar sobre memoria, arquitectura y construcción de nuevos módulos",
+      "spores_count": 13,
+      "roles": {
+        "analista": 13
+      },
+      "best_score": 0.8506,
+      "average_score": 0.808,
+      "members": [
+        {
+          "spore_id": "g_acdcaaf6",
+          "role": "analista",
+          "status": "elite",
+          "score": 0.8506,
+          "generation": 4
+        },
+        {
+          "spore_id": "g_5df53c00",
+          "role": "analista",
+          "status": "elite",
+          "score": 0.846,
+          "generation": 3
+        },
+        {
+          "spore_id": "g_3ed2dce2",
+          "role": "analista",
+          "status": "elite",
+          "score": 0.837,
+          "generation": 3
+        },
+        {
+          "spore_id": "g_82cb0911",
+          "role": "analista",
+          "status": "elite",
+          "score": 0.8263,
+          "generation": 4
+        },
+        {
+          "spore_id": "g_006de730",
+          "role": "analista",
+          "status": "elite",
+          "score": 0.8262,
+          "generation": 4
+        },
+        {
+          "spore_id": "g_afd13f3b",
+          "role": "analista",
+          "status": "survivor",
+          "score": 0.8117,
+          "generation": 3
+        },
+        {
+          "spore_id": "g_2b3880ca",
+          "role": "analista",
+          "status": "survivor",
+          "score": 0.8117,
+          "generation": 4
+        },
+        {
+          "spore_id": "g_d35fe849",
+          "role": "analista",
+          "status": "survivor",
+          "score": 0.8115,
+          "generation": 3
+        }
+      ]
+    },
     {
       "name": "tejido_estabilidad",
       "purpose": "conservar linajes robustos y reducir deriva improductiva",
@@ -9,111 +77,43 @@
       "roles": {
         "estabilizadora": 5
       },
-      "best_score": 0.8305,
-      "average_score": 0.8059,
+      "best_score": 0.8265,
+      "average_score": 0.8019,
       "members": [
         {
           "spore_id": "g_29cde676",
           "role": "estabilizadora",
-          "status": "elite",
-          "score": 0.8305,
+          "status": "survivor",
+          "score": 0.8265,
           "generation": 3
         },
         {
           "spore_id": "g_54f446b9",
           "role": "estabilizadora",
           "status": "survivor",
-          "score": 0.8176,
+          "score": 0.8136,
           "generation": 3
         },
         {
           "spore_id": "g_7c52bbe7",
           "role": "estabilizadora",
           "status": "survivor",
-          "score": 0.8091,
+          "score": 0.8051,
           "generation": 4
         },
         {
           "spore_id": "g_cde30438",
           "role": "estabilizadora",
           "status": "survivor",
-          "score": 0.8057,
+          "score": 0.8017,
           "generation": 3
         },
         {
           "spore_id": "g_efddc670",
           "role": "estabilizadora",
           "status": "survivor",
-          "score": 0.7666,
+          "score": 0.7626,
           "generation": 4
-        }
-      ]
-    },
-    {
-      "name": "tejido_cognitivo",
-      "purpose": "razonar sobre memoria, arquitectura y construcción de nuevos módulos",
-      "spores_count": 10,
-      "roles": {
-        "analista": 10
-      },
-      "best_score": 0.85,
-      "average_score": 0.8041,
-      "members": [
-        {
-          "spore_id": "g_5df53c00",
-          "role": "analista",
-          "status": "elite",
-          "score": 0.85,
-          "generation": 3
-        },
-        {
-          "spore_id": "g_3ed2dce2",
-          "role": "analista",
-          "status": "elite",
-          "score": 0.841,
-          "generation": 3
-        },
-        {
-          "spore_id": "g_afd13f3b",
-          "role": "analista",
-          "status": "elite",
-          "score": 0.8157,
-          "generation": 3
-        },
-        {
-          "spore_id": "g_2b3880ca",
-          "role": "analista",
-          "status": "elite",
-          "score": 0.8157,
-          "generation": 4
-        },
-        {
-          "spore_id": "g_d35fe849",
-          "role": "analista",
-          "status": "survivor",
-          "score": 0.8155,
-          "generation": 3
-        },
-        {
-          "spore_id": "g_4f89ce64",
-          "role": "analista",
-          "status": "survivor",
-          "score": 0.8016,
-          "generation": 2
-        },
-        {
-          "spore_id": "g_75dc461b",
-          "role": "analista",
-          "status": "survivor",
-          "score": 0.7842,
-          "generation": 2
-        },
-        {
-          "spore_id": "g_46da1024",
-          "role": "analista",
-          "status": "survivor",
-          "score": 0.7804,
-          "generation": 3
         }
       ]
     }
@@ -133,8 +133,8 @@
       "tissues": [
         "tejido_cognitivo"
       ],
-      "spores_count": 10,
-      "operational_score": 0.8041,
+      "spores_count": 13,
+      "operational_score": 0.808,
       "status": "virtual_ready"
     },
     {
@@ -144,7 +144,7 @@
         "tejido_estabilidad"
       ],
       "spores_count": 5,
-      "operational_score": 0.8059,
+      "operational_score": 0.8019,
       "status": "virtual_ready"
     }
   ],
