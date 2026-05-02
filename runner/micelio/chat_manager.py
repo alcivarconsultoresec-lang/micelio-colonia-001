@@ -4,11 +4,10 @@ from pathlib import Path
 
 
 class ChatManager:
-    """Local conversational interface for MICELIO.
+    """Chat local contextual para MICELIO.
 
-    The chat answers from current local state first. If a local AI provider is
-    available through LocalAIRouter, it can use it; otherwise it falls back to a
-    deterministic operational response.
+    Si no hay LLM local conectado, responde con diagnóstico estructurado usando
+    el estado real del sistema, no una plantilla genérica fija.
     """
 
     def __init__(self, repo_dir):
@@ -53,50 +52,101 @@ class ChatManager:
         return {
             "metrics": self.read_json(self.output_dir / "colony_metrics.json", {}),
             "construction": self.read_json(self.output_dir / "construction_options.json", {}),
+            "registry": self.read_json(self.memory_dir / "tool_registry.json", {}),
             "mission": self.read_json(self.memory_dir / "evolution_mission.json", {}),
             "senses": self.read_json(self.output_dir / "senses_report.json", {}),
             "local_ai": self.read_json(self.output_dir / "local_ai_report.json", {}),
             "health": self.read_json(self.output_dir / "health_report.json", {}),
+            "chat_personality": self.read_json(self.memory_dir / "chat_personality.json", {}),
         }
 
-    def fallback_answer(self, message, ctx):
-        metrics = ctx.get("metrics", {}) if isinstance(ctx, dict) else {}
+    def summarize_construction(self, ctx):
         construction = ctx.get("construction", {}) if isinstance(ctx, dict) else {}
         options = construction.get("options", []) if isinstance(construction, dict) else []
+        registry = ctx.get("registry", {}) if isinstance(ctx, dict) else {}
+        tools = registry.get("tools", {}) if isinstance(registry, dict) else {}
         pending = [x for x in options if x.get("status") == "pending"]
         approved = [x for x in options if x.get("status") == "approved"]
-        applied = [x for x in options if x.get("status") == "applied"]
-        lower = message.lower()
+        verified = [x for x in options if x.get("status") == "verified"]
+        unverified = [x for x in options if x.get("status") == "applied_unverified"]
+        return pending, approved, verified, unverified, tools
 
-        if "constru" in lower or "herramient" in lower or "aprobar" in lower:
-            if pending:
-                first = pending[0]
-                return (
-                    f"Tengo {len(pending)} construcción(es) pendientes. La primera es: {first.get('title')}. "
-                    f"Sirve para: {first.get('reasoning')}. Puedes aprobarla desde la sección Construcción aprobable."
-                )
-            if approved:
-                first = approved[0]
-                return f"Hay {len(approved)} construcción(es) aprobadas esperando aplicación. La primera es: {first.get('title')}. Toca Aplicar construcción."
-            return f"No tengo construcciones pendientes. Ya hay {len(applied)} aplicadas. Presiona Generar sugerencias para producir nuevas opciones."
+    def structured_answer(self, message, ctx):
+        metrics = ctx.get("metrics", {}) if isinstance(ctx, dict) else {}
+        local_ai = ctx.get("local_ai", {}) if isinstance(ctx, dict) else {}
+        senses = ctx.get("senses", {}) if isinstance(ctx, dict) else {}
+        pending, approved, verified, unverified, tools = self.summarize_construction(ctx)
+        lower = message.lower().strip()
 
-        if "estado" in lower or "ciclo" in lower or "evol" in lower:
+        if lower in {"hola", "buenas", "hello", "hey"}:
             return (
-                f"Estado actual: ciclo {metrics.get('cycle', '—')}, generación {metrics.get('generation', '—')}, "
-                f"best score {metrics.get('best_score', '—')}, modo {metrics.get('mode', '—')}. "
-                "La colonia mantiene selección, roles, tejidos y construcción aprobable."
+                f"Hola. Estoy activo en ciclo {metrics.get('cycle', '—')} y generación {metrics.get('generation', '—')}.\n"
+                f"Herramientas verificadas: {len(tools)}. Pendientes: {len(pending)}. Aprobadas sin aplicar: {len(approved)}.\n"
+                f"IA actual: {local_ai.get('selected_provider') or 'sin proveedor local'}; modo probable: {metrics.get('mode', '—')}.\n"
+                "Pregunta: 'qué construir ahora', 'diagnóstico', 'IA local' o 'evolución tecnológica'."
             )
 
-        if "ia" in lower or "ollama" in lower or "modelo" in lower:
-            local_ai = ctx.get("local_ai", {})
+        if any(word in lower for word in ["diagn", "problema", "fall", "plantilla", "genérico"]):
+            hypothesis = []
+            if not local_ai.get("success"):
+                hypothesis.append("el chat está usando respuesta contextual local porque no hay IA local activa")
+            if not tools:
+                hypothesis.append("aún no hay registro consolidado de herramientas verificadas")
+            if unverified:
+                hypothesis.append(f"hay {len(unverified)} construcción(es) aplicadas pero no verificadas")
+            if not hypothesis:
+                hypothesis.append("el sistema está respondiendo con estado local; falta conectar un modelo para razonamiento abierto")
             return (
-                f"Router IA local: éxito={local_ai.get('success')}, proveedor={local_ai.get('selected_provider')}, "
-                f"modelo={local_ai.get('selected_model')}. Si sigue en fallback, ejecuta scripts/termux_ai_probe.sh."
+                "Diagnóstico:\n- " + "\n- ".join(hypothesis) + "\n\n"
+                "Acción recomendada:\n"
+                "1. Ejecuta una construcción de 'Mejorar razonamiento local del chat'.\n"
+                "2. Ejecuta scripts/termux_ai_probe.sh para saber si existe IA local.\n"
+                "3. Revisa el registro de herramientas verificadas antes de generar más sugerencias."
+            )
+
+        if any(word in lower for word in ["constru", "herramient", "aprobar", "suger"]):
+            if approved:
+                item = approved[0]
+                return f"Hay una construcción aprobada esperando aplicación: {item.get('title')}. Aplícala y luego verifica el estado."
+            if pending:
+                ranked = sorted(pending, key=lambda x: (x.get("wave", 9), 0 if x.get("priority") == "alta" else 1))
+                item = ranked[0]
+                return (
+                    f"Recomiendo construir ahora: {item.get('title')}.\n"
+                    f"Motivo: {item.get('reasoning')}\n"
+                    f"Archivos esperados: {', '.join(item.get('expected_files', []))}.\n"
+                    "Aprobación: usa el botón Aprobar y luego Aplicar construcción."
+                )
+            return "No veo construcciones pendientes. Toca Generar sugerencias; el gestor ya evita repetir herramientas verificadas."
+
+        if any(word in lower for word in ["evol", "estado", "ciclo", "score"]):
+            return (
+                f"Estado evolutivo:\n"
+                f"- Ciclo: {metrics.get('cycle', '—')}\n"
+                f"- Generación: {metrics.get('generation', '—')}\n"
+                f"- Best score: {metrics.get('best_score', '—')}\n"
+                f"- Average score: {metrics.get('average_score', '—')}\n"
+                f"- Presión: {metrics.get('selection_pressure', '—')}\n"
+                f"- Herramientas verificadas: {len(tools)}\n"
+                "La evolución genética existe; la evolución tecnológica depende de construcciones verificadas en el registro."
+            )
+
+        if any(word in lower for word in ["ia", "ollama", "modelo", "inteligencia"]):
+            ollama = (senses.get("local_ai", {}) or {}).get("ollama", {}) if isinstance(senses, dict) else {}
+            return (
+                f"IA local:\n"
+                f"- Router success: {local_ai.get('success')}\n"
+                f"- Proveedor: {local_ai.get('selected_provider')}\n"
+                f"- Modelo: {local_ai.get('selected_model')}\n"
+                f"- Ollama binario: {ollama.get('binary_available')}\n"
+                f"- Modelos detectados: {ollama.get('models', [])}\n"
+                "Si todo sale vacío, el chat no está usando LLM: está usando diagnóstico local."
             )
 
         return (
-            "Estoy operativo como centro local de MICELIO. Puedo explicarte estado, construcciones pendientes, IA local, linajes y próximos pasos. "
-            "Pregunta por 'construcciones', 'estado evolutivo' o 'IA local'."
+            f"Entendido. Lo leo desde mi estado local: ciclo {metrics.get('cycle', '—')}, generación {metrics.get('generation', '—')}, "
+            f"herramientas verificadas {len(tools)}, pendientes {len(pending)}. "
+            "Puedo responder mejor si me preguntas por diagnóstico, construcción, IA local o evolución tecnológica."
         )
 
     def ask(self, message):
@@ -105,30 +155,25 @@ class ChatManager:
             return {"ok": False, "error": "empty_message"}
         history = self.load_history()
         ctx = self.context()
-        user_item = {"role": "user", "content": message, "timestamp_utc": self.now()}
-        history["messages"].append(user_item)
-
-        answer = None
-        provider = "local_state_fallback"
+        history["messages"].append({"role": "user", "content": message, "timestamp_utc": self.now()})
+        provider = "local_state_reasoner"
         try:
             from micelio.local_ai_router import LocalAIRouter
             prompt = (
-                "Eres MICELIO, un organismo local controlado por su administrador. "
-                "Responde en español, corto y operativo. No inventes capacidades.\n\n"
-                f"Contexto JSON: {json.dumps(ctx, ensure_ascii=False)[:6000]}\n\n"
-                f"Mensaje del administrador: {message}"
+                "Eres MICELIO, sistema local de administración. Responde en español con diagnóstico, hipótesis y acción.\n"
+                f"Contexto: {json.dumps(ctx, ensure_ascii=False)[:8000]}\n"
+                f"Mensaje: {message}"
             )
             result = LocalAIRouter(self.repo_dir).generate(prompt, {"estrategia": {"temperatura": 0.35}})
-            answer = result.get("texto") or self.fallback_answer(message, ctx)
+            answer = result.get("texto") or self.structured_answer(message, ctx)
             provider = result.get("modo", "local_ai")
         except Exception:
-            answer = self.fallback_answer(message, ctx)
-
-        assistant_item = {"role": "micelio", "content": answer, "timestamp_utc": self.now(), "provider": provider}
-        history["messages"].append(assistant_item)
+            answer = self.structured_answer(message, ctx)
+        item = {"role": "micelio", "content": answer, "timestamp_utc": self.now(), "provider": provider}
+        history["messages"].append(item)
         history["messages"] = history["messages"][-80:]
         self.save_history(history)
-        return {"ok": True, "answer": assistant_item, "history": history, "context": ctx}
+        return {"ok": True, "answer": item, "history": history, "context": ctx}
 
     def clear(self):
         history = {"messages": [], "updated_at": self.now(), "cleared_at": self.now()}
