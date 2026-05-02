@@ -50,6 +50,8 @@ jobs:
           MICELIO_MAX_TOKENS: '500'
           MICELIO_MAX_VIRTUAL_SPORES: '64'
           MICELIO_MAX_CHILDREN_PER_CYCLE: '3'
+          MICELIO_MAX_SURVIVORS: '24'
+          MICELIO_MAX_ACTIVE_CANDIDATES: '5'
           INPUT_CYCLES: ${{ github.event.inputs.cycles || '1' }}
           INPUT_SLEEP_SECONDS: ${{ github.event.inputs.sleep_seconds || '30' }}
         run: |
@@ -79,7 +81,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add output/resultados.json output/autoconciencia.json memory/colony_state.json memory/episodes.jsonl
+          git add output/resultados.json output/autoconciencia.json output/selection_report.json output/colony_metrics.json memory/colony_state.json memory/episodes.jsonl docs/index.html docs/data/*.json
 
           if git diff --cached --quiet; then
             echo "No changes"
