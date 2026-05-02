@@ -11,8 +11,15 @@ export MICELIO_MAX_ACTIVE_CANDIDATES="${MICELIO_MAX_ACTIVE_CANDIDATES:-5}"
 export MICELIO_MODEL="${MICELIO_MODEL:-openai/gpt-4o-mini}"
 export MICELIO_MAX_TOKENS="${MICELIO_MAX_TOKENS:-500}"
 export MICELIO_AUTO_PUSH="${MICELIO_AUTO_PUSH:-false}"
+export MICELIO_BATCH_MODE="${MICELIO_BATCH_MODE:-false}"
 
 python runner/espora_runner.py
+
+if [ "$MICELIO_BATCH_MODE" = "true" ]; then
+  echo "[MICELIO] Batch mode activo: commit diferido hasta terminar el loop."
+  echo "[MICELIO] Ejecución terminada."
+  exit 0
+fi
 
 # Identidad local para commits generados desde Termux. No requiere credenciales de GitHub.
 git config user.name "micelio-termux" >/dev/null
