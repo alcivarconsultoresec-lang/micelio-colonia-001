@@ -1,30 +1,52 @@
-﻿name: Ejecutar espora
+name: Ejecutar espora
 
 on:
   schedule:
-    - cron: '*/30 * * * *'   # cada 30 minutos
-  workflow_dispatch:         # también manual
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: micelio-espora-main
+  cancel-in-progress: false
 
 jobs:
   run-espora:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v6
         with:
           python-version: '3.10'
+          cache: 'pip'
+
       - name: Install dependencies
         run: |
+          python -m pip install --upgrade pip
           pip install requests
+
       - name: Run espora
         run: |
           python runner/espora_runner.py
+
       - name: Commit results
         run: |
-          git config --global user.name "micelio-bot"
-          git config --global user.email "bot@micelio.local"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add output/resultados.json
-          git commit -m "Resultado de ejecución" || echo "No changes"
-          git push
+
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Resultado de ejecución"
+            git push
+          fi
