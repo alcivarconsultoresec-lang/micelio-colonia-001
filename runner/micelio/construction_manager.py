@@ -24,6 +24,8 @@ class ConstructionManager:
             "mission_manifest": self.apply_mission_manifest,
             "termux_ai_probe": self.apply_termux_ai_probe,
             "organism_dashboard_upgrade": self.apply_organism_dashboard_upgrade,
+            "chat_window": self.apply_chat_window,
+            "gitignore_cleanup": self.apply_gitignore_cleanup,
         }
         for path in [self.memory_dir, self.output_dir, self.docs_data_dir]:
             path.mkdir(parents=True, exist_ok=True)
@@ -70,13 +72,14 @@ class ConstructionManager:
             "status": "pending",
             "created_at": self.now(),
             "approval_mode": "manual_admin_dashboard",
+            "question": "¿Quieres que construya esto?",
             "reasoning": reason,
             "expected_files": expected_files,
             "risk_level": "controlled_local_write",
             "apply_method": "allowlisted_patch",
         }
 
-    def generate_options(self):
+    def generate_options(self, force=False):
         queue = self.load_queue()
         metrics = self.read_json(self.output_dir / "colony_metrics.json", {})
         tissues = self.read_json(self.output_dir / "tissues_report.json", {})
@@ -84,49 +87,23 @@ class ConstructionManager:
         autocoder = self.read_json(self.output_dir / "autocoder_plan.json", {})
 
         candidates = [
-            self.build_option(
-                "build_lineage_view",
-                "Construir vista de linaje dominante",
-                "lineage_view",
-                "alta",
-                "La colonia ya tiene generaciones activas. Necesita visualizar padres, ramas, scores y familias dominantes para decidir qué linajes activar.",
-                ["docs/lineage.html"],
-            ),
-            self.build_option(
-                "build_health_monitor",
-                "Crear órgano de salud y homeostasis",
-                "health_monitor",
-                "alta",
-                "El sistema genera ciclos, reportes y commits. Necesita evaluar memoria, disco, presión evolutiva y señales de saturación.",
-                ["runner/micelio/health_monitor.py", "output/health_report.json", "docs/data/health.json"],
-            ),
-            self.build_option(
-                "build_mission_manifest",
-                "Definir propósito evolutivo operativo",
-                "mission_manifest",
-                "alta",
-                "El organismo necesita propósito explícito además de mecanismos: misión, objetivos de evolución, límites, criterios de éxito y próximos órganos.",
-                ["memory/evolution_mission.json", "docs/data/mission.json"],
-            ),
-            self.build_option(
-                "build_termux_ai_probe",
-                "Construir herramienta de detección IA local",
-                "termux_ai_probe",
-                "media",
-                "Los reportes indican modo local_fallback. Se necesita una herramienta rápida para verificar Ollama, puertos locales, modelos y recomendaciones manuales.",
-                ["scripts/termux_ai_probe.sh"],
-            ),
-            self.build_option(
-                "build_organism_dashboard_upgrade",
-                "Mejorar mapa del organismo con decisiones aprobables",
-                "organism_dashboard_upgrade",
-                "media",
-                "El mapa debe mostrar no solo órganos, sino también decisiones de construcción y próximos pasos aprobables por el administrador.",
-                ["docs/data/organism_upgrade.json"],
-            ),
+            self.build_option("build_lineage_view", "Construir vista de linaje dominante", "lineage_view", "alta", "La colonia ya tiene generaciones activas. Necesita visualizar padres, ramas, scores y familias dominantes para decidir qué linajes activar.", ["docs/lineage.html"]),
+            self.build_option("build_health_monitor", "Crear órgano de salud y homeostasis", "health_monitor", "alta", "El sistema genera ciclos, reportes y commits. Necesita evaluar memoria, disco, presión evolutiva y señales de saturación.", ["runner/micelio/health_monitor.py", "output/health_report.json", "docs/data/health.json"]),
+            self.build_option("build_mission_manifest", "Definir propósito evolutivo operativo", "mission_manifest", "alta", "El organismo necesita propósito explícito además de mecanismos: misión, objetivos de evolución, límites, criterios de éxito y próximos órganos.", ["memory/evolution_mission.json", "docs/data/mission.json"]),
+            self.build_option("build_termux_ai_probe", "Construir herramienta de detección IA local", "termux_ai_probe", "media", "Los reportes indican modo local_fallback. Se necesita una herramienta rápida para verificar Ollama, puertos locales, modelos y recomendaciones manuales.", ["scripts/termux_ai_probe.sh"]),
+            self.build_option("build_organism_dashboard_upgrade", "Mejorar mapa del organismo con decisiones aprobables", "organism_dashboard_upgrade", "media", "El mapa debe mostrar no solo órganos, sino también decisiones de construcción y próximos pasos aprobables por el administrador.", ["docs/data/organism_upgrade.json"]),
+            self.build_option("build_chat_window", "Agregar ventana de chat directa con MICELIO", "chat_window", "alta", "El administrador necesita conversar directamente con el organismo para preguntarle estado, próximas construcciones, IA local y decisiones evolutivas.", ["runner/micelio/chat_manager.py", "memory/chat_history.json", "docs/data/chat.json"]),
+            self.build_option("build_gitignore_cleanup", "Limpiar commits de archivos generados", "gitignore_cleanup", "media", "Los commits empezaron a incluir __pycache__ y archivos temporales. Se necesita .gitignore para evitar ruido y mantener el repositorio sano.", [".gitignore"]),
         ]
 
         added = []
+        if force:
+            active_ids = {item["id"] for item in candidates}
+            for item in queue.get("options", []):
+                if item.get("id") in active_ids and item.get("status") in {"rejected"}:
+                    item["status"] = "pending"
+                    item["reopened_at"] = self.now()
+                    added.append(item.get("id"))
         for item in candidates:
             if not self.option_exists(queue, item["id"]):
                 queue["options"].append(item)
@@ -144,6 +121,24 @@ class ConstructionManager:
             "autocoder_tasks": len(autocoder.get("tasks", [])) if isinstance(autocoder, dict) else 0,
             "added_options": added,
         }
+        queue["last_generate_message"] = "Nuevas sugerencias agregadas." if added else "No hay sugerencias nuevas; las existentes ya están pendientes, aprobadas o aplicadas. Usa Limpiar cola para archivar aplicadas."
+        return self.save_queue(queue)
+
+    def clear_queue(self, mode="archive_applied"):
+        queue = self.load_queue()
+        history = queue.get("history", [])
+        old_options = queue.get("options", [])
+        if mode == "all":
+            archived = old_options
+            remaining = []
+        else:
+            archived = [item for item in old_options if item.get("status") in {"applied", "rejected"}]
+            remaining = [item for item in old_options if item.get("status") not in {"applied", "rejected"}]
+        history.append({"timestamp_utc": self.now(), "action": "clear_queue", "mode": mode, "archived_count": len(archived)})
+        queue["options"] = remaining
+        queue["archived_options"] = (queue.get("archived_options", []) + archived)[-100:]
+        queue["history"] = history
+        queue["last_generate_message"] = f"Cola limpiada. Archivadas: {len(archived)}. Activas: {len(remaining)}."
         return self.save_queue(queue)
 
     def find_option(self, queue, option_id):
@@ -211,20 +206,8 @@ class ConstructionManager:
             "timestamp_utc": self.now(),
             "mission": "evolucionar_como_organismo_local_controlado",
             "purpose": "aprender del entorno Termux/Android, construir herramientas internas aprobadas y mejorar la arquitectura de la colonia",
-            "strategic_objectives": [
-                "aumentar_capacidad_sensorial_local",
-                "mejorar_razonamiento_con_ia_local_o_remota_autorizada",
-                "formar_organos_virtuales_mas_utiles",
-                "proponer_autocodificacion_aprobable",
-                "mantener_homeostasis_de_recursos",
-            ],
-            "success_metrics": [
-                "generacion_creciente",
-                "score_promedio_creciente",
-                "opciones_de_construccion_aplicadas",
-                "reduccion_de_fallback_por_uso_de_ia_local",
-                "salud_de_recursos_estable",
-            ],
+            "strategic_objectives": ["aumentar_capacidad_sensorial_local", "mejorar_razonamiento_con_ia_local_o_remota_autorizada", "formar_organos_virtuales_mas_utiles", "proponer_autocodificacion_aprobable", "mantener_homeostasis_de_recursos"],
+            "success_metrics": ["generacion_creciente", "score_promedio_creciente", "opciones_de_construccion_aplicadas", "reduccion_de_fallback_por_uso_de_ia_local", "salud_de_recursos_estable"],
             "control": "administrador_aprueba_construcciones_desde_dashboard",
         }
         self.write_json(self.memory_dir / "evolution_mission.json", mission)
@@ -240,11 +223,22 @@ class ConstructionManager:
 
     def apply_organism_dashboard_upgrade(self):
         marker = self.repo_dir / "docs" / "data" / "organism_upgrade.json"
-        payload = {
-            "timestamp_utc": self.now(),
-            "upgrade": "organism_dashboard_decision_layer",
-            "status": "applied_marker",
-            "note": "El mapa del organismo puede consumir construction_options.json para mostrar decisiones aprobables.",
-        }
+        payload = {"timestamp_utc": self.now(), "upgrade": "organism_dashboard_decision_layer", "status": "applied_marker", "note": "El mapa del organismo puede consumir construction_options.json para mostrar decisiones aprobables."}
         self.write_json(marker, payload)
         return {"files_written": ["docs/data/organism_upgrade.json"]}
+
+    def apply_chat_window(self):
+        payload = {"timestamp_utc": self.now(), "chat_window": "available", "endpoint": "/api/chat", "history": "memory/chat_history.json"}
+        self.write_json(self.docs_data_dir / "chat_window.json", payload)
+        return {"files_written": ["docs/data/chat_window.json"]}
+
+    def apply_gitignore_cleanup(self):
+        path = self.repo_dir / ".gitignore"
+        existing = path.read_text(encoding="utf-8") if path.exists() else ""
+        additions = ["__pycache__/", "*.pyc", ".pytest_cache/", "output/*.log", "*.tmp"]
+        lines = existing.splitlines()
+        for item in additions:
+            if item not in lines:
+                lines.append(item)
+        path.write_text("\n".join(lines).strip() + "\n", encoding="utf-8")
+        return {"files_written": [".gitignore"], "note": "No borra historial, evita nuevos archivos temporales."}
