@@ -1,11 +1,11 @@
 {
-  "texto": "**Diagnóstico:** La capacidad de análisis de texto está activa, pero el fitness actual indica que se necesita mejorar el rendimiento. No se han registrado éxitos ni fallos, lo que sugiere que aún no se ha realizado ninguna acción efectiva.\n\n**Acción recomendada:** Realizar un análisis de un fragmento de texto sencillo para poner en práctica las capacidades activas. Se sugiere analizar un texto breve y generar un resumen o una pregunta sobre él. Esto permitirá registrar un éxito y mejorar el fitness.\n\n**Siguiente mutación útil:** Incrementar la capacidad de análisis al incluir la opción de detectar emociones en el texto analizado, lo que podría enriquecer las respuestas generadas.",
+  "texto": "**Diagnóstico:** La colonia MICELIO se encuentra en un estado óptimo de energía (100) y fitness (0.95). Sin embargo, no ha registrado éxitos en sus acciones, lo que indica una oportunidad de mejorar la efectividad en el análisis de texto.\n\n**Acción recomendada:** Realizar un análisis de texto de un documento específico, buscando patrones y temas relevantes. Esto permitirá obtener datos útiles que puedan ser utilizados para mejorar las futuras respuestas y la capacidad de análisis.\n\n**Siguiente mutación útil:** Implementar un mecanismo de retroalimentación para evaluar la efectividad de las respuestas generadas y registrar los resultados, lo que contribuirá a aumentar la tasa de éxito en las acciones futuras.",
   "fitness": 0.88,
   "modo": "remote_ai_github_models",
   "modelo": "openai/gpt-4o-mini",
   "provider": "github_models",
   "usage": {
-    "completion_tokens": 142,
+    "completion_tokens": 145,
     "completion_tokens_details": {
       "accepted_prediction_tokens": 0,
       "audio_tokens": 0,
@@ -14,36 +14,36 @@
     },
     "latency_checkpoint": {
       "engine_tbt_ms": 9,
-      "engine_ttft_ms": 46,
-      "engine_ttlt_ms": 1256,
-      "pre_inference_ms": 87,
+      "engine_ttft_ms": 38,
+      "engine_ttlt_ms": 1318,
+      "pre_inference_ms": 92,
       "service_tbt_ms": 9,
-      "service_ttft_ms": 601,
-      "service_ttlt_ms": 1810,
-      "total_duration_ms": 1729,
-      "user_visible_ttft_ms": 513
+      "service_ttft_ms": 579,
+      "service_ttlt_ms": 1891,
+      "total_duration_ms": 1804,
+      "user_visible_ttft_ms": 487
     },
     "prompt_tokens": 163,
     "prompt_tokens_details": {
       "audio_tokens": 0,
       "cached_tokens": 0
     },
-    "total_tokens": 305
+    "total_tokens": 308
   },
   "genoma_id": "g_3d16eb2f",
   "objetivo": "general",
-  "timestamp_utc": "2026-05-03T05:46:56.526473+00:00",
+  "timestamp_utc": "2026-05-03T07:33:08.650098+00:00",
   "evolucion": {
     "fitness_calculado": 0.6,
     "children_created": 3,
     "virtual_spores_total": 24,
     "active_candidates": 5,
     "survivors": 24,
-    "extinct_total": 15,
-    "best_score": 0.8868,
-    "average_score": 0.8195,
+    "extinct_total": 18,
+    "best_score": 0.8828,
+    "average_score": 0.8234,
     "selection_pressure": 0.1111,
-    "cycle": 13,
+    "cycle": 14,
     "colony_decision": "seleccion_natural_controlada_v2",
     "self_awareness_report": "output/autoconciencia.json",
     "selection_report": "output/selection_report.json",
@@ -53,7 +53,7 @@
     "dashboard_data": "docs/data"
   },
   "roles": {
-    "timestamp_utc": "2026-05-03T05:46:56.540732+00:00",
+    "timestamp_utc": "2026-05-03T07:33:08.664754+00:00",
     "phase": "fase_2_2_especializacion_de_linajes",
     "roles_available": {
       "exploradora": "Alta exploración y mutación. Busca variación genética controlada.",
@@ -65,8 +65,8 @@
     "roles_summary": {
       "analista": {
         "count": 24,
-        "avg_adjusted_score": 0.8315,
-        "best_adjusted_score": 0.8988,
+        "avg_adjusted_score": 0.8354,
+        "best_adjusted_score": 0.8948,
         "description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
       }
     },
@@ -78,11 +78,24 @@
         "status": "elite",
         "role": "analista",
         "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-        "selection_score": 0.8868,
-        "adjusted_score": 0.8988,
+        "selection_score": 0.8828,
+        "adjusted_score": 0.8948,
         "temperature": 0.651,
         "exploration": 0.454,
         "mutation_rate": 0.127
+      },
+      {
+        "spore_id": "g_fe19ae1a",
+        "parent_id": "g_6292d022",
+        "generation": 6,
+        "status": "elite",
+        "role": "analista",
+        "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
+        "selection_score": 0.8617,
+        "adjusted_score": 0.8737,
+        "temperature": 0.618,
+        "exploration": 0.504,
+        "mutation_rate": 0.147
       },
       {
         "spore_id": "g_09fcda95",
@@ -91,8 +104,8 @@
         "status": "elite",
         "role": "analista",
         "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-        "selection_score": 0.8625,
-        "adjusted_score": 0.8745,
+        "selection_score": 0.8585,
+        "adjusted_score": 0.8705,
         "temperature": 0.563,
         "exploration": 0.473,
         "mutation_rate": 0.147
@@ -104,21 +117,34 @@
         "status": "elite",
         "role": "analista",
         "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-        "selection_score": 0.8545,
-        "adjusted_score": 0.8665,
+        "selection_score": 0.8505,
+        "adjusted_score": 0.8625,
         "temperature": 0.569,
         "exploration": 0.424,
         "mutation_rate": 0.14
       },
       {
-        "spore_id": "g_a0e1519d",
-        "parent_id": "g_09fcda95",
-        "generation": 7,
+        "spore_id": "g_82880c92",
+        "parent_id": "g_6292d022",
+        "generation": 6,
         "status": "elite",
         "role": "analista",
         "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-        "selection_score": 0.8451,
-        "adjusted_score": 0.8571,
+        "selection_score": 0.8497,
+        "adjusted_score": 0.8617,
+        "temperature": 0.603,
+        "exploration": 0.448,
+        "mutation_rate": 0.169
+      },
+      {
+        "spore_id": "g_a0e1519d",
+        "parent_id": "g_09fcda95",
+        "generation": 7,
+        "status": "survivor",
+        "role": "analista",
+        "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
+        "selection_score": 0.8411,
+        "adjusted_score": 0.8531,
         "temperature": 0.473,
         "exploration": 0.523,
         "mutation_rate": 0.125
@@ -127,11 +153,11 @@
         "spore_id": "g_6292d022",
         "parent_id": "g_030aa337",
         "generation": 5,
-        "status": "elite",
+        "status": "survivor",
         "role": "analista",
         "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-        "selection_score": 0.8386,
-        "adjusted_score": 0.8506,
+        "selection_score": 0.8346,
+        "adjusted_score": 0.8466,
         "temperature": 0.601,
         "exploration": 0.447,
         "mutation_rate": 0.139
@@ -143,8 +169,8 @@
         "status": "survivor",
         "role": "analista",
         "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-        "selection_score": 0.8357,
-        "adjusted_score": 0.8477,
+        "selection_score": 0.8317,
+        "adjusted_score": 0.8437,
         "temperature": 0.721,
         "exploration": 0.289,
         "mutation_rate": 0.112
@@ -156,8 +182,8 @@
         "status": "survivor",
         "role": "analista",
         "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-        "selection_score": 0.8331,
-        "adjusted_score": 0.8451,
+        "selection_score": 0.8291,
+        "adjusted_score": 0.8411,
         "temperature": 0.734,
         "exploration": 0.383,
         "mutation_rate": 0.103
@@ -169,8 +195,8 @@
         "status": "survivor",
         "role": "analista",
         "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-        "selection_score": 0.8325,
-        "adjusted_score": 0.8445,
+        "selection_score": 0.8285,
+        "adjusted_score": 0.8405,
         "temperature": 0.66,
         "exploration": 0.448,
         "mutation_rate": 0.143
@@ -182,8 +208,8 @@
         "status": "survivor",
         "role": "analista",
         "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-        "selection_score": 0.8318,
-        "adjusted_score": 0.8438,
+        "selection_score": 0.8278,
+        "adjusted_score": 0.8398,
         "temperature": 0.652,
         "exploration": 0.457,
         "mutation_rate": 0.132
@@ -195,44 +221,18 @@
         "status": "survivor",
         "role": "analista",
         "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-        "selection_score": 0.826,
-        "adjusted_score": 0.838,
+        "selection_score": 0.822,
+        "adjusted_score": 0.834,
         "temperature": 0.671,
         "exploration": 0.329,
         "mutation_rate": 0.099
-      },
-      {
-        "spore_id": "g_5f871e2e",
-        "parent_id": "g_82cb0911",
-        "generation": 5,
-        "status": "survivor",
-        "role": "analista",
-        "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-        "selection_score": 0.8205,
-        "adjusted_score": 0.8325,
-        "temperature": 0.641,
-        "exploration": 0.317,
-        "mutation_rate": 0.128
-      },
-      {
-        "spore_id": "g_c3c1d66a",
-        "parent_id": "g_6292d022",
-        "generation": 6,
-        "status": "survivor",
-        "role": "analista",
-        "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-        "selection_score": 0.8179,
-        "adjusted_score": 0.8299,
-        "temperature": 0.512,
-        "exploration": 0.538,
-        "mutation_rate": 0.16
       }
     ],
     "decision": "castas_funcionales_asignadas_sin_despliegue_externo",
     "safety": "Los roles no habilitan despliegue externo. Solo clasifican funciones internas de la colonia."
   },
   "sentidos": {
-    "timestamp_utc": "2026-05-03T05:46:56.543329+00:00",
+    "timestamp_utc": "2026-05-03T07:33:08.667360+00:00",
     "phase": "fase_3_sentidos_moviles",
     "runtime": "local",
     "platform": {
@@ -243,7 +243,7 @@
     },
     "memory": {
       "MemTotal": "16373468 kB",
-      "MemAvailable": "15015048 kB",
+      "MemAvailable": "15380148 kB",
       "SwapTotal": "3145724 kB",
       "SwapFree": "3145724 kB"
     },
@@ -252,15 +252,15 @@
         "path": "/home/runner",
         "exists": true,
         "total_mb": 147718.61,
-        "used_mb": 56557.36,
-        "free_mb": 91145.25
+        "used_mb": 56561.2,
+        "free_mb": 91141.41
       },
       "repo": {
         "path": "/home/runner/work/micelio-colonia-001/micelio-colonia-001",
         "exists": true,
         "total_mb": 147718.61,
-        "used_mb": 56557.36,
-        "free_mb": 91145.25
+        "used_mb": 56561.2,
+        "free_mb": 91141.41
       },
       "storage_download": {
         "path": "/storage/emulated/0/Download",
@@ -336,7 +336,7 @@
     }
   },
   "tejidos": {
-    "timestamp_utc": "2026-05-03T05:46:56.544545+00:00",
+    "timestamp_utc": "2026-05-03T07:33:08.668581+00:00",
     "phase": "fase_3_tejidos_y_organos_virtuales",
     "tissues": [
       {
@@ -346,64 +346,64 @@
         "roles": {
           "analista": 24
         },
-        "best_score": 0.8988,
-        "average_score": 0.8315,
+        "best_score": 0.8948,
+        "average_score": 0.8354,
         "members": [
           {
             "spore_id": "g_01826703",
             "role": "analista",
             "status": "elite",
-            "score": 0.8988,
+            "score": 0.8948,
             "generation": 7
+          },
+          {
+            "spore_id": "g_fe19ae1a",
+            "role": "analista",
+            "status": "elite",
+            "score": 0.8737,
+            "generation": 6
           },
           {
             "spore_id": "g_09fcda95",
             "role": "analista",
             "status": "elite",
-            "score": 0.8745,
+            "score": 0.8705,
             "generation": 6
           },
           {
             "spore_id": "g_48502b94",
             "role": "analista",
             "status": "elite",
-            "score": 0.8665,
+            "score": 0.8625,
             "generation": 7
+          },
+          {
+            "spore_id": "g_82880c92",
+            "role": "analista",
+            "status": "elite",
+            "score": 0.8617,
+            "generation": 6
           },
           {
             "spore_id": "g_a0e1519d",
             "role": "analista",
-            "status": "elite",
-            "score": 0.8571,
+            "status": "survivor",
+            "score": 0.8531,
             "generation": 7
           },
           {
             "spore_id": "g_6292d022",
             "role": "analista",
-            "status": "elite",
-            "score": 0.8506,
+            "status": "survivor",
+            "score": 0.8466,
             "generation": 5
           },
           {
             "spore_id": "g_5dea76e6",
             "role": "analista",
             "status": "survivor",
-            "score": 0.8477,
+            "score": 0.8437,
             "generation": 6
-          },
-          {
-            "spore_id": "g_b6aebef7",
-            "role": "analista",
-            "status": "survivor",
-            "score": 0.8451,
-            "generation": 7
-          },
-          {
-            "spore_id": "g_030aa337",
-            "role": "analista",
-            "status": "survivor",
-            "score": 0.8445,
-            "generation": 4
           }
         ]
       }
@@ -424,7 +424,7 @@
           "tejido_cognitivo"
         ],
         "spores_count": 24,
-        "operational_score": 0.8315,
+        "operational_score": 0.8354,
         "status": "virtual_ready"
       },
       {
@@ -441,7 +441,7 @@
     "safety": "Los órganos son agrupaciones virtuales. No crean procesos ni acceden a recursos fuera del alcance autorizado."
   },
   "autocoder": {
-    "timestamp_utc": "2026-05-03T05:46:56.547728+00:00",
+    "timestamp_utc": "2026-05-03T07:33:08.671766+00:00",
     "phase": "fase_3_autocodificacion_supervisada",
     "mode": "plan_only",
     "tasks": [
@@ -484,14 +484,14 @@
         "priority": "alta",
         "wave": 1,
         "status": "pending",
-        "created_at": "2026-05-03T05:46:56.548624+00:00",
+        "created_at": "2026-05-03T07:33:08.672694+00:00",
         "question": "¿Quieres que construya esto?",
         "reasoning": "Visualiza padres, ramas, scores y familias dominantes.",
         "expected_files": [
           "docs/lineage.html"
         ],
         "verification": {
-          "verified_at": "2026-05-03T05:46:56.548636+00:00",
+          "verified_at": "2026-05-03T07:33:08.672705+00:00",
           "ok": false,
           "expected_count": 1,
           "existing_count": 0,
@@ -513,14 +513,14 @@
         "priority": "alta",
         "wave": 1,
         "status": "pending",
-        "created_at": "2026-05-03T05:46:56.548639+00:00",
+        "created_at": "2026-05-03T07:33:08.672708+00:00",
         "question": "¿Quieres que construya esto?",
         "reasoning": "Evalúa disco, generación y presión de selección.",
         "expected_files": [
           "runner/micelio/health_monitor.py"
         ],
         "verification": {
-          "verified_at": "2026-05-03T05:46:56.548651+00:00",
+          "verified_at": "2026-05-03T07:33:08.672719+00:00",
           "ok": false,
           "expected_count": 1,
           "existing_count": 0,
@@ -542,7 +542,7 @@
         "priority": "alta",
         "wave": 1,
         "status": "pending",
-        "created_at": "2026-05-03T05:46:56.548654+00:00",
+        "created_at": "2026-05-03T07:33:08.672722+00:00",
         "question": "¿Quieres que construya esto?",
         "reasoning": "Define misión, objetivos y métricas de éxito.",
         "expected_files": [
@@ -550,7 +550,7 @@
           "docs/data/mission.json"
         ],
         "verification": {
-          "verified_at": "2026-05-03T05:46:56.548674+00:00",
+          "verified_at": "2026-05-03T07:33:08.672741+00:00",
           "ok": false,
           "expected_count": 2,
           "existing_count": 0,
@@ -578,14 +578,14 @@
         "priority": "media",
         "wave": 1,
         "status": "pending",
-        "created_at": "2026-05-03T05:46:56.548677+00:00",
+        "created_at": "2026-05-03T07:33:08.672744+00:00",
         "question": "¿Quieres que construya esto?",
         "reasoning": "Verifica Ollama, puertos locales y modelos disponibles.",
         "expected_files": [
           "scripts/termux_ai_probe.sh"
         ],
         "verification": {
-          "verified_at": "2026-05-03T05:46:56.548687+00:00",
+          "verified_at": "2026-05-03T07:33:08.672754+00:00",
           "ok": false,
           "expected_count": 1,
           "existing_count": 0,
@@ -607,14 +607,14 @@
         "priority": "media",
         "wave": 1,
         "status": "pending",
-        "created_at": "2026-05-03T05:46:56.548690+00:00",
+        "created_at": "2026-05-03T07:33:08.672757+00:00",
         "question": "¿Quieres que construya esto?",
         "reasoning": "Marca una mejora visible para el mapa del organismo.",
         "expected_files": [
           "docs/data/organism_upgrade.json"
         ],
         "verification": {
-          "verified_at": "2026-05-03T05:46:56.548701+00:00",
+          "verified_at": "2026-05-03T07:33:08.672768+00:00",
           "ok": false,
           "expected_count": 1,
           "existing_count": 0,
@@ -636,14 +636,14 @@
         "priority": "alta",
         "wave": 1,
         "status": "pending",
-        "created_at": "2026-05-03T05:46:56.548704+00:00",
+        "created_at": "2026-05-03T07:33:08.672770+00:00",
         "question": "¿Quieres que construya esto?",
         "reasoning": "Registra la capacidad de conversación local.",
         "expected_files": [
           "docs/data/chat_window.json"
         ],
         "verification": {
-          "verified_at": "2026-05-03T05:46:56.548715+00:00",
+          "verified_at": "2026-05-03T07:33:08.672781+00:00",
           "ok": false,
           "expected_count": 1,
           "existing_count": 0,
@@ -665,7 +665,7 @@
         "priority": "alta",
         "wave": 2,
         "status": "pending",
-        "created_at": "2026-05-03T05:46:56.548741+00:00",
+        "created_at": "2026-05-03T07:33:08.672806+00:00",
         "question": "¿Quieres que construya esto?",
         "reasoning": "Comprueba si cada herramienta aprobada realmente escribió archivos.",
         "expected_files": [
@@ -673,7 +673,7 @@
           "docs/data/build_verifier.json"
         ],
         "verification": {
-          "verified_at": "2026-05-03T05:46:56.548762+00:00",
+          "verified_at": "2026-05-03T07:33:08.672827+00:00",
           "ok": false,
           "expected_count": 2,
           "existing_count": 0,
@@ -701,14 +701,14 @@
         "priority": "alta",
         "wave": 2,
         "status": "pending",
-        "created_at": "2026-05-03T05:46:56.548766+00:00",
+        "created_at": "2026-05-03T07:33:08.672830+00:00",
         "question": "¿Quieres que construya esto?",
         "reasoning": "Muestra salud y recursos en una pantalla propia.",
         "expected_files": [
           "docs/health.html"
         ],
         "verification": {
-          "verified_at": "2026-05-03T05:46:56.548776+00:00",
+          "verified_at": "2026-05-03T07:33:08.672841+00:00",
           "ok": false,
           "expected_count": 1,
           "existing_count": 0,
@@ -730,14 +730,14 @@
         "priority": "media",
         "wave": 2,
         "status": "pending",
-        "created_at": "2026-05-03T05:46:56.548779+00:00",
+        "created_at": "2026-05-03T07:33:08.672843+00:00",
         "question": "¿Quieres que construya esto?",
         "reasoning": "Muestra historial de aprobaciones, aplicaciones y verificaciones.",
         "expected_files": [
           "docs/evolution_log.html"
         ],
         "verification": {
-          "verified_at": "2026-05-03T05:46:56.548791+00:00",
+          "verified_at": "2026-05-03T07:33:08.672854+00:00",
           "ok": false,
           "expected_count": 1,
           "existing_count": 0,
@@ -759,7 +759,7 @@
         "priority": "alta",
         "wave": 2,
         "status": "pending",
-        "created_at": "2026-05-03T05:46:56.548794+00:00",
+        "created_at": "2026-05-03T07:33:08.672881+00:00",
         "question": "¿Quieres que construya esto?",
         "reasoning": "Hace que el chat entregue diagnóstico, hipótesis y acción recomendada.",
         "expected_files": [
@@ -767,7 +767,7 @@
           "docs/data/chat_capabilities.json"
         ],
         "verification": {
-          "verified_at": "2026-05-03T05:46:56.548814+00:00",
+          "verified_at": "2026-05-03T07:33:08.672910+00:00",
           "ok": false,
           "expected_count": 2,
           "existing_count": 0,
@@ -792,7 +792,7 @@
     "history": [],
     "archived_options": [],
     "last_generation_context": {
-      "timestamp_utc": "2026-05-03T05:46:56.548822+00:00",
+      "timestamp_utc": "2026-05-03T07:33:08.672919+00:00",
       "added_options": [
         "build_lineage_view",
         "build_health_monitor",
@@ -808,6 +808,6 @@
       "verified_tools_total": 1
     },
     "last_generate_message": "Nuevas sugerencias agregadas: build_lineage_view, build_health_monitor, build_mission_manifest, build_termux_ai_probe, build_organism_dashboard_upgrade, build_chat_window, build_construction_verifier, build_health_dashboard, build_evolution_changelog, build_chat_reasoning_upgrade",
-    "updated_at": "2026-05-03T05:46:56.548825+00:00"
+    "updated_at": "2026-05-03T07:33:08.672922+00:00"
   }
 }

@@ -1,18 +1,18 @@
 {
-  "timestamp_utc": "2026-05-03T05:46:56.531279+00:00",
+  "timestamp_utc": "2026-05-03T07:33:08.654839+00:00",
   "colony_id": "micelio-colonia-001",
-  "cycle": 13,
+  "cycle": 14,
   "runtime": "github_actions",
   "mode": "remote_ai_github_models",
   "model": "openai/gpt-4o-mini",
   "fitness": 0.6,
-  "best_score": 0.8868,
-  "average_score": 0.8195,
+  "best_score": 0.8828,
+  "average_score": 0.8234,
   "selection_pressure": 0.1111,
   "virtual_spores": 24,
   "active_candidates": 5,
   "survivors": 24,
-  "extinct_total": 15,
+  "extinct_total": 18,
   "children_created": 3,
   "generation": 7,
   "replication_mode": "virtual_only",
@@ -300,6 +300,28 @@
         "selection_pressure": 0.1111,
         "max_generation": 7,
         "decision": "seleccion_natural_controlada_v2"
+      },
+      {
+        "timestamp_utc": "2026-05-03T07:33:08.654638+00:00",
+        "cycle": 14,
+        "genoma_id": "g_3d16eb2f",
+        "mode": "remote_ai_github_models",
+        "fitness": 0.6,
+        "children_created": 3,
+        "parent_sources": [
+          "g_6292d022",
+          "g_6292d022",
+          "g_6292d022"
+        ],
+        "virtual_spores_total": 24,
+        "active_candidates": 5,
+        "survivors": 24,
+        "extinct_last_cycle_count": 3,
+        "best_score": 0.8828,
+        "average_score": 0.8234,
+        "selection_pressure": 0.1111,
+        "max_generation": 7,
+        "decision": "seleccion_natural_controlada_v2"
       }
     ]
   },
@@ -307,8 +329,8 @@
   "roles_summary": {
     "analista": {
       "count": 24,
-      "avg_adjusted_score": 0.8315,
-      "best_adjusted_score": 0.8988,
+      "avg_adjusted_score": 0.8354,
+      "best_adjusted_score": 0.8948,
       "description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
     }
   },
@@ -320,11 +342,24 @@
       "status": "elite",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8868,
-      "adjusted_score": 0.8988,
+      "selection_score": 0.8828,
+      "adjusted_score": 0.8948,
       "temperature": 0.651,
       "exploration": 0.454,
       "mutation_rate": 0.127
+    },
+    {
+      "spore_id": "g_fe19ae1a",
+      "parent_id": "g_6292d022",
+      "generation": 6,
+      "status": "elite",
+      "role": "analista",
+      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
+      "selection_score": 0.8617,
+      "adjusted_score": 0.8737,
+      "temperature": 0.618,
+      "exploration": 0.504,
+      "mutation_rate": 0.147
     },
     {
       "spore_id": "g_09fcda95",
@@ -333,8 +368,8 @@
       "status": "elite",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8625,
-      "adjusted_score": 0.8745,
+      "selection_score": 0.8585,
+      "adjusted_score": 0.8705,
       "temperature": 0.563,
       "exploration": 0.473,
       "mutation_rate": 0.147
@@ -346,21 +381,34 @@
       "status": "elite",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8545,
-      "adjusted_score": 0.8665,
+      "selection_score": 0.8505,
+      "adjusted_score": 0.8625,
       "temperature": 0.569,
       "exploration": 0.424,
       "mutation_rate": 0.14
     },
     {
-      "spore_id": "g_a0e1519d",
-      "parent_id": "g_09fcda95",
-      "generation": 7,
+      "spore_id": "g_82880c92",
+      "parent_id": "g_6292d022",
+      "generation": 6,
       "status": "elite",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8451,
-      "adjusted_score": 0.8571,
+      "selection_score": 0.8497,
+      "adjusted_score": 0.8617,
+      "temperature": 0.603,
+      "exploration": 0.448,
+      "mutation_rate": 0.169
+    },
+    {
+      "spore_id": "g_a0e1519d",
+      "parent_id": "g_09fcda95",
+      "generation": 7,
+      "status": "survivor",
+      "role": "analista",
+      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
+      "selection_score": 0.8411,
+      "adjusted_score": 0.8531,
       "temperature": 0.473,
       "exploration": 0.523,
       "mutation_rate": 0.125
@@ -369,11 +417,11 @@
       "spore_id": "g_6292d022",
       "parent_id": "g_030aa337",
       "generation": 5,
-      "status": "elite",
+      "status": "survivor",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8386,
-      "adjusted_score": 0.8506,
+      "selection_score": 0.8346,
+      "adjusted_score": 0.8466,
       "temperature": 0.601,
       "exploration": 0.447,
       "mutation_rate": 0.139
@@ -385,37 +433,11 @@
       "status": "survivor",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8357,
-      "adjusted_score": 0.8477,
+      "selection_score": 0.8317,
+      "adjusted_score": 0.8437,
       "temperature": 0.721,
       "exploration": 0.289,
       "mutation_rate": 0.112
-    },
-    {
-      "spore_id": "g_b6aebef7",
-      "parent_id": "g_5dea76e6",
-      "generation": 7,
-      "status": "survivor",
-      "role": "analista",
-      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8331,
-      "adjusted_score": 0.8451,
-      "temperature": 0.734,
-      "exploration": 0.383,
-      "mutation_rate": 0.103
-    },
-    {
-      "spore_id": "g_030aa337",
-      "parent_id": "g_3ed2dce2",
-      "generation": 4,
-      "status": "survivor",
-      "role": "analista",
-      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8325,
-      "adjusted_score": 0.8445,
-      "temperature": 0.66,
-      "exploration": 0.448,
-      "mutation_rate": 0.143
     }
   ]
 }
