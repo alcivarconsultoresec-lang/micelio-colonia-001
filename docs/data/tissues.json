@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-05-03T18:34:13.680586+00:00",
+  "timestamp_utc": "2026-05-03T19:36:46.347408+00:00",
   "phase": "fase_3_tejidos_y_organos_virtuales",
   "tissues": [
     {
@@ -9,63 +9,63 @@
       "roles": {
         "analista": 24
       },
-      "best_score": 0.8972,
-      "average_score": 0.8671,
+      "best_score": 0.8932,
+      "average_score": 0.8639,
       "members": [
         {
           "spore_id": "g_6974be13",
           "role": "analista",
           "status": "elite",
-          "score": 0.8972,
+          "score": 0.8932,
           "generation": 10
         },
         {
           "spore_id": "g_8e848c4a",
           "role": "analista",
           "status": "elite",
-          "score": 0.8952,
+          "score": 0.8912,
           "generation": 9
         },
         {
           "spore_id": "g_e3237401",
           "role": "analista",
           "status": "elite",
-          "score": 0.8923,
+          "score": 0.8883,
           "generation": 10
         },
         {
           "spore_id": "g_a483e02f",
           "role": "analista",
           "status": "elite",
-          "score": 0.8897,
+          "score": 0.8857,
           "generation": 10
         },
         {
           "spore_id": "g_cfb5495d",
           "role": "analista",
           "status": "elite",
-          "score": 0.8878,
+          "score": 0.8838,
           "generation": 9
         },
         {
           "spore_id": "g_b56b0e71",
           "role": "analista",
           "status": "survivor",
-          "score": 0.8855,
+          "score": 0.8815,
           "generation": 9
         },
         {
           "spore_id": "g_c4f30b02",
           "role": "analista",
           "status": "survivor",
-          "score": 0.8854,
+          "score": 0.8814,
           "generation": 10
         },
         {
           "spore_id": "g_0e606fd1",
           "role": "analista",
           "status": "survivor",
-          "score": 0.8841,
+          "score": 0.8801,
           "generation": 8
         }
       ]
@@ -87,7 +87,7 @@
         "tejido_cognitivo"
       ],
       "spores_count": 24,
-      "operational_score": 0.8671,
+      "operational_score": 0.8639,
       "status": "virtual_ready"
     },
     {

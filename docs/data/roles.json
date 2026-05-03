@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-05-03T18:34:13.676636+00:00",
+  "timestamp_utc": "2026-05-03T19:36:46.343470+00:00",
   "phase": "fase_2_2_especializacion_de_linajes",
   "roles_available": {
     "exploradora": "Alta exploración y mutación. Busca variación genética controlada.",
@@ -11,8 +11,8 @@
   "roles_summary": {
     "analista": {
       "count": 24,
-      "avg_adjusted_score": 0.8671,
-      "best_adjusted_score": 0.8972,
+      "avg_adjusted_score": 0.8639,
+      "best_adjusted_score": 0.8932,
       "description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
     }
   },
@@ -24,8 +24,8 @@
       "status": "elite",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8852,
-      "adjusted_score": 0.8972,
+      "selection_score": 0.8812,
+      "adjusted_score": 0.8932,
       "temperature": 0.614,
       "exploration": 0.533,
       "mutation_rate": 0.142
@@ -37,8 +37,8 @@
       "status": "elite",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8832,
-      "adjusted_score": 0.8952,
+      "selection_score": 0.8792,
+      "adjusted_score": 0.8912,
       "temperature": 0.685,
       "exploration": 0.497,
       "mutation_rate": 0.138
@@ -50,8 +50,8 @@
       "status": "elite",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8803,
-      "adjusted_score": 0.8923,
+      "selection_score": 0.8763,
+      "adjusted_score": 0.8883,
       "temperature": 0.752,
       "exploration": 0.542,
       "mutation_rate": 0.172
@@ -63,8 +63,8 @@
       "status": "elite",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8777,
-      "adjusted_score": 0.8897,
+      "selection_score": 0.8737,
+      "adjusted_score": 0.8857,
       "temperature": 0.745,
       "exploration": 0.509,
       "mutation_rate": 0.147
@@ -76,8 +76,8 @@
       "status": "elite",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8758,
-      "adjusted_score": 0.8878,
+      "selection_score": 0.8718,
+      "adjusted_score": 0.8838,
       "temperature": 0.717,
       "exploration": 0.495,
       "mutation_rate": 0.162
@@ -89,8 +89,8 @@
       "status": "survivor",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8735,
-      "adjusted_score": 0.8855,
+      "selection_score": 0.8695,
+      "adjusted_score": 0.8815,
       "temperature": 0.648,
       "exploration": 0.586,
       "mutation_rate": 0.145
@@ -102,8 +102,8 @@
       "status": "survivor",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8734,
-      "adjusted_score": 0.8854,
+      "selection_score": 0.8694,
+      "adjusted_score": 0.8814,
       "temperature": 0.726,
       "exploration": 0.558,
       "mutation_rate": 0.173
@@ -115,8 +115,8 @@
       "status": "survivor",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8721,
-      "adjusted_score": 0.8841,
+      "selection_score": 0.8681,
+      "adjusted_score": 0.8801,
       "temperature": 0.712,
       "exploration": 0.544,
       "mutation_rate": 0.108
@@ -128,8 +128,8 @@
       "status": "survivor",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8677,
-      "adjusted_score": 0.8797,
+      "selection_score": 0.8637,
+      "adjusted_score": 0.8757,
       "temperature": 0.665,
       "exploration": 0.436,
       "mutation_rate": 0.132
@@ -141,8 +141,8 @@
       "status": "survivor",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8628,
-      "adjusted_score": 0.8748,
+      "selection_score": 0.8588,
+      "adjusted_score": 0.8708,
       "temperature": 0.682,
       "exploration": 0.524,
       "mutation_rate": 0.134
@@ -154,8 +154,8 @@
       "status": "survivor",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8615,
-      "adjusted_score": 0.8735,
+      "selection_score": 0.8575,
+      "adjusted_score": 0.8695,
       "temperature": 0.626,
       "exploration": 0.44,
       "mutation_rate": 0.151
@@ -167,8 +167,8 @@
       "status": "survivor",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8528,
-      "adjusted_score": 0.8648,
+      "selection_score": 0.8488,
+      "adjusted_score": 0.8608,
       "temperature": 0.685,
       "exploration": 0.41,
       "mutation_rate": 0.148
