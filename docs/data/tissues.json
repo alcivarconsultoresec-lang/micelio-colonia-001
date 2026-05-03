@@ -1,91 +1,72 @@
 {
-  "timestamp_utc": "2026-05-03T02:44:52.891056+00:00",
+  "timestamp_utc": "2026-05-03T05:46:56.544545+00:00",
   "phase": "fase_3_tejidos_y_organos_virtuales",
   "tissues": [
     {
       "name": "tejido_cognitivo",
       "purpose": "razonar sobre memoria, arquitectura y construcción de nuevos módulos",
-      "spores_count": 23,
+      "spores_count": 24,
       "roles": {
-        "analista": 23
+        "analista": 24
       },
-      "best_score": 0.8785,
-      "average_score": 0.826,
+      "best_score": 0.8988,
+      "average_score": 0.8315,
       "members": [
+        {
+          "spore_id": "g_01826703",
+          "role": "analista",
+          "status": "elite",
+          "score": 0.8988,
+          "generation": 7
+        },
         {
           "spore_id": "g_09fcda95",
           "role": "analista",
           "status": "elite",
-          "score": 0.8785,
+          "score": 0.8745,
           "generation": 6
+        },
+        {
+          "spore_id": "g_48502b94",
+          "role": "analista",
+          "status": "elite",
+          "score": 0.8665,
+          "generation": 7
+        },
+        {
+          "spore_id": "g_a0e1519d",
+          "role": "analista",
+          "status": "elite",
+          "score": 0.8571,
+          "generation": 7
         },
         {
           "spore_id": "g_6292d022",
           "role": "analista",
           "status": "elite",
-          "score": 0.8546,
+          "score": 0.8506,
           "generation": 5
         },
         {
           "spore_id": "g_5dea76e6",
           "role": "analista",
-          "status": "elite",
-          "score": 0.8517,
+          "status": "survivor",
+          "score": 0.8477,
           "generation": 6
         },
         {
           "spore_id": "g_b6aebef7",
           "role": "analista",
-          "status": "elite",
-          "score": 0.8491,
+          "status": "survivor",
+          "score": 0.8451,
           "generation": 7
         },
         {
           "spore_id": "g_030aa337",
           "role": "analista",
-          "status": "elite",
-          "score": 0.8485,
+          "status": "survivor",
+          "score": 0.8445,
           "generation": 4
-        },
-        {
-          "spore_id": "g_10675bed",
-          "role": "analista",
-          "status": "survivor",
-          "score": 0.8478,
-          "generation": 6
-        },
-        {
-          "spore_id": "g_604101cd",
-          "role": "analista",
-          "status": "survivor",
-          "score": 0.842,
-          "generation": 7
-        },
-        {
-          "spore_id": "g_5f871e2e",
-          "role": "analista",
-          "status": "survivor",
-          "score": 0.8365,
-          "generation": 5
-        }
-      ]
-    },
-    {
-      "name": "tejido_estabilidad",
-      "purpose": "conservar linajes robustos y reducir deriva improductiva",
-      "spores_count": 1,
-      "roles": {
-        "estabilizadora": 1
-      },
-      "best_score": 0.8025,
-      "average_score": 0.8025,
-      "members": [
-        {
-          "spore_id": "g_29cde676",
-          "role": "estabilizadora",
-          "status": "survivor",
-          "score": 0.8025,
-          "generation": 3
         }
       ]
     }
@@ -105,19 +86,17 @@
       "tissues": [
         "tejido_cognitivo"
       ],
-      "spores_count": 23,
-      "operational_score": 0.826,
+      "spores_count": 24,
+      "operational_score": 0.8315,
       "status": "virtual_ready"
     },
     {
       "name": "organo_homeostasis",
       "purpose": "regular límites, memoria, consumo y seguridad",
-      "tissues": [
-        "tejido_estabilidad"
-      ],
-      "spores_count": 1,
-      "operational_score": 0.8025,
-      "status": "virtual_ready"
+      "tissues": [],
+      "spores_count": 0,
+      "operational_score": 0,
+      "status": "missing_tissue"
     }
   ],
   "decision": "organizacion_virtual_creada_sin_despliegue_externo",
