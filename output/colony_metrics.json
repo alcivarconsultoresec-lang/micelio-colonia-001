@@ -1,18 +1,18 @@
 {
-  "timestamp_utc": "2026-05-03T16:52:51.823968+00:00",
+  "timestamp_utc": "2026-05-03T17:36:15.965315+00:00",
   "colony_id": "micelio-colonia-001",
-  "cycle": 23,
+  "cycle": 24,
   "runtime": "github_actions",
   "mode": "remote_ai_github_models",
   "model": "openai/gpt-4o-mini",
   "fitness": 0.6,
-  "best_score": 0.8932,
-  "average_score": 0.855,
+  "best_score": 0.8892,
+  "average_score": 0.8546,
   "selection_pressure": 0.1111,
   "virtual_spores": 24,
   "active_candidates": 5,
   "survivors": 24,
-  "extinct_total": 45,
+  "extinct_total": 48,
   "children_created": 3,
   "generation": 10,
   "replication_mode": "virtual_only",
@@ -520,6 +520,28 @@
         "selection_pressure": 0.1111,
         "max_generation": 10,
         "decision": "seleccion_natural_controlada_v2"
+      },
+      {
+        "timestamp_utc": "2026-05-03T17:36:15.965072+00:00",
+        "cycle": 24,
+        "genoma_id": "g_3d16eb2f",
+        "mode": "remote_ai_github_models",
+        "fitness": 0.6,
+        "children_created": 3,
+        "parent_sources": [
+          "g_cfb5495d",
+          "g_cfb5495d",
+          "g_cfb5495d"
+        ],
+        "virtual_spores_total": 24,
+        "active_candidates": 5,
+        "survivors": 24,
+        "extinct_last_cycle_count": 3,
+        "best_score": 0.8892,
+        "average_score": 0.8546,
+        "selection_pressure": 0.1111,
+        "max_generation": 10,
+        "decision": "seleccion_natural_controlada_v2"
       }
     ]
   },
@@ -527,8 +549,8 @@
   "roles_summary": {
     "analista": {
       "count": 24,
-      "avg_adjusted_score": 0.867,
-      "best_adjusted_score": 0.9052,
+      "avg_adjusted_score": 0.8666,
+      "best_adjusted_score": 0.9012,
       "description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
     }
   },
@@ -540,8 +562,8 @@
       "status": "elite",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8932,
-      "adjusted_score": 0.9052,
+      "selection_score": 0.8892,
+      "adjusted_score": 0.9012,
       "temperature": 0.614,
       "exploration": 0.533,
       "mutation_rate": 0.142
@@ -553,8 +575,8 @@
       "status": "elite",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8912,
-      "adjusted_score": 0.9032,
+      "selection_score": 0.8872,
+      "adjusted_score": 0.8992,
       "temperature": 0.685,
       "exploration": 0.497,
       "mutation_rate": 0.138
@@ -566,8 +588,8 @@
       "status": "elite",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8857,
-      "adjusted_score": 0.8977,
+      "selection_score": 0.8817,
+      "adjusted_score": 0.8937,
       "temperature": 0.745,
       "exploration": 0.509,
       "mutation_rate": 0.147
@@ -579,8 +601,8 @@
       "status": "elite",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8838,
-      "adjusted_score": 0.8958,
+      "selection_score": 0.8798,
+      "adjusted_score": 0.8918,
       "temperature": 0.717,
       "exploration": 0.495,
       "mutation_rate": 0.162
@@ -592,11 +614,24 @@
       "status": "elite",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8815,
-      "adjusted_score": 0.8935,
+      "selection_score": 0.8775,
+      "adjusted_score": 0.8895,
       "temperature": 0.648,
       "exploration": 0.586,
       "mutation_rate": 0.145
+    },
+    {
+      "spore_id": "g_c4f30b02",
+      "parent_id": "g_cfb5495d",
+      "generation": 10,
+      "status": "survivor",
+      "role": "analista",
+      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
+      "selection_score": 0.8774,
+      "adjusted_score": 0.8894,
+      "temperature": 0.726,
+      "exploration": 0.558,
+      "mutation_rate": 0.173
     },
     {
       "spore_id": "g_0e606fd1",
@@ -605,8 +640,8 @@
       "status": "survivor",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8801,
-      "adjusted_score": 0.8921,
+      "selection_score": 0.8761,
+      "adjusted_score": 0.8881,
       "temperature": 0.712,
       "exploration": 0.544,
       "mutation_rate": 0.108
@@ -618,24 +653,11 @@
       "status": "survivor",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8708,
-      "adjusted_score": 0.8828,
+      "selection_score": 0.8668,
+      "adjusted_score": 0.8788,
       "temperature": 0.682,
       "exploration": 0.524,
       "mutation_rate": 0.134
-    },
-    {
-      "spore_id": "g_5eb837ad",
-      "parent_id": "g_8e848c4a",
-      "generation": 10,
-      "status": "survivor",
-      "role": "analista",
-      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8695,
-      "adjusted_score": 0.8815,
-      "temperature": 0.626,
-      "exploration": 0.44,
-      "mutation_rate": 0.151
     }
   ]
 }
