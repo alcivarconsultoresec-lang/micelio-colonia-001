@@ -1,9 +1,9 @@
 {
   "colony_id": "micelio-colonia-001",
   "created_at": "2026-05-02T15:57:52.626719+00:00",
-  "updated_at": "2026-05-04T04:00:42.604691+00:00",
+  "updated_at": "2026-05-04T06:47:00.813602+00:00",
   "generation": 13,
-  "cycles": 33,
+  "cycles": 34,
   "virtual_spores": [
     {
       "spore_id": "g_0e73f28e",
@@ -12,7 +12,7 @@
       "generation": 12,
       "status": "elite",
       "created_at": "2026-05-03T21:52:09.460679+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604391+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813294+00:00",
       "genome_hash": "bc966c42d55a24a654bea04adcbf12e0ef9d22fe409c13496372a1414ea281fb",
       "genome": {
         "capacidades": [
@@ -51,12 +51,12 @@
         "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
       },
       "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.865,
+      "selection_score": 0.861,
       "selection_reason": "top_fitness_candidate_for_activation",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "role_bonus": 0.012,
-      "adjusted_score": 0.877
+      "adjusted_score": 0.873
     },
     {
       "spore_id": "g_d760b390",
@@ -65,7 +65,7 @@
       "generation": 13,
       "status": "elite",
       "created_at": "2026-05-04T04:00:42.604375+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604517+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813300+00:00",
       "genome_hash": "de1b1deca74c1ec097b3305c6ab23d3a507319811170ee5e1ac0abcee999e659",
       "genome": {
         "capacidades": [
@@ -104,12 +104,12 @@
         "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
       },
       "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.8624,
+      "selection_score": 0.8584,
       "selection_reason": "top_fitness_candidate_for_activation",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "role_bonus": 0.012,
-      "adjusted_score": 0.8744
+      "adjusted_score": 0.8704
     },
     {
       "spore_id": "g_cbdf35f7",
@@ -118,7 +118,7 @@
       "generation": 12,
       "status": "elite",
       "created_at": "2026-05-03T23:10:29.713887+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604397+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813305+00:00",
       "genome_hash": "585424b70beef5adc36a1f5afad671e0af170bd6e7ced8f5cb7052040093c9a2",
       "genome": {
         "capacidades": [
@@ -157,12 +157,12 @@
         "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
       },
       "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.8605,
+      "selection_score": 0.8565,
       "selection_reason": "top_fitness_candidate_for_activation",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "role_bonus": 0.012,
-      "adjusted_score": 0.8725
+      "adjusted_score": 0.8685
     },
     {
       "spore_id": "g_c8574d58",
@@ -171,7 +171,7 @@
       "generation": 11,
       "status": "elite",
       "created_at": "2026-05-03T20:09:05.151844+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604403+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813310+00:00",
       "genome_hash": "a2ec60ff41e5163f752003c4479a3704cc6f1bea62069acff66e77f6b5941eb7",
       "genome": {
         "capacidades": [
@@ -210,21 +210,74 @@
         "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
       },
       "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.8571,
+      "selection_score": 0.8531,
       "selection_reason": "top_fitness_candidate_for_activation",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "role_bonus": 0.012,
-      "adjusted_score": 0.8691
+      "adjusted_score": 0.8651
+    },
+    {
+      "spore_id": "g_09584bfd",
+      "parent_id": "g_c8574d58",
+      "parent_source": "g_c8574d58",
+      "generation": 12,
+      "status": "elite",
+      "created_at": "2026-05-04T06:47:00.813279+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813428+00:00",
+      "genome_hash": "50c9a895c60b5cf493d82869d575249a3fc580a9702c5425ee79293e7d02a95c",
+      "genome": {
+        "capacidades": [
+          "generar_respuesta"
+        ],
+        "energia": 100,
+        "especialidad": "analisis_texto",
+        "estado": "latente",
+        "estrategia": {
+          "estrategia_cognitiva": "directo",
+          "exploracion": 0.498,
+          "tasa_mutacion": 0.146,
+          "temperatura": 0.666
+        },
+        "fitness": 0.9862,
+        "generacion": 12,
+        "hash_integridad": "f6f5e1dea4a9905841fb1c2cd6a07e1239193dd8d7bae6f80f494b84c9acc4dd",
+        "id": "g_09584bfd",
+        "linaje": "g_c8574d58",
+        "memoria": {
+          "exitos": 0,
+          "fallos": 0,
+          "mejor_fitness": 0.0,
+          "ultimas_acciones": []
+        },
+        "metadatos": {
+          "creacion": "2026-03-17T16:00:00Z",
+          "ultima_actualizacion": "2026-05-04T06:47:00.813255+00:00",
+          "version_protocolo": "7.0"
+        },
+        "objetivo": "general",
+        "sentidos": [
+          "lenguaje"
+        ],
+        "rol_evolutivo": "analista",
+        "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
+      },
+      "deployment": "not_deployed_virtual_only",
+      "selection_score": 0.8525,
+      "selection_reason": "top_fitness_candidate_for_activation",
+      "role": "analista",
+      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
+      "role_bonus": 0.012,
+      "adjusted_score": 0.8645
     },
     {
       "spore_id": "g_a912ce47",
       "parent_id": "g_6974be13",
       "parent_source": "g_6974be13",
       "generation": 11,
-      "status": "elite",
+      "status": "survivor",
       "created_at": "2026-05-03T21:00:18.373960+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604408+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813314+00:00",
       "genome_hash": "3b3a16b59ae8b77f8f57c36592042133039a63e86351cf87dfef75047f5ed1a0",
       "genome": {
         "capacidades": [
@@ -263,12 +316,12 @@
         "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
       },
       "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.8535,
-      "selection_reason": "top_fitness_candidate_for_activation",
+      "selection_score": 0.8495,
+      "selection_reason": "kept_as_viable_latent_variant",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "role_bonus": 0.012,
-      "adjusted_score": 0.8655
+      "adjusted_score": 0.8615
     },
     {
       "spore_id": "g_48031e21",
@@ -277,7 +330,7 @@
       "generation": 12,
       "status": "survivor",
       "created_at": "2026-05-03T22:27:11.811594+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604413+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813319+00:00",
       "genome_hash": "ecd7154c41d59f57ad2f3582da4ada7060e40eeef77ba30e212e672c0cc0761a",
       "genome": {
         "capacidades": [
@@ -316,12 +369,12 @@
         "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
       },
       "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.8533,
+      "selection_score": 0.8493,
       "selection_reason": "kept_as_viable_latent_variant",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "role_bonus": 0.012,
-      "adjusted_score": 0.8653
+      "adjusted_score": 0.8613
     },
     {
       "spore_id": "g_6974be13",
@@ -330,7 +383,7 @@
       "generation": 10,
       "status": "survivor",
       "created_at": "2026-05-03T16:52:51.820861+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604418+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813325+00:00",
       "genome_hash": "50cec8bdf780042dc1ade86e1f8b37f59575e402d5f1406968cbcbae48c29e29",
       "genome": {
         "capacidades": [
@@ -369,12 +422,12 @@
         "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
       },
       "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.8532,
+      "selection_score": 0.8492,
       "selection_reason": "kept_as_viable_latent_variant",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "role_bonus": 0.012,
-      "adjusted_score": 0.8652
+      "adjusted_score": 0.8612
     },
     {
       "spore_id": "g_8e848c4a",
@@ -383,7 +436,7 @@
       "generation": 9,
       "status": "survivor",
       "created_at": "2026-05-03T15:58:16.739452+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604423+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813329+00:00",
       "genome_hash": "1d1107815e649561d736077446966a2c8e0fa28fd85609189aaf70461ed030ed",
       "genome": {
         "capacidades": [
@@ -422,12 +475,12 @@
         "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
       },
       "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.8512,
+      "selection_score": 0.8472,
       "selection_reason": "kept_as_viable_latent_variant",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "role_bonus": 0.012,
-      "adjusted_score": 0.8632
+      "adjusted_score": 0.8592
     },
     {
       "spore_id": "g_82bd927c",
@@ -436,7 +489,7 @@
       "generation": 12,
       "status": "survivor",
       "created_at": "2026-05-03T21:52:09.460830+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604427+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813340+00:00",
       "genome_hash": "4af6f9c2ace632692dcc0ad0154fdfd794c2f54a5b7ee5acc0e4910c0e3d971c",
       "genome": {
         "capacidades": [
@@ -475,12 +528,12 @@
         "descripcion_rol": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar."
       },
       "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.8491,
+      "selection_score": 0.8451,
       "selection_reason": "kept_as_viable_latent_variant",
       "role": "colonizadora",
       "role_description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar.",
       "role_bonus": 0.018,
-      "adjusted_score": 0.8671
+      "adjusted_score": 0.8631
     },
     {
       "spore_id": "g_e3237401",
@@ -489,7 +542,7 @@
       "generation": 10,
       "status": "survivor",
       "created_at": "2026-05-03T18:34:13.662242+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604432+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813344+00:00",
       "genome_hash": "e29aa42cf2472bfeea3cb39f99b88a21b46a16e1700dac6a0eec9c1d170106a5",
       "genome": {
         "capacidades": [
@@ -528,12 +581,12 @@
         "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
       },
       "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.8483,
+      "selection_score": 0.8443,
       "selection_reason": "kept_as_viable_latent_variant",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "role_bonus": 0.012,
-      "adjusted_score": 0.8603
+      "adjusted_score": 0.8563
     },
     {
       "spore_id": "g_d59a0aa3",
@@ -542,7 +595,7 @@
       "generation": 11,
       "status": "survivor",
       "created_at": "2026-05-03T21:00:18.373746+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604436+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813349+00:00",
       "genome_hash": "ca6ae4bfc45536da3479c5b0b3d38ee75afca81550355dd238a58661dc5dc576",
       "genome": {
         "capacidades": [
@@ -581,12 +634,12 @@
         "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
       },
       "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.8477,
+      "selection_score": 0.8437,
       "selection_reason": "kept_as_viable_latent_variant",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "role_bonus": 0.012,
-      "adjusted_score": 0.8597
+      "adjusted_score": 0.8557
     },
     {
       "spore_id": "g_a483e02f",
@@ -595,7 +648,7 @@
       "generation": 10,
       "status": "survivor",
       "created_at": "2026-05-03T16:52:51.820658+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604441+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813354+00:00",
       "genome_hash": "1af39e78ed1abdd0ca90b1ee47947928bead017897f987ea775b4bc674132799",
       "genome": {
         "capacidades": [
@@ -634,12 +687,65 @@
         "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
       },
       "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.8457,
+      "selection_score": 0.8417,
       "selection_reason": "kept_as_viable_latent_variant",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "role_bonus": 0.012,
-      "adjusted_score": 0.8577
+      "adjusted_score": 0.8537
+    },
+    {
+      "spore_id": "g_aa128ac8",
+      "parent_id": "g_c8574d58",
+      "parent_source": "g_c8574d58",
+      "generation": 12,
+      "status": "survivor",
+      "created_at": "2026-05-04T06:47:00.813182+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813423+00:00",
+      "genome_hash": "506f947d6bccac5f76709425b9254537fd1e464ca7b93154999074217ace6a2c",
+      "genome": {
+        "capacidades": [
+          "generar_respuesta"
+        ],
+        "energia": 100,
+        "especialidad": "analisis_texto",
+        "estado": "latente",
+        "estrategia": {
+          "estrategia_cognitiva": "directo",
+          "exploracion": 0.498,
+          "tasa_mutacion": 0.107,
+          "temperatura": 0.676
+        },
+        "fitness": 0.99,
+        "generacion": 12,
+        "hash_integridad": "f6f5e1dea4a9905841fb1c2cd6a07e1239193dd8d7bae6f80f494b84c9acc4dd",
+        "id": "g_aa128ac8",
+        "linaje": "g_c8574d58",
+        "memoria": {
+          "exitos": 0,
+          "fallos": 0,
+          "mejor_fitness": 0.0,
+          "ultimas_acciones": []
+        },
+        "metadatos": {
+          "creacion": "2026-03-17T16:00:00Z",
+          "ultima_actualizacion": "2026-05-04T06:47:00.813157+00:00",
+          "version_protocolo": "7.0"
+        },
+        "objetivo": "general",
+        "sentidos": [
+          "lenguaje"
+        ],
+        "rol_evolutivo": "analista",
+        "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
+      },
+      "deployment": "not_deployed_virtual_only",
+      "selection_score": 0.8405,
+      "selection_reason": "kept_as_viable_latent_variant",
+      "role": "analista",
+      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
+      "role_bonus": 0.012,
+      "adjusted_score": 0.8525
     },
     {
       "spore_id": "g_cfb5495d",
@@ -648,7 +754,7 @@
       "generation": 9,
       "status": "survivor",
       "created_at": "2026-05-03T15:04:46.110601+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604446+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813358+00:00",
       "genome_hash": "0736aa1d21bfdf50d7861c383774f01a6d101314ab64a35e1b2812480e49fcdc",
       "genome": {
         "capacidades": [
@@ -687,12 +793,12 @@
         "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
       },
       "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.8438,
+      "selection_score": 0.8398,
       "selection_reason": "kept_as_viable_latent_variant",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "role_bonus": 0.012,
-      "adjusted_score": 0.8558
+      "adjusted_score": 0.8518
     },
     {
       "spore_id": "g_b56b0e71",
@@ -701,7 +807,7 @@
       "generation": 9,
       "status": "survivor",
       "created_at": "2026-05-03T15:58:16.739544+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604451+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813363+00:00",
       "genome_hash": "cae04c8a5dd1c00d291c03b48bbd71d5b359dc7e876f0c9a27923901d70bbd26",
       "genome": {
         "capacidades": [
@@ -740,12 +846,12 @@
         "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
       },
       "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.8415,
+      "selection_score": 0.8375,
       "selection_reason": "kept_as_viable_latent_variant",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "role_bonus": 0.012,
-      "adjusted_score": 0.8535
+      "adjusted_score": 0.8495
     },
     {
       "spore_id": "g_c4f30b02",
@@ -754,7 +860,7 @@
       "generation": 10,
       "status": "survivor",
       "created_at": "2026-05-03T17:36:15.962421+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604455+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813368+00:00",
       "genome_hash": "f17337848b8e8cf06da24abc011f66c4b23b675dd151381f4fe41fa7538c075c",
       "genome": {
         "capacidades": [
@@ -793,12 +899,12 @@
         "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
       },
       "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.8414,
+      "selection_score": 0.8374,
       "selection_reason": "kept_as_viable_latent_variant",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "role_bonus": 0.012,
-      "adjusted_score": 0.8534
+      "adjusted_score": 0.8494
     },
     {
       "spore_id": "g_0e606fd1",
@@ -807,7 +913,7 @@
       "generation": 8,
       "status": "survivor",
       "created_at": "2026-05-03T11:08:00.424401+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604460+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813373+00:00",
       "genome_hash": "c5f82c9315b7aae32a19572a7bda19d761fa1b4d8996a024438ffeb12257fcfc",
       "genome": {
         "capacidades": [
@@ -846,12 +952,12 @@
         "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
       },
       "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.8401,
+      "selection_score": 0.8361,
       "selection_reason": "kept_as_viable_latent_variant",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "role_bonus": 0.012,
-      "adjusted_score": 0.8521
+      "adjusted_score": 0.8481
     },
     {
       "spore_id": "g_491f0be6",
@@ -860,7 +966,7 @@
       "generation": 12,
       "status": "survivor",
       "created_at": "2026-05-04T00:02:11.725684+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604465+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813378+00:00",
       "genome_hash": "194196d116f8da84effabb7e83d19f125ca585085a3b5332b3d09b81def9cae9",
       "genome": {
         "capacidades": [
@@ -899,12 +1005,12 @@
         "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
       },
       "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.8367,
+      "selection_score": 0.8327,
       "selection_reason": "kept_as_viable_latent_variant",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "role_bonus": 0.012,
-      "adjusted_score": 0.8487
+      "adjusted_score": 0.8447
     },
     {
       "spore_id": "g_68fdcd08",
@@ -913,7 +1019,7 @@
       "generation": 10,
       "status": "survivor",
       "created_at": "2026-05-03T18:34:13.662128+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604470+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813383+00:00",
       "genome_hash": "2610e342cf304f40fc051e0278bc1ccf60581e21bddde088c6adeb7148601f2d",
       "genome": {
         "capacidades": [
@@ -952,12 +1058,12 @@
         "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
       },
       "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.8357,
+      "selection_score": 0.8317,
       "selection_reason": "kept_as_viable_latent_variant",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "role_bonus": 0.012,
-      "adjusted_score": 0.8477
+      "adjusted_score": 0.8437
     },
     {
       "spore_id": "g_2357744a",
@@ -966,7 +1072,7 @@
       "generation": 11,
       "status": "survivor",
       "created_at": "2026-05-03T20:09:05.152060+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604474+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813388+00:00",
       "genome_hash": "249d0c2d7042e9f2998f0fff645279d4ddb9db779df4205d410a6aec08139b69",
       "genome": {
         "capacidades": [
@@ -1005,12 +1111,12 @@
         "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
       },
       "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.8355,
+      "selection_score": 0.8315,
       "selection_reason": "kept_as_viable_latent_variant",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "role_bonus": 0.012,
-      "adjusted_score": 0.8475
+      "adjusted_score": 0.8435
     },
     {
       "spore_id": "g_89482f33",
@@ -1019,7 +1125,7 @@
       "generation": 11,
       "status": "survivor",
       "created_at": "2026-05-03T20:09:05.151956+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604479+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813393+00:00",
       "genome_hash": "51824d3850deb5e18ab30795a44bc447175debd21c26243a310a14d49533a700",
       "genome": {
         "capacidades": [
@@ -1058,12 +1164,12 @@
         "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
       },
       "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.835,
+      "selection_score": 0.831,
       "selection_reason": "kept_as_viable_latent_variant",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "role_bonus": 0.012,
-      "adjusted_score": 0.847
+      "adjusted_score": 0.843
     },
     {
       "spore_id": "g_3285279f",
@@ -1072,7 +1178,7 @@
       "generation": 12,
       "status": "survivor",
       "created_at": "2026-05-03T22:27:11.811921+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604483+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813398+00:00",
       "genome_hash": "1bcadeee7639a2dcae8cb8b25c1bd039be94a8ad91314f6ba341c8aacdf257fc",
       "genome": {
         "capacidades": [
@@ -1111,12 +1217,12 @@
         "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
       },
       "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.8329,
+      "selection_score": 0.8289,
       "selection_reason": "kept_as_viable_latent_variant",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "role_bonus": 0.012,
-      "adjusted_score": 0.8449
+      "adjusted_score": 0.8409
     },
     {
       "spore_id": "g_5c836123",
@@ -1125,7 +1231,7 @@
       "generation": 9,
       "status": "survivor",
       "created_at": "2026-05-03T15:58:16.739348+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604488+00:00",
+      "last_seen_at": "2026-05-04T06:47:00.813403+00:00",
       "genome_hash": "2f0b3bec83a16ab3f1c8aae55463b31eb2b84356459bede68135b0ce1b16f5c2",
       "genome": {
         "capacidades": [
@@ -1164,122 +1270,16 @@
         "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
       },
       "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.8308,
+      "selection_score": 0.8268,
       "selection_reason": "kept_as_viable_latent_variant",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "role_bonus": 0.012,
-      "adjusted_score": 0.8428
-    },
-    {
-      "spore_id": "g_5eb837ad",
-      "parent_id": "g_8e848c4a",
-      "parent_source": "g_8e848c4a",
-      "generation": 10,
-      "status": "survivor",
-      "created_at": "2026-05-03T16:52:51.820769+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604493+00:00",
-      "genome_hash": "d832a799406a8bc716c19ab48e3e572186cb1003298df46bfa91fbfe4352bd06",
-      "genome": {
-        "capacidades": [
-          "generar_respuesta"
-        ],
-        "energia": 100,
-        "especialidad": "analisis_texto",
-        "estado": "latente",
-        "estrategia": {
-          "estrategia_cognitiva": "directo",
-          "exploracion": 0.44,
-          "tasa_mutacion": 0.151,
-          "temperatura": 0.626
-        },
-        "fitness": 0.99,
-        "generacion": 10,
-        "hash_integridad": "f6f5e1dea4a9905841fb1c2cd6a07e1239193dd8d7bae6f80f494b84c9acc4dd",
-        "id": "g_5eb837ad",
-        "linaje": "g_8e848c4a",
-        "memoria": {
-          "exitos": 0,
-          "fallos": 0,
-          "mejor_fitness": 0.0,
-          "ultimas_acciones": []
-        },
-        "metadatos": {
-          "creacion": "2026-03-17T16:00:00Z",
-          "ultima_actualizacion": "2026-05-03T16:52:51.820744+00:00",
-          "version_protocolo": "7.0"
-        },
-        "objetivo": "general",
-        "sentidos": [
-          "lenguaje"
-        ],
-        "rol_evolutivo": "analista",
-        "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
-      },
-      "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.8295,
-      "selection_reason": "kept_as_viable_latent_variant",
-      "role": "analista",
-      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "role_bonus": 0.012,
-      "adjusted_score": 0.8415
-    },
-    {
-      "spore_id": "g_1c17e77e",
-      "parent_id": "g_c8574d58",
-      "parent_source": "g_c8574d58",
-      "generation": 12,
-      "status": "survivor",
-      "created_at": "2026-05-03T22:27:11.811748+00:00",
-      "last_seen_at": "2026-05-04T04:00:42.604497+00:00",
-      "genome_hash": "f4739ed7ed1579039c25dc6aa5eaaa10a06cb3b117eda97e35d998b4269e5680",
-      "genome": {
-        "capacidades": [
-          "generar_respuesta"
-        ],
-        "energia": 100,
-        "especialidad": "analisis_texto",
-        "estado": "latente",
-        "estrategia": {
-          "estrategia_cognitiva": "directo",
-          "exploracion": 0.509,
-          "tasa_mutacion": 0.118,
-          "temperatura": 0.7
-        },
-        "fitness": 0.9318,
-        "generacion": 12,
-        "hash_integridad": "f6f5e1dea4a9905841fb1c2cd6a07e1239193dd8d7bae6f80f494b84c9acc4dd",
-        "id": "g_1c17e77e",
-        "linaje": "g_c8574d58",
-        "memoria": {
-          "exitos": 0,
-          "fallos": 0,
-          "mejor_fitness": 0.0,
-          "ultimas_acciones": []
-        },
-        "metadatos": {
-          "creacion": "2026-03-17T16:00:00Z",
-          "ultima_actualizacion": "2026-05-03T22:27:11.811718+00:00",
-          "version_protocolo": "7.0"
-        },
-        "objetivo": "general",
-        "sentidos": [
-          "lenguaje"
-        ],
-        "rol_evolutivo": "analista",
-        "descripcion_rol": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
-      },
-      "deployment": "not_deployed_virtual_only",
-      "selection_score": 0.8262,
-      "selection_reason": "kept_as_viable_latent_variant",
-      "role": "analista",
-      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "role_bonus": 0.012,
-      "adjusted_score": 0.8382
+      "adjusted_score": 0.8388
     }
   ],
   "lineage": [],
-  "extinct_total": 75,
+  "extinct_total": 78,
   "selection": {
     "mode": "elitist_safe_selection_v2",
     "active_candidates": [
@@ -1289,7 +1289,7 @@
         "parent_source": "g_a912ce47",
         "generation": 12,
         "status": "elite",
-        "selection_score": 0.865,
+        "selection_score": 0.861,
         "fitness": 0.99,
         "temperature": 0.663,
         "exploration": 0.568,
@@ -1303,7 +1303,7 @@
         "parent_source": "g_0e73f28e",
         "generation": 13,
         "status": "elite",
-        "selection_score": 0.8624,
+        "selection_score": 0.8584,
         "fitness": 0.9659,
         "temperature": 0.659,
         "exploration": 0.551,
@@ -1317,7 +1317,7 @@
         "parent_source": "g_a912ce47",
         "generation": 12,
         "status": "elite",
-        "selection_score": 0.8605,
+        "selection_score": 0.8565,
         "fitness": 0.9825,
         "temperature": 0.642,
         "exploration": 0.548,
@@ -1331,7 +1331,7 @@
         "parent_source": "g_a483e02f",
         "generation": 11,
         "status": "elite",
-        "selection_score": 0.8571,
+        "selection_score": 0.8531,
         "fitness": 0.99,
         "temperature": 0.673,
         "exploration": 0.534,
@@ -1340,16 +1340,16 @@
         "reason": "top_fitness_candidate_for_activation"
       },
       {
-        "spore_id": "g_a912ce47",
-        "parent_id": "g_6974be13",
-        "parent_source": "g_6974be13",
-        "generation": 11,
+        "spore_id": "g_09584bfd",
+        "parent_id": "g_c8574d58",
+        "parent_source": "g_c8574d58",
+        "generation": 12,
         "status": "elite",
-        "selection_score": 0.8535,
-        "fitness": 0.9824,
-        "temperature": 0.606,
-        "exploration": 0.553,
-        "mutation_rate": 0.145,
+        "selection_score": 0.8525,
+        "fitness": 0.9862,
+        "temperature": 0.666,
+        "exploration": 0.498,
+        "mutation_rate": 0.146,
         "deployment": "not_deployed_virtual_only",
         "reason": "top_fitness_candidate_for_activation"
       }
@@ -1361,7 +1361,7 @@
         "parent_source": "g_a912ce47",
         "generation": 12,
         "status": "elite",
-        "selection_score": 0.865,
+        "selection_score": 0.861,
         "fitness": 0.99,
         "temperature": 0.663,
         "exploration": 0.568,
@@ -1375,7 +1375,7 @@
         "parent_source": "g_0e73f28e",
         "generation": 13,
         "status": "elite",
-        "selection_score": 0.8624,
+        "selection_score": 0.8584,
         "fitness": 0.9659,
         "temperature": 0.659,
         "exploration": 0.551,
@@ -1389,7 +1389,7 @@
         "parent_source": "g_a912ce47",
         "generation": 12,
         "status": "elite",
-        "selection_score": 0.8605,
+        "selection_score": 0.8565,
         "fitness": 0.9825,
         "temperature": 0.642,
         "exploration": 0.548,
@@ -1403,7 +1403,7 @@
         "parent_source": "g_a483e02f",
         "generation": 11,
         "status": "elite",
-        "selection_score": 0.8571,
+        "selection_score": 0.8531,
         "fitness": 0.99,
         "temperature": 0.673,
         "exploration": 0.534,
@@ -1412,18 +1412,32 @@
         "reason": "top_fitness_candidate_for_activation"
       },
       {
+        "spore_id": "g_09584bfd",
+        "parent_id": "g_c8574d58",
+        "parent_source": "g_c8574d58",
+        "generation": 12,
+        "status": "elite",
+        "selection_score": 0.8525,
+        "fitness": 0.9862,
+        "temperature": 0.666,
+        "exploration": 0.498,
+        "mutation_rate": 0.146,
+        "deployment": "not_deployed_virtual_only",
+        "reason": "top_fitness_candidate_for_activation"
+      },
+      {
         "spore_id": "g_a912ce47",
         "parent_id": "g_6974be13",
         "parent_source": "g_6974be13",
         "generation": 11,
-        "status": "elite",
-        "selection_score": 0.8535,
+        "status": "survivor",
+        "selection_score": 0.8495,
         "fitness": 0.9824,
         "temperature": 0.606,
         "exploration": 0.553,
         "mutation_rate": 0.145,
         "deployment": "not_deployed_virtual_only",
-        "reason": "top_fitness_candidate_for_activation"
+        "reason": "kept_as_viable_latent_variant"
       },
       {
         "spore_id": "g_48031e21",
@@ -1431,7 +1445,7 @@
         "parent_source": "g_c8574d58",
         "generation": 12,
         "status": "survivor",
-        "selection_score": 0.8533,
+        "selection_score": 0.8493,
         "fitness": 0.99,
         "temperature": 0.759,
         "exploration": 0.522,
@@ -1445,7 +1459,7 @@
         "parent_source": "g_8e848c4a",
         "generation": 10,
         "status": "survivor",
-        "selection_score": 0.8532,
+        "selection_score": 0.8492,
         "fitness": 0.99,
         "temperature": 0.614,
         "exploration": 0.533,
@@ -1459,7 +1473,7 @@
         "parent_source": "g_e93ebb0b",
         "generation": 9,
         "status": "survivor",
-        "selection_score": 0.8512,
+        "selection_score": 0.8472,
         "fitness": 0.99,
         "temperature": 0.685,
         "exploration": 0.497,
@@ -1473,7 +1487,7 @@
         "parent_source": "g_a912ce47",
         "generation": 12,
         "status": "survivor",
-        "selection_score": 0.8491,
+        "selection_score": 0.8451,
         "fitness": 0.99,
         "temperature": 0.702,
         "exploration": 0.647,
@@ -1487,7 +1501,7 @@
         "parent_source": "g_8e848c4a",
         "generation": 10,
         "status": "survivor",
-        "selection_score": 0.8483,
+        "selection_score": 0.8443,
         "fitness": 0.99,
         "temperature": 0.752,
         "exploration": 0.542,
@@ -1501,7 +1515,7 @@
         "parent_source": "g_6974be13",
         "generation": 11,
         "status": "survivor",
-        "selection_score": 0.8477,
+        "selection_score": 0.8437,
         "fitness": 0.99,
         "temperature": 0.675,
         "exploration": 0.461,
@@ -1515,11 +1529,25 @@
         "parent_source": "g_8e848c4a",
         "generation": 10,
         "status": "survivor",
-        "selection_score": 0.8457,
+        "selection_score": 0.8417,
         "fitness": 0.9694,
         "temperature": 0.745,
         "exploration": 0.509,
         "mutation_rate": 0.147,
+        "deployment": "not_deployed_virtual_only",
+        "reason": "kept_as_viable_latent_variant"
+      },
+      {
+        "spore_id": "g_aa128ac8",
+        "parent_id": "g_c8574d58",
+        "parent_source": "g_c8574d58",
+        "generation": 12,
+        "status": "survivor",
+        "selection_score": 0.8405,
+        "fitness": 0.99,
+        "temperature": 0.676,
+        "exploration": 0.498,
+        "mutation_rate": 0.107,
         "deployment": "not_deployed_virtual_only",
         "reason": "kept_as_viable_latent_variant"
       },
@@ -1529,7 +1557,7 @@
         "parent_source": "g_66a8cdef",
         "generation": 9,
         "status": "survivor",
-        "selection_score": 0.8438,
+        "selection_score": 0.8398,
         "fitness": 0.99,
         "temperature": 0.717,
         "exploration": 0.495,
@@ -1543,7 +1571,7 @@
         "parent_source": "g_e93ebb0b",
         "generation": 9,
         "status": "survivor",
-        "selection_score": 0.8415,
+        "selection_score": 0.8375,
         "fitness": 0.9773,
         "temperature": 0.648,
         "exploration": 0.586,
@@ -1557,7 +1585,7 @@
         "parent_source": "g_cfb5495d",
         "generation": 10,
         "status": "survivor",
-        "selection_score": 0.8414,
+        "selection_score": 0.8374,
         "fitness": 0.9709,
         "temperature": 0.726,
         "exploration": 0.558,
@@ -1571,7 +1599,7 @@
         "parent_source": "g_01826703",
         "generation": 8,
         "status": "survivor",
-        "selection_score": 0.8401,
+        "selection_score": 0.8361,
         "fitness": 0.99,
         "temperature": 0.712,
         "exploration": 0.544,
@@ -1585,7 +1613,7 @@
         "parent_source": "g_c8574d58",
         "generation": 12,
         "status": "survivor",
-        "selection_score": 0.8367,
+        "selection_score": 0.8327,
         "fitness": 0.99,
         "temperature": 0.586,
         "exploration": 0.504,
@@ -1599,7 +1627,7 @@
         "parent_source": "g_8e848c4a",
         "generation": 10,
         "status": "survivor",
-        "selection_score": 0.8357,
+        "selection_score": 0.8317,
         "fitness": 0.99,
         "temperature": 0.665,
         "exploration": 0.436,
@@ -1613,7 +1641,7 @@
         "parent_source": "g_a483e02f",
         "generation": 11,
         "status": "survivor",
-        "selection_score": 0.8355,
+        "selection_score": 0.8315,
         "fitness": 0.99,
         "temperature": 0.827,
         "exploration": 0.569,
@@ -1627,7 +1655,7 @@
         "parent_source": "g_a483e02f",
         "generation": 11,
         "status": "survivor",
-        "selection_score": 0.835,
+        "selection_score": 0.831,
         "fitness": 0.99,
         "temperature": 0.819,
         "exploration": 0.445,
@@ -1641,7 +1669,7 @@
         "parent_source": "g_c8574d58",
         "generation": 12,
         "status": "survivor",
-        "selection_score": 0.8329,
+        "selection_score": 0.8289,
         "fitness": 0.958,
         "temperature": 0.744,
         "exploration": 0.519,
@@ -1655,69 +1683,41 @@
         "parent_source": "g_e93ebb0b",
         "generation": 9,
         "status": "survivor",
-        "selection_score": 0.8308,
+        "selection_score": 0.8268,
         "fitness": 0.9445,
         "temperature": 0.682,
         "exploration": 0.524,
         "mutation_rate": 0.134,
         "deployment": "not_deployed_virtual_only",
         "reason": "kept_as_viable_latent_variant"
-      },
-      {
-        "spore_id": "g_5eb837ad",
-        "parent_id": "g_8e848c4a",
-        "parent_source": "g_8e848c4a",
-        "generation": 10,
-        "status": "survivor",
-        "selection_score": 0.8295,
-        "fitness": 0.99,
-        "temperature": 0.626,
-        "exploration": 0.44,
-        "mutation_rate": 0.151,
-        "deployment": "not_deployed_virtual_only",
-        "reason": "kept_as_viable_latent_variant"
-      },
-      {
-        "spore_id": "g_1c17e77e",
-        "parent_id": "g_c8574d58",
-        "parent_source": "g_c8574d58",
-        "generation": 12,
-        "status": "survivor",
-        "selection_score": 0.8262,
-        "fitness": 0.9318,
-        "temperature": 0.7,
-        "exploration": 0.509,
-        "mutation_rate": 0.118,
-        "deployment": "not_deployed_virtual_only",
-        "reason": "kept_as_viable_latent_variant"
       }
     ],
     "extinct_last_cycle": [
       {
-        "spore_id": "g_230b6d15",
-        "parent_id": "g_a912ce47",
-        "selection_score": 0.8259,
+        "spore_id": "g_5eb837ad",
+        "parent_id": "g_8e848c4a",
+        "selection_score": 0.8255,
+        "generation": 10,
+        "reason": "outcompeted_by_higher_fitness_variants"
+      },
+      {
+        "spore_id": "g_1c17e77e",
+        "parent_id": "g_c8574d58",
+        "selection_score": 0.8222,
         "generation": 12,
         "reason": "outcompeted_by_higher_fitness_variants"
       },
       {
-        "spore_id": "g_03311bd5",
-        "parent_id": "g_0e73f28e",
-        "selection_score": 0.8133,
-        "generation": 13,
-        "reason": "outcompeted_by_higher_fitness_variants"
-      },
-      {
-        "spore_id": "g_a409ae7d",
-        "parent_id": "g_0e73f28e",
-        "selection_score": 0.7921,
-        "generation": 13,
+        "spore_id": "g_dfb03b18",
+        "parent_id": "g_c8574d58",
+        "selection_score": 0.8144,
+        "generation": 12,
         "reason": "outcompeted_by_higher_fitness_variants"
       }
     ],
     "extinct_last_cycle_count": 3,
-    "best_score": 0.865,
-    "average_score": 0.8448,
+    "best_score": 0.861,
+    "average_score": 0.8427,
     "selection_pressure": 0.1111
   },
   "safety_limits": {
@@ -1743,7 +1743,7 @@
   "engine_version": "2.1",
   "role_system": {
     "version": "2.2",
-    "updated_at": "2026-05-04T04:00:42.612890+00:00",
+    "updated_at": "2026-05-04T06:47:00.821888+00:00",
     "roles_available": {
       "exploradora": "Alta exploración y mutación. Busca variación genética controlada.",
       "estabilizadora": "Baja mutación y alta consistencia. Conserva patrones útiles.",
@@ -1755,14 +1755,14 @@
   "roles_summary": {
     "analista": {
       "count": 23,
-      "avg_adjusted_score": 0.8567,
-      "best_adjusted_score": 0.877,
+      "avg_adjusted_score": 0.8546,
+      "best_adjusted_score": 0.873,
       "description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
     },
     "colonizadora": {
       "count": 1,
-      "avg_adjusted_score": 0.8671,
-      "best_adjusted_score": 0.8671,
+      "avg_adjusted_score": 0.8631,
+      "best_adjusted_score": 0.8631,
       "description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar."
     }
   },
@@ -1774,14 +1774,14 @@
       "roles": {
         "colonizadora": 1
       },
-      "best_score": 0.8671,
-      "average_score": 0.8671,
+      "best_score": 0.8631,
+      "average_score": 0.8631,
       "members": [
         {
           "spore_id": "g_82bd927c",
           "role": "colonizadora",
           "status": "survivor",
-          "score": 0.8671,
+          "score": 0.8631,
           "generation": 12
         }
       ]
@@ -1793,64 +1793,64 @@
       "roles": {
         "analista": 23
       },
-      "best_score": 0.877,
-      "average_score": 0.8567,
+      "best_score": 0.873,
+      "average_score": 0.8546,
       "members": [
         {
           "spore_id": "g_0e73f28e",
           "role": "analista",
           "status": "elite",
-          "score": 0.877,
+          "score": 0.873,
           "generation": 12
         },
         {
           "spore_id": "g_d760b390",
           "role": "analista",
           "status": "elite",
-          "score": 0.8744,
+          "score": 0.8704,
           "generation": 13
         },
         {
           "spore_id": "g_cbdf35f7",
           "role": "analista",
           "status": "elite",
-          "score": 0.8725,
+          "score": 0.8685,
           "generation": 12
         },
         {
           "spore_id": "g_c8574d58",
           "role": "analista",
           "status": "elite",
-          "score": 0.8691,
+          "score": 0.8651,
           "generation": 11
+        },
+        {
+          "spore_id": "g_09584bfd",
+          "role": "analista",
+          "status": "elite",
+          "score": 0.8645,
+          "generation": 12
         },
         {
           "spore_id": "g_a912ce47",
           "role": "analista",
-          "status": "elite",
-          "score": 0.8655,
+          "status": "survivor",
+          "score": 0.8615,
           "generation": 11
         },
         {
           "spore_id": "g_48031e21",
           "role": "analista",
           "status": "survivor",
-          "score": 0.8653,
+          "score": 0.8613,
           "generation": 12
         },
         {
           "spore_id": "g_6974be13",
           "role": "analista",
           "status": "survivor",
-          "score": 0.8652,
+          "score": 0.8612,
           "generation": 10
-        },
-        {
-          "spore_id": "g_8e848c4a",
-          "role": "analista",
-          "status": "survivor",
-          "score": 0.8632,
-          "generation": 9
         }
       ]
     }
@@ -1863,7 +1863,7 @@
         "tejido_exploracion"
       ],
       "spores_count": 1,
-      "operational_score": 0.8671,
+      "operational_score": 0.8631,
       "status": "virtual_ready"
     },
     "organo_cognitivo": {
@@ -1873,7 +1873,7 @@
         "tejido_cognitivo"
       ],
       "spores_count": 23,
-      "operational_score": 0.8567,
+      "operational_score": 0.8546,
       "status": "virtual_ready"
     },
     "organo_homeostasis": {
