@@ -1,97 +1,104 @@
 {
-  "timestamp_utc": "2026-05-04T12:57:21.331882+00:00",
+  "timestamp_utc": "2026-05-04T15:09:53.188229+00:00",
   "phase": "fase_3_tejidos_y_organos_virtuales",
   "tissues": [
     {
-      "name": "tejido_exploracion",
-      "purpose": "descubrir recursos autorizados, variaciones y rutas de expansión controlada",
-      "spores_count": 2,
-      "roles": {
-        "colonizadora": 2
-      },
-      "best_score": 0.8511,
-      "average_score": 0.8454,
-      "members": [
-        {
-          "spore_id": "g_82bd927c",
-          "role": "colonizadora",
-          "status": "survivor",
-          "score": 0.8511,
-          "generation": 12
-        },
-        {
-          "spore_id": "g_a026c66e",
-          "role": "colonizadora",
-          "status": "survivor",
-          "score": 0.8397,
-          "generation": 14
-        }
-      ]
-    },
-    {
       "name": "tejido_cognitivo",
       "purpose": "razonar sobre memoria, arquitectura y construcción de nuevos módulos",
-      "spores_count": 22,
+      "spores_count": 21,
       "roles": {
-        "analista": 22
+        "analista": 21
       },
-      "best_score": 0.861,
-      "average_score": 0.8444,
+      "best_score": 0.857,
+      "average_score": 0.8411,
       "members": [
         {
           "spore_id": "g_0e73f28e",
           "role": "analista",
           "status": "elite",
-          "score": 0.861,
+          "score": 0.857,
           "generation": 12
         },
         {
           "spore_id": "g_d760b390",
           "role": "analista",
           "status": "elite",
-          "score": 0.8584,
+          "score": 0.8544,
           "generation": 13
         },
         {
           "spore_id": "g_cbdf35f7",
           "role": "analista",
           "status": "elite",
-          "score": 0.8565,
+          "score": 0.8525,
           "generation": 12
         },
         {
           "spore_id": "g_c8574d58",
           "role": "analista",
           "status": "elite",
-          "score": 0.8531,
+          "score": 0.8491,
           "generation": 11
         },
         {
           "spore_id": "g_84b8080e",
           "role": "analista",
           "status": "elite",
-          "score": 0.8527,
+          "score": 0.8487,
           "generation": 12
         },
         {
           "spore_id": "g_09584bfd",
           "role": "analista",
           "status": "survivor",
-          "score": 0.8525,
+          "score": 0.8485,
           "generation": 12
         },
         {
           "spore_id": "g_a912ce47",
           "role": "analista",
           "status": "survivor",
-          "score": 0.8495,
+          "score": 0.8455,
           "generation": 11
         },
         {
           "spore_id": "g_48031e21",
           "role": "analista",
           "status": "survivor",
-          "score": 0.8493,
+          "score": 0.8453,
+          "generation": 12
+        }
+      ]
+    },
+    {
+      "name": "tejido_exploracion",
+      "purpose": "descubrir recursos autorizados, variaciones y rutas de expansión controlada",
+      "spores_count": 3,
+      "roles": {
+        "colonizadora": 3
+      },
+      "best_score": 0.8471,
+      "average_score": 0.839,
+      "members": [
+        {
+          "spore_id": "g_82bd927c",
+          "role": "colonizadora",
+          "status": "survivor",
+          "score": 0.8471,
+          "generation": 12
+        },
+        {
+          "spore_id": "g_a026c66e",
+          "role": "colonizadora",
+          "status": "survivor",
+          "score": 0.8357,
+          "generation": 14
+        },
+        {
+          "spore_id": "g_bc6167ee",
+          "role": "colonizadora",
+          "status": "survivor",
+          "score": 0.8343,
           "generation": 12
         }
       ]
@@ -104,8 +111,8 @@
       "tissues": [
         "tejido_exploracion"
       ],
-      "spores_count": 2,
-      "operational_score": 0.8454,
+      "spores_count": 3,
+      "operational_score": 0.839,
       "status": "virtual_ready"
     },
     {
@@ -114,8 +121,8 @@
       "tissues": [
         "tejido_cognitivo"
       ],
-      "spores_count": 22,
-      "operational_score": 0.8444,
+      "spores_count": 21,
+      "operational_score": 0.8411,
       "status": "virtual_ready"
     },
     {
