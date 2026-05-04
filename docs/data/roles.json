@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-05-04T21:10:53.438188+00:00",
+  "timestamp_utc": "2026-05-04T22:14:26.242878+00:00",
   "phase": "fase_2_2_especializacion_de_linajes",
   "roles_available": {
     "exploradora": "Alta exploración y mutación. Busca variación genética controlada.",
@@ -10,15 +10,15 @@
   },
   "roles_summary": {
     "analista": {
-      "count": 19,
-      "avg_adjusted_score": 0.8268,
-      "best_adjusted_score": 0.841,
+      "count": 18,
+      "avg_adjusted_score": 0.8234,
+      "best_adjusted_score": 0.837,
       "description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
     },
     "colonizadora": {
-      "count": 5,
-      "avg_adjusted_score": 0.8413,
-      "best_adjusted_score": 0.8467,
+      "count": 6,
+      "avg_adjusted_score": 0.8356,
+      "best_adjusted_score": 0.8427,
       "description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar."
     }
   },
@@ -30,8 +30,8 @@
       "status": "elite",
       "role": "colonizadora",
       "role_description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar.",
-      "selection_score": 0.8287,
-      "adjusted_score": 0.8467,
+      "selection_score": 0.8247,
+      "adjusted_score": 0.8427,
       "temperature": 0.722,
       "exploration": 0.646,
       "mutation_rate": 0.145
@@ -43,8 +43,8 @@
       "status": "elite",
       "role": "colonizadora",
       "role_description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar.",
-      "selection_score": 0.8272,
-      "adjusted_score": 0.8452,
+      "selection_score": 0.8232,
+      "adjusted_score": 0.8412,
       "temperature": 0.734,
       "exploration": 0.655,
       "mutation_rate": 0.141
@@ -56,8 +56,8 @@
       "status": "elite",
       "role": "colonizadora",
       "role_description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar.",
-      "selection_score": 0.8249,
-      "adjusted_score": 0.8429,
+      "selection_score": 0.8209,
+      "adjusted_score": 0.8389,
       "temperature": 0.683,
       "exploration": 0.628,
       "mutation_rate": 0.143
@@ -69,8 +69,8 @@
       "status": "elite",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.829,
-      "adjusted_score": 0.841,
+      "selection_score": 0.825,
+      "adjusted_score": 0.837,
       "temperature": 0.663,
       "exploration": 0.568,
       "mutation_rate": 0.133
@@ -82,8 +82,8 @@
       "status": "survivor",
       "role": "colonizadora",
       "role_description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar.",
-      "selection_score": 0.8225,
-      "adjusted_score": 0.8405,
+      "selection_score": 0.8185,
+      "adjusted_score": 0.8365,
       "temperature": 0.683,
       "exploration": 0.638,
       "mutation_rate": 0.145
@@ -95,8 +95,8 @@
       "status": "elite",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8264,
-      "adjusted_score": 0.8384,
+      "selection_score": 0.8224,
+      "adjusted_score": 0.8344,
       "temperature": 0.659,
       "exploration": 0.551,
       "mutation_rate": 0.138
@@ -108,8 +108,8 @@
       "status": "survivor",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8245,
-      "adjusted_score": 0.8365,
+      "selection_score": 0.8205,
+      "adjusted_score": 0.8325,
       "temperature": 0.642,
       "exploration": 0.548,
       "mutation_rate": 0.131
@@ -121,8 +121,8 @@
       "status": "survivor",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8211,
-      "adjusted_score": 0.8331,
+      "selection_score": 0.8171,
+      "adjusted_score": 0.8291,
       "temperature": 0.673,
       "exploration": 0.534,
       "mutation_rate": 0.123
@@ -134,8 +134,8 @@
       "status": "survivor",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8207,
-      "adjusted_score": 0.8327,
+      "selection_score": 0.8167,
+      "adjusted_score": 0.8287,
       "temperature": 0.628,
       "exploration": 0.565,
       "mutation_rate": 0.154
@@ -147,8 +147,8 @@
       "status": "survivor",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8205,
-      "adjusted_score": 0.8325,
+      "selection_score": 0.8165,
+      "adjusted_score": 0.8285,
       "temperature": 0.666,
       "exploration": 0.498,
       "mutation_rate": 0.146
@@ -160,24 +160,24 @@
       "status": "survivor",
       "role": "colonizadora",
       "role_description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar.",
-      "selection_score": 0.8131,
-      "adjusted_score": 0.8311,
+      "selection_score": 0.8091,
+      "adjusted_score": 0.8271,
       "temperature": 0.702,
       "exploration": 0.647,
       "mutation_rate": 0.126
     },
     {
-      "spore_id": "g_a912ce47",
-      "parent_id": "g_6974be13",
-      "generation": 11,
+      "spore_id": "g_8e0dc798",
+      "parent_id": "g_c3943206",
+      "generation": 14,
       "status": "survivor",
-      "role": "analista",
-      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.8175,
-      "adjusted_score": 0.8295,
-      "temperature": 0.606,
-      "exploration": 0.553,
-      "mutation_rate": 0.145
+      "role": "colonizadora",
+      "role_description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar.",
+      "selection_score": 0.809,
+      "adjusted_score": 0.827,
+      "temperature": 0.685,
+      "exploration": 0.664,
+      "mutation_rate": 0.148
     }
   ],
   "decision": "castas_funcionales_asignadas_sin_despliegue_externo",
