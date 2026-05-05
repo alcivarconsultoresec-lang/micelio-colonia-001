@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-05-04T23:10:38.162736+00:00",
+  "timestamp_utc": "2026-05-05T00:06:53.476578+00:00",
   "phase": "fase_3_tejidos_y_organos_virtuales",
   "tissues": [
     {
@@ -9,56 +9,56 @@
       "roles": {
         "colonizadora": 7
       },
-      "best_score": 0.8401,
-      "average_score": 0.8328,
+      "best_score": 0.8361,
+      "average_score": 0.8288,
       "members": [
         {
           "spore_id": "g_79db068d",
           "role": "colonizadora",
           "status": "elite",
-          "score": 0.8401,
+          "score": 0.8361,
           "generation": 13
         },
         {
           "spore_id": "g_b2d780ca",
           "role": "colonizadora",
           "status": "elite",
-          "score": 0.8387,
+          "score": 0.8347,
           "generation": 14
         },
         {
           "spore_id": "g_47d96011",
           "role": "colonizadora",
-          "status": "elite",
-          "score": 0.8372,
+          "status": "survivor",
+          "score": 0.8332,
           "generation": 14
         },
         {
           "spore_id": "g_c3943206",
           "role": "colonizadora",
           "status": "survivor",
-          "score": 0.8349,
+          "score": 0.8309,
           "generation": 13
         },
         {
           "spore_id": "g_9a409c5c",
           "role": "colonizadora",
           "status": "survivor",
-          "score": 0.8325,
+          "score": 0.8285,
           "generation": 14
         },
         {
           "spore_id": "g_82bd927c",
           "role": "colonizadora",
           "status": "survivor",
-          "score": 0.8231,
+          "score": 0.8191,
           "generation": 12
         },
         {
           "spore_id": "g_8e0dc798",
           "role": "colonizadora",
           "status": "survivor",
-          "score": 0.823,
+          "score": 0.819,
           "generation": 14
         }
       ]
@@ -70,63 +70,63 @@
       "roles": {
         "analista": 17
       },
-      "best_score": 0.833,
-      "average_score": 0.8212,
+      "best_score": 0.8466,
+      "average_score": 0.822,
       "members": [
+        {
+          "spore_id": "g_eda2f998",
+          "role": "analista",
+          "status": "elite",
+          "score": 0.8466,
+          "generation": 13
+        },
         {
           "spore_id": "g_0e73f28e",
           "role": "analista",
           "status": "elite",
-          "score": 0.833,
+          "score": 0.829,
           "generation": 12
+        },
+        {
+          "spore_id": "g_f7a7c0b9",
+          "role": "analista",
+          "status": "elite",
+          "score": 0.8289,
+          "generation": 13
+        },
+        {
+          "spore_id": "g_ec93fc32",
+          "role": "analista",
+          "status": "survivor",
+          "score": 0.8287,
+          "generation": 13
         },
         {
           "spore_id": "g_0bdb1bb2",
           "role": "analista",
-          "status": "elite",
-          "score": 0.8305,
+          "status": "survivor",
+          "score": 0.8265,
           "generation": 13
         },
         {
           "spore_id": "g_d760b390",
           "role": "analista",
           "status": "survivor",
-          "score": 0.8304,
+          "score": 0.8264,
           "generation": 13
         },
         {
           "spore_id": "g_cbdf35f7",
           "role": "analista",
           "status": "survivor",
-          "score": 0.8285,
+          "score": 0.8245,
           "generation": 12
         },
         {
           "spore_id": "g_c8574d58",
           "role": "analista",
           "status": "survivor",
-          "score": 0.8251,
-          "generation": 11
-        },
-        {
-          "spore_id": "g_84b8080e",
-          "role": "analista",
-          "status": "survivor",
-          "score": 0.8247,
-          "generation": 12
-        },
-        {
-          "spore_id": "g_09584bfd",
-          "role": "analista",
-          "status": "survivor",
-          "score": 0.8245,
-          "generation": 12
-        },
-        {
-          "spore_id": "g_a912ce47",
-          "role": "analista",
-          "status": "survivor",
-          "score": 0.8215,
+          "score": 0.8211,
           "generation": 11
         }
       ]
@@ -140,7 +140,7 @@
         "tejido_exploracion"
       ],
       "spores_count": 7,
-      "operational_score": 0.8328,
+      "operational_score": 0.8288,
       "status": "virtual_ready"
     },
     {
@@ -150,7 +150,7 @@
         "tejido_cognitivo"
       ],
       "spores_count": 17,
-      "operational_score": 0.8212,
+      "operational_score": 0.822,
       "status": "virtual_ready"
     },
     {
