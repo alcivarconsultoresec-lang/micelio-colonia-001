@@ -1,18 +1,18 @@
 {
-  "timestamp_utc": "2026-05-05T19:18:19.268149+00:00",
+  "timestamp_utc": "2026-05-05T20:35:59.370644+00:00",
   "colony_id": "micelio-colonia-001",
-  "cycle": 54,
+  "cycle": 55,
   "runtime": "github_actions",
   "mode": "remote_ai_github_models",
   "model": "openai/gpt-4o-mini",
   "fitness": 0.6,
-  "best_score": 0.7986,
-  "average_score": 0.779,
+  "best_score": 0.7946,
+  "average_score": 0.7753,
   "selection_pressure": 0.1111,
   "virtual_spores": 24,
   "active_candidates": 5,
   "survivors": 24,
-  "extinct_total": 138,
+  "extinct_total": 141,
   "children_created": 3,
   "generation": 15,
   "replication_mode": "virtual_only",
@@ -21,28 +21,6 @@
   "engine_version": "2.1",
   "charts": {
     "episodes": [
-      {
-        "timestamp_utc": "2026-05-02T19:36:13.267241+00:00",
-        "cycle": 5,
-        "genoma_id": "g_3d16eb2f",
-        "mode": "remote_ai_github_models",
-        "fitness": 0.6,
-        "children_created": 3,
-        "parent_sources": [
-          "g_4f89ce64",
-          "g_4f89ce64",
-          "g_4f89ce64"
-        ],
-        "virtual_spores_total": 15,
-        "active_candidates": 5,
-        "survivors": 15,
-        "extinct_last_cycle_count": 0,
-        "best_score": 0.838,
-        "average_score": 0.7884,
-        "selection_pressure": 0.0,
-        "max_generation": 4,
-        "decision": "seleccion_natural_controlada_v2"
-      },
       {
         "timestamp_utc": "2026-05-02T20:07:44.497199+00:00",
         "cycle": 6,
@@ -1120,21 +1098,43 @@
         "selection_pressure": 0.1111,
         "max_generation": 15,
         "decision": "seleccion_natural_controlada_v2"
+      },
+      {
+        "timestamp_utc": "2026-05-05T20:35:59.370215+00:00",
+        "cycle": 55,
+        "genoma_id": "g_3d16eb2f",
+        "mode": "remote_ai_github_models",
+        "fitness": 0.6,
+        "children_created": 3,
+        "parent_sources": [
+          "g_79db068d",
+          "g_79db068d",
+          "g_79db068d"
+        ],
+        "virtual_spores_total": 24,
+        "active_candidates": 5,
+        "survivors": 24,
+        "extinct_last_cycle_count": 3,
+        "best_score": 0.7946,
+        "average_score": 0.7753,
+        "selection_pressure": 0.1111,
+        "max_generation": 15,
+        "decision": "seleccion_natural_controlada_v2"
       }
     ]
   },
   "phase": "fase_2_2_especializacion_de_linajes",
   "roles_summary": {
     "analista": {
-      "count": 17,
-      "avg_adjusted_score": 0.7913,
-      "best_adjusted_score": 0.8106,
+      "count": 16,
+      "avg_adjusted_score": 0.7881,
+      "best_adjusted_score": 0.8066,
       "description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
     },
     "colonizadora": {
-      "count": 7,
-      "avg_adjusted_score": 0.7962,
-      "best_adjusted_score": 0.8001,
+      "count": 8,
+      "avg_adjusted_score": 0.7918,
+      "best_adjusted_score": 0.7961,
       "description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar."
     }
   },
@@ -1146,8 +1146,8 @@
       "status": "elite",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.7986,
-      "adjusted_score": 0.8106,
+      "selection_score": 0.7946,
+      "adjusted_score": 0.8066,
       "temperature": 0.721,
       "exploration": 0.543,
       "mutation_rate": 0.141
@@ -1159,8 +1159,8 @@
       "status": "elite",
       "role": "colonizadora",
       "role_description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar.",
-      "selection_score": 0.7821,
-      "adjusted_score": 0.8001,
+      "selection_score": 0.7781,
+      "adjusted_score": 0.7961,
       "temperature": 0.731,
       "exploration": 0.621,
       "mutation_rate": 0.143
@@ -1172,8 +1172,8 @@
       "status": "survivor",
       "role": "colonizadora",
       "role_description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar.",
-      "selection_score": 0.7807,
-      "adjusted_score": 0.7987,
+      "selection_score": 0.7767,
+      "adjusted_score": 0.7947,
       "temperature": 0.722,
       "exploration": 0.646,
       "mutation_rate": 0.145
@@ -1185,8 +1185,8 @@
       "status": "elite",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.7865,
-      "adjusted_score": 0.7985,
+      "selection_score": 0.7825,
+      "adjusted_score": 0.7945,
       "temperature": 0.779,
       "exploration": 0.586,
       "mutation_rate": 0.129
@@ -1198,8 +1198,8 @@
       "status": "survivor",
       "role": "colonizadora",
       "role_description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar.",
-      "selection_score": 0.7792,
-      "adjusted_score": 0.7972,
+      "selection_score": 0.7752,
+      "adjusted_score": 0.7932,
       "temperature": 0.734,
       "exploration": 0.655,
       "mutation_rate": 0.141
@@ -1211,8 +1211,8 @@
       "status": "survivor",
       "role": "colonizadora",
       "role_description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar.",
-      "selection_score": 0.7787,
-      "adjusted_score": 0.7967,
+      "selection_score": 0.7747,
+      "adjusted_score": 0.7927,
       "temperature": 0.677,
       "exploration": 0.637,
       "mutation_rate": 0.138
@@ -1224,8 +1224,8 @@
       "status": "elite",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.784,
-      "adjusted_score": 0.796,
+      "selection_score": 0.78,
+      "adjusted_score": 0.792,
       "temperature": 0.716,
       "exploration": 0.561,
       "mutation_rate": 0.122
@@ -1237,8 +1237,8 @@
       "status": "survivor",
       "role": "colonizadora",
       "role_description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar.",
-      "selection_score": 0.7769,
-      "adjusted_score": 0.7949,
+      "selection_score": 0.7729,
+      "adjusted_score": 0.7909,
       "temperature": 0.683,
       "exploration": 0.628,
       "mutation_rate": 0.143
