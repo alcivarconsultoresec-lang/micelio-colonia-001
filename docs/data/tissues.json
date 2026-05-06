@@ -1,16 +1,16 @@
 {
-  "timestamp_utc": "2026-05-06T15:29:55.733902+00:00",
+  "timestamp_utc": "2026-05-06T17:06:08.983585+00:00",
   "phase": "fase_3_tejidos_y_organos_virtuales",
   "tissues": [
     {
       "name": "tejido_exploracion",
       "purpose": "descubrir recursos autorizados, variaciones y rutas de expansión controlada",
-      "spores_count": 6,
+      "spores_count": 7,
       "roles": {
-        "colonizadora": 6
+        "colonizadora": 7
       },
       "best_score": 0.7841,
-      "average_score": 0.7795,
+      "average_score": 0.7793,
       "members": [
         {
           "spore_id": "g_79db068d",
@@ -41,6 +41,13 @@
           "generation": 14
         },
         {
+          "spore_id": "g_0cb36bb1",
+          "role": "colonizadora",
+          "status": "survivor",
+          "score": 0.7781,
+          "generation": 13
+        },
+        {
           "spore_id": "g_47d96011",
           "role": "colonizadora",
           "status": "survivor",
@@ -59,12 +66,12 @@
     {
       "name": "tejido_cognitivo",
       "purpose": "razonar sobre memoria, arquitectura y construcción de nuevos módulos",
-      "spores_count": 18,
+      "spores_count": 17,
       "roles": {
-        "analista": 18
+        "analista": 17
       },
       "best_score": 0.7946,
-      "average_score": 0.7769,
+      "average_score": 0.7773,
       "members": [
         {
           "spore_id": "g_eda2f998",
@@ -132,8 +139,8 @@
       "tissues": [
         "tejido_exploracion"
       ],
-      "spores_count": 6,
-      "operational_score": 0.7795,
+      "spores_count": 7,
+      "operational_score": 0.7793,
       "status": "virtual_ready"
     },
     {
@@ -142,8 +149,8 @@
       "tissues": [
         "tejido_cognitivo"
       ],
-      "spores_count": 18,
-      "operational_score": 0.7769,
+      "spores_count": 17,
+      "operational_score": 0.7773,
       "status": "virtual_ready"
     },
     {
