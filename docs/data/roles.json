@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-05-06T22:26:58.837020+00:00",
+  "timestamp_utc": "2026-05-06T23:13:01.535607+00:00",
   "phase": "fase_2_2_especializacion_de_linajes",
   "roles_available": {
     "exploradora": "Alta exploración y mutación. Busca variación genética controlada.",
@@ -10,14 +10,14 @@
   },
   "roles_summary": {
     "analista": {
-      "count": 17,
-      "avg_adjusted_score": 0.7778,
+      "count": 18,
+      "avg_adjusted_score": 0.778,
       "best_adjusted_score": 0.7946,
       "description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
     },
     "colonizadora": {
-      "count": 7,
-      "avg_adjusted_score": 0.7793,
+      "count": 6,
+      "avg_adjusted_score": 0.7797,
       "best_adjusted_score": 0.7841,
       "description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar."
     }
@@ -76,6 +76,19 @@
       "mutation_rate": 0.142
     },
     {
+      "spore_id": "g_408e9446",
+      "parent_id": "g_a6a88165",
+      "generation": 15,
+      "status": "elite",
+      "role": "analista",
+      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
+      "selection_score": 0.7691,
+      "adjusted_score": 0.7811,
+      "temperature": 0.65,
+      "exploration": 0.528,
+      "mutation_rate": 0.142
+    },
+    {
       "spore_id": "g_0e73f28e",
       "parent_id": "g_a912ce47",
       "generation": 12,
@@ -131,7 +144,7 @@
       "spore_id": "g_8155a122",
       "parent_id": "g_0e73f28e",
       "generation": 13,
-      "status": "elite",
+      "status": "survivor",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "selection_score": 0.7664,
@@ -165,19 +178,6 @@
       "temperature": 0.744,
       "exploration": 0.514,
       "mutation_rate": 0.154
-    },
-    {
-      "spore_id": "g_47d96011",
-      "parent_id": "g_c3943206",
-      "generation": 14,
-      "status": "survivor",
-      "role": "colonizadora",
-      "role_description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar.",
-      "selection_score": 0.7592,
-      "adjusted_score": 0.7772,
-      "temperature": 0.734,
-      "exploration": 0.655,
-      "mutation_rate": 0.141
     }
   ],
   "decision": "castas_funcionales_asignadas_sin_despliegue_externo",

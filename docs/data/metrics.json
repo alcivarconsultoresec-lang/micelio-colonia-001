@@ -1,18 +1,18 @@
 {
-  "timestamp_utc": "2026-05-06T22:26:58.823881+00:00",
+  "timestamp_utc": "2026-05-06T23:13:01.521677+00:00",
   "colony_id": "micelio-colonia-001",
-  "cycle": 70,
+  "cycle": 71,
   "runtime": "github_actions",
   "mode": "remote_ai_github_models",
   "model": "openai/gpt-4o-mini",
   "fitness": 0.6,
   "best_score": 0.7826,
-  "average_score": 0.7645,
+  "average_score": 0.7649,
   "selection_pressure": 0.1111,
   "virtual_spores": 24,
   "active_candidates": 5,
   "survivors": 24,
-  "extinct_total": 186,
+  "extinct_total": 189,
   "children_created": 3,
   "generation": 15,
   "replication_mode": "virtual_only",
@@ -21,28 +21,6 @@
   "engine_version": "2.1",
   "charts": {
     "episodes": [
-      {
-        "timestamp_utc": "2026-05-03T15:04:46.113309+00:00",
-        "cycle": 21,
-        "genoma_id": "g_3d16eb2f",
-        "mode": "remote_ai_github_models",
-        "fitness": 0.6,
-        "children_created": 3,
-        "parent_sources": [
-          "g_66a8cdef",
-          "g_66a8cdef",
-          "g_66a8cdef"
-        ],
-        "virtual_spores_total": 24,
-        "active_candidates": 5,
-        "survivors": 24,
-        "extinct_last_cycle_count": 3,
-        "best_score": 0.8918,
-        "average_score": 0.8457,
-        "selection_pressure": 0.1111,
-        "max_generation": 9,
-        "decision": "seleccion_natural_controlada_v2"
-      },
       {
         "timestamp_utc": "2026-05-03T15:58:16.742318+00:00",
         "cycle": 22,
@@ -1120,20 +1098,42 @@
         "selection_pressure": 0.1111,
         "max_generation": 15,
         "decision": "seleccion_natural_controlada_v2"
+      },
+      {
+        "timestamp_utc": "2026-05-06T23:13:01.521246+00:00",
+        "cycle": 71,
+        "genoma_id": "g_3d16eb2f",
+        "mode": "remote_ai_github_models",
+        "fitness": 0.6,
+        "children_created": 3,
+        "parent_sources": [
+          "g_a6a88165",
+          "g_a6a88165",
+          "g_a6a88165"
+        ],
+        "virtual_spores_total": 24,
+        "active_candidates": 5,
+        "survivors": 24,
+        "extinct_last_cycle_count": 3,
+        "best_score": 0.7826,
+        "average_score": 0.7649,
+        "selection_pressure": 0.1111,
+        "max_generation": 15,
+        "decision": "seleccion_natural_controlada_v2"
       }
     ]
   },
   "phase": "fase_2_2_especializacion_de_linajes",
   "roles_summary": {
     "analista": {
-      "count": 17,
-      "avg_adjusted_score": 0.7778,
+      "count": 18,
+      "avg_adjusted_score": 0.778,
       "best_adjusted_score": 0.7946,
       "description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
     },
     "colonizadora": {
-      "count": 7,
-      "avg_adjusted_score": 0.7793,
+      "count": 6,
+      "avg_adjusted_score": 0.7797,
       "best_adjusted_score": 0.7841,
       "description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar."
     }
@@ -1192,6 +1192,19 @@
       "mutation_rate": 0.142
     },
     {
+      "spore_id": "g_408e9446",
+      "parent_id": "g_a6a88165",
+      "generation": 15,
+      "status": "elite",
+      "role": "analista",
+      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
+      "selection_score": 0.7691,
+      "adjusted_score": 0.7811,
+      "temperature": 0.65,
+      "exploration": 0.528,
+      "mutation_rate": 0.142
+    },
+    {
       "spore_id": "g_0e73f28e",
       "parent_id": "g_a912ce47",
       "generation": 12,
@@ -1229,19 +1242,6 @@
       "temperature": 0.683,
       "exploration": 0.628,
       "mutation_rate": 0.143
-    },
-    {
-      "spore_id": "g_b2d780ca",
-      "parent_id": "g_c3943206",
-      "generation": 14,
-      "status": "survivor",
-      "role": "colonizadora",
-      "role_description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar.",
-      "selection_score": 0.7607,
-      "adjusted_score": 0.7787,
-      "temperature": 0.722,
-      "exploration": 0.646,
-      "mutation_rate": 0.145
     }
   ]
 }
