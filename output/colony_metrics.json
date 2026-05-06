@@ -1,18 +1,18 @@
 {
-  "timestamp_utc": "2026-05-06T09:11:07.580973+00:00",
+  "timestamp_utc": "2026-05-06T11:17:32.886108+00:00",
   "colony_id": "micelio-colonia-001",
-  "cycle": 62,
+  "cycle": 63,
   "runtime": "github_actions",
   "mode": "remote_ai_github_models",
   "model": "openai/gpt-4o-mini",
   "fitness": 0.6,
   "best_score": 0.7826,
-  "average_score": 0.763,
+  "average_score": 0.7637,
   "selection_pressure": 0.1111,
   "virtual_spores": 24,
   "active_candidates": 5,
   "survivors": 24,
-  "extinct_total": 162,
+  "extinct_total": 165,
   "children_created": 3,
   "generation": 15,
   "replication_mode": "virtual_only",
@@ -21,28 +21,6 @@
   "engine_version": "2.1",
   "charts": {
     "episodes": [
-      {
-        "timestamp_utc": "2026-05-03T05:46:56.531085+00:00",
-        "cycle": 13,
-        "genoma_id": "g_3d16eb2f",
-        "mode": "remote_ai_github_models",
-        "fitness": 0.6,
-        "children_created": 3,
-        "parent_sources": [
-          "g_09fcda95",
-          "g_09fcda95",
-          "g_09fcda95"
-        ],
-        "virtual_spores_total": 24,
-        "active_candidates": 5,
-        "survivors": 24,
-        "extinct_last_cycle_count": 3,
-        "best_score": 0.8868,
-        "average_score": 0.8195,
-        "selection_pressure": 0.1111,
-        "max_generation": 7,
-        "decision": "seleccion_natural_controlada_v2"
-      },
       {
         "timestamp_utc": "2026-05-03T07:33:08.654638+00:00",
         "cycle": 14,
@@ -1120,6 +1098,28 @@
         "selection_pressure": 0.1111,
         "max_generation": 15,
         "decision": "seleccion_natural_controlada_v2"
+      },
+      {
+        "timestamp_utc": "2026-05-06T11:17:32.885667+00:00",
+        "cycle": 63,
+        "genoma_id": "g_3d16eb2f",
+        "mode": "remote_ai_github_models",
+        "fitness": 0.6,
+        "children_created": 3,
+        "parent_sources": [
+          "g_f7a7c0b9",
+          "g_f7a7c0b9",
+          "g_f7a7c0b9"
+        ],
+        "virtual_spores_total": 24,
+        "active_candidates": 5,
+        "survivors": 24,
+        "extinct_last_cycle_count": 3,
+        "best_score": 0.7826,
+        "average_score": 0.7637,
+        "selection_pressure": 0.1111,
+        "max_generation": 15,
+        "decision": "seleccion_natural_controlada_v2"
       }
     ]
   },
@@ -1127,7 +1127,7 @@
   "roles_summary": {
     "analista": {
       "count": 18,
-      "avg_adjusted_score": 0.7755,
+      "avg_adjusted_score": 0.7764,
       "best_adjusted_score": 0.7946,
       "description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
     },
@@ -1151,6 +1151,19 @@
       "temperature": 0.721,
       "exploration": 0.543,
       "mutation_rate": 0.141
+    },
+    {
+      "spore_id": "g_a6a88165",
+      "parent_id": "g_f7a7c0b9",
+      "generation": 14,
+      "status": "elite",
+      "role": "analista",
+      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
+      "selection_score": 0.7729,
+      "adjusted_score": 0.7849,
+      "temperature": 0.734,
+      "exploration": 0.588,
+      "mutation_rate": 0.137
     },
     {
       "spore_id": "g_79db068d",
@@ -1229,19 +1242,6 @@
       "temperature": 0.688,
       "exploration": 0.606,
       "mutation_rate": 0.143
-    },
-    {
-      "spore_id": "g_47d96011",
-      "parent_id": "g_c3943206",
-      "generation": 14,
-      "status": "survivor",
-      "role": "colonizadora",
-      "role_description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar.",
-      "selection_score": 0.7592,
-      "adjusted_score": 0.7772,
-      "temperature": 0.734,
-      "exploration": 0.655,
-      "mutation_rate": 0.141
     }
   ]
 }
