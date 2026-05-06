@@ -1,18 +1,18 @@
 {
-  "timestamp_utc": "2026-05-06T17:06:08.964400+00:00",
+  "timestamp_utc": "2026-05-06T18:52:40.431813+00:00",
   "colony_id": "micelio-colonia-001",
-  "cycle": 66,
+  "cycle": 67,
   "runtime": "github_actions",
   "mode": "remote_ai_github_models",
   "model": "openai/gpt-4o-mini",
   "fitness": 0.6,
   "best_score": 0.7826,
-  "average_score": 0.7641,
+  "average_score": 0.7645,
   "selection_pressure": 0.1111,
   "virtual_spores": 24,
   "active_candidates": 5,
   "survivors": 24,
-  "extinct_total": 174,
+  "extinct_total": 177,
   "children_created": 3,
   "generation": 15,
   "replication_mode": "virtual_only",
@@ -21,28 +21,6 @@
   "engine_version": "2.1",
   "charts": {
     "episodes": [
-      {
-        "timestamp_utc": "2026-05-03T11:08:00.427247+00:00",
-        "cycle": 17,
-        "genoma_id": "g_3d16eb2f",
-        "mode": "remote_ai_github_models",
-        "fitness": 0.6,
-        "children_created": 3,
-        "parent_sources": [
-          "g_01826703",
-          "g_01826703",
-          "g_01826703"
-        ],
-        "virtual_spores_total": 24,
-        "active_candidates": 5,
-        "survivors": 24,
-        "extinct_last_cycle_count": 3,
-        "best_score": 0.9041,
-        "average_score": 0.8368,
-        "selection_pressure": 0.1111,
-        "max_generation": 8,
-        "decision": "seleccion_natural_controlada_v2"
-      },
       {
         "timestamp_utc": "2026-05-03T11:56:00.394902+00:00",
         "cycle": 18,
@@ -1120,6 +1098,28 @@
         "selection_pressure": 0.1111,
         "max_generation": 15,
         "decision": "seleccion_natural_controlada_v2"
+      },
+      {
+        "timestamp_utc": "2026-05-06T18:52:40.431364+00:00",
+        "cycle": 67,
+        "genoma_id": "g_3d16eb2f",
+        "mode": "remote_ai_github_models",
+        "fitness": 0.6,
+        "children_created": 3,
+        "parent_sources": [
+          "g_79db068d",
+          "g_79db068d",
+          "g_79db068d"
+        ],
+        "virtual_spores_total": 24,
+        "active_candidates": 5,
+        "survivors": 24,
+        "extinct_last_cycle_count": 3,
+        "best_score": 0.7826,
+        "average_score": 0.7645,
+        "selection_pressure": 0.1111,
+        "max_generation": 15,
+        "decision": "seleccion_natural_controlada_v2"
       }
     ]
   },
@@ -1127,7 +1127,7 @@
   "roles_summary": {
     "analista": {
       "count": 17,
-      "avg_adjusted_score": 0.7773,
+      "avg_adjusted_score": 0.7778,
       "best_adjusted_score": 0.7946,
       "description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
     },
@@ -1169,7 +1169,7 @@
       "spore_id": "g_79db068d",
       "parent_id": "g_0e73f28e",
       "generation": 13,
-      "status": "elite",
+      "status": "survivor",
       "role": "colonizadora",
       "role_description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar.",
       "selection_score": 0.7661,
@@ -1205,6 +1205,19 @@
       "mutation_rate": 0.133
     },
     {
+      "spore_id": "g_9e6e0d05",
+      "parent_id": "g_79db068d",
+      "generation": 14,
+      "status": "elite",
+      "role": "analista",
+      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
+      "selection_score": 0.767,
+      "adjusted_score": 0.779,
+      "temperature": 0.761,
+      "exploration": 0.547,
+      "mutation_rate": 0.16
+    },
+    {
       "spore_id": "g_c3943206",
       "parent_id": "g_84b8080e",
       "generation": 13,
@@ -1229,19 +1242,6 @@
       "temperature": 0.722,
       "exploration": 0.646,
       "mutation_rate": 0.145
-    },
-    {
-      "spore_id": "g_8155a122",
-      "parent_id": "g_0e73f28e",
-      "generation": 13,
-      "status": "elite",
-      "role": "analista",
-      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.7664,
-      "adjusted_score": 0.7784,
-      "temperature": 0.688,
-      "exploration": 0.606,
-      "mutation_rate": 0.143
     }
   ]
 }

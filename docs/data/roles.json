@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-05-06T17:06:08.979427+00:00",
+  "timestamp_utc": "2026-05-06T18:52:40.446163+00:00",
   "phase": "fase_2_2_especializacion_de_linajes",
   "roles_available": {
     "exploradora": "Alta exploración y mutación. Busca variación genética controlada.",
@@ -11,7 +11,7 @@
   "roles_summary": {
     "analista": {
       "count": 17,
-      "avg_adjusted_score": 0.7773,
+      "avg_adjusted_score": 0.7778,
       "best_adjusted_score": 0.7946,
       "description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
     },
@@ -53,7 +53,7 @@
       "spore_id": "g_79db068d",
       "parent_id": "g_0e73f28e",
       "generation": 13,
-      "status": "elite",
+      "status": "survivor",
       "role": "colonizadora",
       "role_description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar.",
       "selection_score": 0.7661,
@@ -87,6 +87,19 @@
       "temperature": 0.663,
       "exploration": 0.568,
       "mutation_rate": 0.133
+    },
+    {
+      "spore_id": "g_9e6e0d05",
+      "parent_id": "g_79db068d",
+      "generation": 14,
+      "status": "elite",
+      "role": "analista",
+      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
+      "selection_score": 0.767,
+      "adjusted_score": 0.779,
+      "temperature": 0.761,
+      "exploration": 0.547,
+      "mutation_rate": 0.16
     },
     {
       "spore_id": "g_c3943206",
@@ -165,19 +178,6 @@
       "temperature": 0.734,
       "exploration": 0.655,
       "mutation_rate": 0.141
-    },
-    {
-      "spore_id": "g_f7a7c0b9",
-      "parent_id": "g_0e73f28e",
-      "generation": 13,
-      "status": "survivor",
-      "role": "analista",
-      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.7649,
-      "adjusted_score": 0.7769,
-      "temperature": 0.656,
-      "exploration": 0.571,
-      "mutation_rate": 0.13
     }
   ],
   "decision": "castas_funcionales_asignadas_sin_despliegue_externo",
