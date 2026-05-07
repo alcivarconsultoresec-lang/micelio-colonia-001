@@ -1,18 +1,18 @@
 {
-  "timestamp_utc": "2026-05-07T17:20:57.147699+00:00",
+  "timestamp_utc": "2026-05-07T19:08:00.738421+00:00",
   "colony_id": "micelio-colonia-001",
-  "cycle": 79,
+  "cycle": 80,
   "runtime": "github_actions",
-  "mode": "github_models",
+  "mode": "remote_ai_github_models",
   "model": "openai/gpt-4o-mini",
-  "fitness": 0.78,
+  "fitness": 0.6,
   "best_score": 0.7826,
-  "average_score": 0.767,
+  "average_score": 0.7674,
   "selection_pressure": 0.1111,
   "virtual_spores": 24,
   "active_candidates": 5,
   "survivors": 24,
-  "extinct_total": 213,
+  "extinct_total": 216,
   "children_created": 3,
   "generation": 17,
   "replication_mode": "virtual_only",
@@ -21,28 +21,6 @@
   "engine_version": "2.1",
   "charts": {
     "episodes": [
-      {
-        "timestamp_utc": "2026-05-03T22:27:11.816186+00:00",
-        "cycle": 30,
-        "genoma_id": "g_3d16eb2f",
-        "mode": "remote_ai_github_models",
-        "fitness": 0.6,
-        "children_created": 3,
-        "parent_sources": [
-          "g_c8574d58",
-          "g_c8574d58",
-          "g_c8574d58"
-        ],
-        "virtual_spores_total": 24,
-        "active_candidates": 5,
-        "survivors": 24,
-        "extinct_last_cycle_count": 3,
-        "best_score": 0.877,
-        "average_score": 0.8529,
-        "selection_pressure": 0.1111,
-        "max_generation": 12,
-        "decision": "seleccion_natural_controlada_v2"
-      },
       {
         "timestamp_utc": "2026-05-03T23:10:29.716530+00:00",
         "cycle": 31,
@@ -1120,6 +1098,28 @@
         "selection_pressure": 0.1111,
         "max_generation": 17,
         "decision": "seleccion_natural_controlada_v2"
+      },
+      {
+        "timestamp_utc": "2026-05-07T19:08:00.737945+00:00",
+        "cycle": 80,
+        "genoma_id": "g_3d16eb2f",
+        "mode": "remote_ai_github_models",
+        "fitness": 0.6,
+        "children_created": 3,
+        "parent_sources": [
+          "g_2064cc7c",
+          "g_2064cc7c",
+          "g_2064cc7c"
+        ],
+        "virtual_spores_total": 24,
+        "active_candidates": 5,
+        "survivors": 24,
+        "extinct_last_cycle_count": 3,
+        "best_score": 0.7826,
+        "average_score": 0.7674,
+        "selection_pressure": 0.1111,
+        "max_generation": 17,
+        "decision": "seleccion_natural_controlada_v2"
       }
     ]
   },
@@ -1127,7 +1127,7 @@
   "roles_summary": {
     "analista": {
       "count": 22,
-      "avg_adjusted_score": 0.7792,
+      "avg_adjusted_score": 0.7796,
       "best_adjusted_score": 0.7946,
       "description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
     },
@@ -1218,6 +1218,19 @@
       "mutation_rate": 0.127
     },
     {
+      "spore_id": "g_86074b76",
+      "parent_id": "g_2064cc7c",
+      "generation": 17,
+      "status": "survivor",
+      "role": "analista",
+      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
+      "selection_score": 0.7705,
+      "adjusted_score": 0.7825,
+      "temperature": 0.771,
+      "exploration": 0.53,
+      "mutation_rate": 0.135
+    },
+    {
       "spore_id": "g_eaedbc2b",
       "parent_id": "g_0e73f28e",
       "generation": 13,
@@ -1228,19 +1241,6 @@
       "adjusted_score": 0.7813,
       "temperature": 0.685,
       "exploration": 0.621,
-      "mutation_rate": 0.142
-    },
-    {
-      "spore_id": "g_408e9446",
-      "parent_id": "g_a6a88165",
-      "generation": 15,
-      "status": "survivor",
-      "role": "analista",
-      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.7691,
-      "adjusted_score": 0.7811,
-      "temperature": 0.65,
-      "exploration": 0.528,
       "mutation_rate": 0.142
     }
   ]
