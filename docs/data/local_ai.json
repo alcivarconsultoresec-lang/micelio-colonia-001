@@ -1,9 +1,9 @@
 {
-  "timestamp_utc": "2026-05-07T15:35:08.208331+00:00",
+  "timestamp_utc": "2026-05-07T17:20:54.865907+00:00",
   "phase": "fase_4_router_ia_hibrida",
-  "success": true,
-  "selected_provider": "github_models",
-  "selected_model": "openai/gpt-4o-mini",
+  "success": false,
+  "selected_provider": null,
+  "selected_model": null,
   "provider_status": {
     "ollama_available": false,
     "ollama_models": [],
@@ -21,6 +21,10 @@
     {
       "provider": "openai_compatible_local",
       "error": "No se detectó endpoint local OpenAI-compatible en 127.0.0.1:5001."
+    },
+    {
+      "provider": "github_models",
+      "error": "500 Server Error: Internal Server Error for url: https://models.github.ai/inference/chat/completions"
     }
   ],
   "safety": "Se usan proveedores locales o token configurado explícitamente por el administrador."
