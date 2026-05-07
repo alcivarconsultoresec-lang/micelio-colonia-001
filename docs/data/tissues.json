@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-05-07T19:08:00.756879+00:00",
+  "timestamp_utc": "2026-05-07T20:36:33.963961+00:00",
   "phase": "fase_3_tejidos_y_organos_virtuales",
   "tissues": [
     {
@@ -36,7 +36,7 @@
         "analista": 22
       },
       "best_score": 0.7946,
-      "average_score": 0.7796,
+      "average_score": 0.7798,
       "members": [
         {
           "spore_id": "g_eda2f998",
@@ -115,7 +115,7 @@
         "tejido_cognitivo"
       ],
       "spores_count": 22,
-      "operational_score": 0.7796,
+      "operational_score": 0.7798,
       "status": "virtual_ready"
     },
     {

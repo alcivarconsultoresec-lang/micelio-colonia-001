@@ -1,18 +1,18 @@
 {
-  "timestamp_utc": "2026-05-07T19:08:00.738421+00:00",
+  "timestamp_utc": "2026-05-07T20:36:33.945715+00:00",
   "colony_id": "micelio-colonia-001",
-  "cycle": 80,
+  "cycle": 81,
   "runtime": "github_actions",
   "mode": "remote_ai_github_models",
   "model": "openai/gpt-4o-mini",
   "fitness": 0.6,
   "best_score": 0.7826,
-  "average_score": 0.7674,
+  "average_score": 0.7675,
   "selection_pressure": 0.1111,
   "virtual_spores": 24,
   "active_candidates": 5,
   "survivors": 24,
-  "extinct_total": 216,
+  "extinct_total": 219,
   "children_created": 3,
   "generation": 17,
   "replication_mode": "virtual_only",
@@ -21,28 +21,6 @@
   "engine_version": "2.1",
   "charts": {
     "episodes": [
-      {
-        "timestamp_utc": "2026-05-03T23:10:29.716530+00:00",
-        "cycle": 31,
-        "genoma_id": "g_3d16eb2f",
-        "mode": "remote_ai_github_models",
-        "fitness": 0.6,
-        "children_created": 3,
-        "parent_sources": [
-          "g_a912ce47",
-          "g_a912ce47",
-          "g_a912ce47"
-        ],
-        "virtual_spores_total": 24,
-        "active_candidates": 5,
-        "survivors": 24,
-        "extinct_last_cycle_count": 3,
-        "best_score": 0.873,
-        "average_score": 0.8508,
-        "selection_pressure": 0.1111,
-        "max_generation": 12,
-        "decision": "seleccion_natural_controlada_v2"
-      },
       {
         "timestamp_utc": "2026-05-04T00:02:11.728723+00:00",
         "cycle": 32,
@@ -1120,6 +1098,28 @@
         "selection_pressure": 0.1111,
         "max_generation": 17,
         "decision": "seleccion_natural_controlada_v2"
+      },
+      {
+        "timestamp_utc": "2026-05-07T20:36:33.945210+00:00",
+        "cycle": 81,
+        "genoma_id": "g_3d16eb2f",
+        "mode": "remote_ai_github_models",
+        "fitness": 0.6,
+        "children_created": 3,
+        "parent_sources": [
+          "g_2064cc7c",
+          "g_2064cc7c",
+          "g_2064cc7c"
+        ],
+        "virtual_spores_total": 24,
+        "active_candidates": 5,
+        "survivors": 24,
+        "extinct_last_cycle_count": 3,
+        "best_score": 0.7826,
+        "average_score": 0.7675,
+        "selection_pressure": 0.1111,
+        "max_generation": 17,
+        "decision": "seleccion_natural_controlada_v2"
       }
     ]
   },
@@ -1127,7 +1127,7 @@
   "roles_summary": {
     "analista": {
       "count": 22,
-      "avg_adjusted_score": 0.7796,
+      "avg_adjusted_score": 0.7798,
       "best_adjusted_score": 0.7946,
       "description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
     },
