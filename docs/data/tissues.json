@@ -1,16 +1,16 @@
 {
-  "timestamp_utc": "2026-05-08T07:59:09.917784+00:00",
+  "timestamp_utc": "2026-05-08T09:26:15.989637+00:00",
   "phase": "fase_3_tejidos_y_organos_virtuales",
   "tissues": [
     {
       "name": "tejido_exploracion",
       "purpose": "descubrir recursos autorizados, variaciones y rutas de expansión controlada",
-      "spores_count": 2,
+      "spores_count": 1,
       "roles": {
-        "colonizadora": 2
+        "colonizadora": 1
       },
       "best_score": 0.7841,
-      "average_score": 0.7827,
+      "average_score": 0.7841,
       "members": [
         {
           "spore_id": "g_79db068d",
@@ -18,25 +18,18 @@
           "status": "survivor",
           "score": 0.7841,
           "generation": 13
-        },
-        {
-          "spore_id": "g_eaedbc2b",
-          "role": "colonizadora",
-          "status": "survivor",
-          "score": 0.7813,
-          "generation": 13
         }
       ]
     },
     {
       "name": "tejido_cognitivo",
       "purpose": "razonar sobre memoria, arquitectura y construcción de nuevos módulos",
-      "spores_count": 22,
+      "spores_count": 23,
       "roles": {
-        "analista": 22
+        "analista": 23
       },
       "best_score": 0.7946,
-      "average_score": 0.7809,
+      "average_score": 0.7812,
       "members": [
         {
           "spore_id": "g_eda2f998",
@@ -51,6 +44,13 @@
           "status": "elite",
           "score": 0.7905,
           "generation": 16
+        },
+        {
+          "spore_id": "g_946b9e0b",
+          "role": "analista",
+          "status": "elite",
+          "score": 0.7863,
+          "generation": 17
         },
         {
           "spore_id": "g_a6a88165",
@@ -69,7 +69,7 @@
         {
           "spore_id": "g_f2146412",
           "role": "analista",
-          "status": "elite",
+          "status": "survivor",
           "score": 0.7826,
           "generation": 17
         },
@@ -86,13 +86,6 @@
           "status": "survivor",
           "score": 0.7825,
           "generation": 17
-        },
-        {
-          "spore_id": "g_f60a856c",
-          "role": "analista",
-          "status": "survivor",
-          "score": 0.7823,
-          "generation": 14
         }
       ]
     }
@@ -104,8 +97,8 @@
       "tissues": [
         "tejido_exploracion"
       ],
-      "spores_count": 2,
-      "operational_score": 0.7827,
+      "spores_count": 1,
+      "operational_score": 0.7841,
       "status": "virtual_ready"
     },
     {
@@ -114,8 +107,8 @@
       "tissues": [
         "tejido_cognitivo"
       ],
-      "spores_count": 22,
-      "operational_score": 0.7809,
+      "spores_count": 23,
+      "operational_score": 0.7812,
       "status": "virtual_ready"
     },
     {
