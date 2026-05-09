@@ -1,35 +1,16 @@
 {
-  "timestamp_utc": "2026-05-09T22:00:53.412877+00:00",
+  "timestamp_utc": "2026-05-09T22:56:16.893938+00:00",
   "phase": "fase_3_tejidos_y_organos_virtuales",
   "tissues": [
     {
-      "name": "tejido_exploracion",
-      "purpose": "descubrir recursos autorizados, variaciones y rutas de expansión controlada",
-      "spores_count": 1,
-      "roles": {
-        "colonizadora": 1
-      },
-      "best_score": 0.7841,
-      "average_score": 0.7841,
-      "members": [
-        {
-          "spore_id": "g_79db068d",
-          "role": "colonizadora",
-          "status": "survivor",
-          "score": 0.7841,
-          "generation": 13
-        }
-      ]
-    },
-    {
       "name": "tejido_cognitivo",
       "purpose": "razonar sobre memoria, arquitectura y construcción de nuevos módulos",
-      "spores_count": 23,
+      "spores_count": 24,
       "roles": {
-        "analista": 23
+        "analista": 24
       },
       "best_score": 0.7946,
-      "average_score": 0.783,
+      "average_score": 0.7829,
       "members": [
         {
           "spore_id": "g_eda2f998",
@@ -94,12 +75,10 @@
     {
       "name": "organo_sensorial",
       "purpose": "leer entorno local y detectar herramientas disponibles",
-      "tissues": [
-        "tejido_exploracion"
-      ],
-      "spores_count": 1,
-      "operational_score": 0.7841,
-      "status": "virtual_ready"
+      "tissues": [],
+      "spores_count": 0,
+      "operational_score": 0,
+      "status": "missing_tissue"
     },
     {
       "name": "organo_cognitivo",
@@ -107,8 +86,8 @@
       "tissues": [
         "tejido_cognitivo"
       ],
-      "spores_count": 23,
-      "operational_score": 0.783,
+      "spores_count": 24,
+      "operational_score": 0.7829,
       "status": "virtual_ready"
     },
     {

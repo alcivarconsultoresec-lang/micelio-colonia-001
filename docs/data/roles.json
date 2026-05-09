@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-05-09T22:00:53.408875+00:00",
+  "timestamp_utc": "2026-05-09T22:56:16.890092+00:00",
   "phase": "fase_2_2_especializacion_de_linajes",
   "roles_available": {
     "exploradora": "Alta exploración y mutación. Busca variación genética controlada.",
@@ -10,16 +10,10 @@
   },
   "roles_summary": {
     "analista": {
-      "count": 23,
-      "avg_adjusted_score": 0.783,
+      "count": 24,
+      "avg_adjusted_score": 0.7829,
       "best_adjusted_score": 0.7946,
       "description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
-    },
-    "colonizadora": {
-      "count": 1,
-      "avg_adjusted_score": 0.7841,
-      "best_adjusted_score": 0.7841,
-      "description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar."
     }
   },
   "top_spores_by_role": [
@@ -102,19 +96,6 @@
       "mutation_rate": 0.137
     },
     {
-      "spore_id": "g_79db068d",
-      "parent_id": "g_0e73f28e",
-      "generation": 13,
-      "status": "survivor",
-      "role": "colonizadora",
-      "role_description": "Exploración alta con temperatura estable. Evalúa recursos autorizados sin desplegar.",
-      "selection_score": 0.7661,
-      "adjusted_score": 0.7841,
-      "temperature": 0.731,
-      "exploration": 0.621,
-      "mutation_rate": 0.143
-    },
-    {
       "spore_id": "g_2064cc7c",
       "parent_id": "g_408e9446",
       "generation": 16,
@@ -178,6 +159,19 @@
       "temperature": 0.681,
       "exploration": 0.55,
       "mutation_rate": 0.127
+    },
+    {
+      "spore_id": "g_86074b76",
+      "parent_id": "g_2064cc7c",
+      "generation": 17,
+      "status": "survivor",
+      "role": "analista",
+      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
+      "selection_score": 0.7705,
+      "adjusted_score": 0.7825,
+      "temperature": 0.771,
+      "exploration": 0.53,
+      "mutation_rate": 0.135
     }
   ],
   "decision": "castas_funcionales_asignadas_sin_despliegue_externo",
