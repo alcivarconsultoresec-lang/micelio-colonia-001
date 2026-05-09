@@ -1,5 +1,5 @@
 {
-  "texto": "**Diagnóstico:** La colonia MICELIO se encuentra en un estado óptimo de energía, con un fitness alto (0.95), lo que indica una buena capacidad operativa. Sin embargo, no ha registrado éxitos ni fallos, lo que sugiere una falta de actividad o interacción efectiva en su entorno.\n\n**Acción recomendada:** Iniciar un proceso de análisis de texto en un documento o conjunto de datos específico para generar resultados que puedan ser registrados como éxitos. Esto permitirá mejorar la memoria de la colonia y fomentar el aprendizaje continuo.\n\n**Siguiente mutación útil:** Implementar una función de retroalimentación que registre tanto las respuestas generadas como la calidad de las mismas, permitiendo ajustar la estrategia de análisis según los resultados obtenidos. Esto mejorará el fitness y la adaptabilidad del organismo.",
+  "texto": "**Diagnóstico:** La capacidad de análisis de texto se encuentra en un estado óptimo (fitness actual: 0.95), pero no se han registrado éxitos en la producción de respuestas. Esto indica que, a pesar de la alta eficiencia, no se ha logrado aplicar exitosamente la salida generada.\n\n**Acción recomendada:** Iniciar un ciclo de pruebas controladas en diferentes contextos de análisis de texto para identificar áreas de mejora. Se debe registrar cada resultado para evaluar el rendimiento y realizar ajustes según sea necesario.\n\n**Siguiente mutación útil:** Implementar un mecanismo de retroalimentación que permita aprender de los resultados de las pruebas, ajustando el enfoque del análisis de texto basado en las respuestas anteriores. Esto podría incluir la incorporación de un sistema de puntuación para evaluar la calidad de las respuestas generadas.",
   "fitness": 0.88,
   "modo": "remote_ai_github_models",
   "modelo": "openai/gpt-4o-mini",
@@ -13,15 +13,15 @@
       "rejected_prediction_tokens": 0
     },
     "latency_checkpoint": {
-      "engine_tbt_ms": 10,
-      "engine_ttft_ms": 51,
-      "engine_ttlt_ms": 1638,
-      "pre_inference_ms": 107,
-      "service_tbt_ms": 10,
-      "service_ttft_ms": 626,
-      "service_ttlt_ms": 2211,
-      "total_duration_ms": 2111,
-      "user_visible_ttft_ms": 519
+      "engine_tbt_ms": 12,
+      "engine_ttft_ms": 30,
+      "engine_ttlt_ms": 1953,
+      "pre_inference_ms": 95,
+      "service_tbt_ms": 12,
+      "service_ttft_ms": 474,
+      "service_ttlt_ms": 2394,
+      "total_duration_ms": 2305,
+      "user_visible_ttft_ms": 378
     },
     "prompt_tokens": 163,
     "prompt_tokens_details": {
@@ -32,18 +32,18 @@
   },
   "genoma_id": "g_3d16eb2f",
   "objetivo": "general",
-  "timestamp_utc": "2026-05-09T08:19:12.011117+00:00",
+  "timestamp_utc": "2026-05-09T09:47:17.150864+00:00",
   "evolucion": {
     "fitness_calculado": 0.6,
     "children_created": 3,
     "virtual_spores_total": 24,
     "active_candidates": 5,
     "survivors": 24,
-    "extinct_total": 288,
+    "extinct_total": 291,
     "best_score": 0.7826,
     "average_score": 0.7697,
     "selection_pressure": 0.1111,
-    "cycle": 104,
+    "cycle": 105,
     "colony_decision": "seleccion_natural_controlada_v2",
     "self_awareness_report": "output/autoconciencia.json",
     "selection_report": "output/selection_report.json",
@@ -53,7 +53,7 @@
     "dashboard_data": "docs/data"
   },
   "roles": {
-    "timestamp_utc": "2026-05-09T08:19:12.033687+00:00",
+    "timestamp_utc": "2026-05-09T09:47:17.170189+00:00",
     "phase": "fase_2_2_especializacion_de_linajes",
     "roles_available": {
       "exploradora": "Alta exploración y mutación. Busca variación genética controlada.",
@@ -238,7 +238,7 @@
     "safety": "Los roles no habilitan despliegue externo. Solo clasifican funciones internas de la colonia."
   },
   "sentidos": {
-    "timestamp_utc": "2026-05-09T08:19:12.036547+00:00",
+    "timestamp_utc": "2026-05-09T09:47:17.172785+00:00",
     "phase": "fase_3_sentidos_moviles",
     "runtime": "local",
     "platform": {
@@ -248,8 +248,8 @@
       "cpu_count": 4
     },
     "memory": {
-      "MemTotal": "16373464 kB",
-      "MemAvailable": "15017212 kB",
+      "MemTotal": "16373468 kB",
+      "MemAvailable": "15194992 kB",
       "SwapTotal": "3145724 kB",
       "SwapFree": "3145724 kB"
     },
@@ -258,15 +258,15 @@
         "path": "/home/runner",
         "exists": true,
         "total_mb": 147718.61,
-        "used_mb": 56559.96,
-        "free_mb": 91142.64
+        "used_mb": 56559.95,
+        "free_mb": 91142.66
       },
       "repo": {
         "path": "/home/runner/work/micelio-colonia-001/micelio-colonia-001",
         "exists": true,
         "total_mb": 147718.61,
-        "used_mb": 56559.96,
-        "free_mb": 91142.64
+        "used_mb": 56559.95,
+        "free_mb": 91142.66
       },
       "storage_download": {
         "path": "/storage/emulated/0/Download",
@@ -342,7 +342,7 @@
     }
   },
   "tejidos": {
-    "timestamp_utc": "2026-05-09T08:19:12.037910+00:00",
+    "timestamp_utc": "2026-05-09T09:47:17.174022+00:00",
     "phase": "fase_3_tejidos_y_organos_virtuales",
     "tissues": [
       {
@@ -468,7 +468,7 @@
     "safety": "Los órganos son agrupaciones virtuales. No crean procesos ni acceden a recursos fuera del alcance autorizado."
   },
   "autocoder": {
-    "timestamp_utc": "2026-05-09T08:19:12.041591+00:00",
+    "timestamp_utc": "2026-05-09T09:47:17.177266+00:00",
     "phase": "fase_3_autocodificacion_supervisada",
     "mode": "plan_only",
     "tasks": [
@@ -511,14 +511,14 @@
         "priority": "alta",
         "wave": 1,
         "status": "pending",
-        "created_at": "2026-05-09T08:19:12.042483+00:00",
+        "created_at": "2026-05-09T09:47:17.178180+00:00",
         "question": "¿Quieres que construya esto?",
         "reasoning": "Visualiza padres, ramas, scores y familias dominantes.",
         "expected_files": [
           "docs/lineage.html"
         ],
         "verification": {
-          "verified_at": "2026-05-09T08:19:12.042493+00:00",
+          "verified_at": "2026-05-09T09:47:17.178192+00:00",
           "ok": false,
           "expected_count": 1,
           "existing_count": 0,
@@ -540,14 +540,14 @@
         "priority": "alta",
         "wave": 1,
         "status": "pending",
-        "created_at": "2026-05-09T08:19:12.042496+00:00",
+        "created_at": "2026-05-09T09:47:17.178195+00:00",
         "question": "¿Quieres que construya esto?",
         "reasoning": "Evalúa disco, generación y presión de selección.",
         "expected_files": [
           "runner/micelio/health_monitor.py"
         ],
         "verification": {
-          "verified_at": "2026-05-09T08:19:12.042507+00:00",
+          "verified_at": "2026-05-09T09:47:17.178206+00:00",
           "ok": false,
           "expected_count": 1,
           "existing_count": 0,
@@ -569,7 +569,7 @@
         "priority": "alta",
         "wave": 1,
         "status": "pending",
-        "created_at": "2026-05-09T08:19:12.042509+00:00",
+        "created_at": "2026-05-09T09:47:17.178209+00:00",
         "question": "¿Quieres que construya esto?",
         "reasoning": "Define misión, objetivos y métricas de éxito.",
         "expected_files": [
@@ -577,7 +577,7 @@
           "docs/data/mission.json"
         ],
         "verification": {
-          "verified_at": "2026-05-09T08:19:12.042528+00:00",
+          "verified_at": "2026-05-09T09:47:17.178229+00:00",
           "ok": false,
           "expected_count": 2,
           "existing_count": 0,
@@ -605,14 +605,14 @@
         "priority": "media",
         "wave": 1,
         "status": "pending",
-        "created_at": "2026-05-09T08:19:12.042531+00:00",
+        "created_at": "2026-05-09T09:47:17.178232+00:00",
         "question": "¿Quieres que construya esto?",
         "reasoning": "Verifica Ollama, puertos locales y modelos disponibles.",
         "expected_files": [
           "scripts/termux_ai_probe.sh"
         ],
         "verification": {
-          "verified_at": "2026-05-09T08:19:12.042541+00:00",
+          "verified_at": "2026-05-09T09:47:17.178243+00:00",
           "ok": false,
           "expected_count": 1,
           "existing_count": 0,
@@ -634,14 +634,14 @@
         "priority": "media",
         "wave": 1,
         "status": "pending",
-        "created_at": "2026-05-09T08:19:12.042543+00:00",
+        "created_at": "2026-05-09T09:47:17.178246+00:00",
         "question": "¿Quieres que construya esto?",
         "reasoning": "Marca una mejora visible para el mapa del organismo.",
         "expected_files": [
           "docs/data/organism_upgrade.json"
         ],
         "verification": {
-          "verified_at": "2026-05-09T08:19:12.042553+00:00",
+          "verified_at": "2026-05-09T09:47:17.178257+00:00",
           "ok": false,
           "expected_count": 1,
           "existing_count": 0,
@@ -663,14 +663,14 @@
         "priority": "alta",
         "wave": 1,
         "status": "pending",
-        "created_at": "2026-05-09T08:19:12.042556+00:00",
+        "created_at": "2026-05-09T09:47:17.178260+00:00",
         "question": "¿Quieres que construya esto?",
         "reasoning": "Registra la capacidad de conversación local.",
         "expected_files": [
           "docs/data/chat_window.json"
         ],
         "verification": {
-          "verified_at": "2026-05-09T08:19:12.042566+00:00",
+          "verified_at": "2026-05-09T09:47:17.178271+00:00",
           "ok": false,
           "expected_count": 1,
           "existing_count": 0,
@@ -692,7 +692,7 @@
         "priority": "alta",
         "wave": 2,
         "status": "pending",
-        "created_at": "2026-05-09T08:19:12.042592+00:00",
+        "created_at": "2026-05-09T09:47:17.178298+00:00",
         "question": "¿Quieres que construya esto?",
         "reasoning": "Comprueba si cada herramienta aprobada realmente escribió archivos.",
         "expected_files": [
@@ -700,7 +700,7 @@
           "docs/data/build_verifier.json"
         ],
         "verification": {
-          "verified_at": "2026-05-09T08:19:12.042630+00:00",
+          "verified_at": "2026-05-09T09:47:17.178319+00:00",
           "ok": false,
           "expected_count": 2,
           "existing_count": 0,
@@ -728,14 +728,14 @@
         "priority": "alta",
         "wave": 2,
         "status": "pending",
-        "created_at": "2026-05-09T08:19:12.042633+00:00",
+        "created_at": "2026-05-09T09:47:17.178323+00:00",
         "question": "¿Quieres que construya esto?",
         "reasoning": "Muestra salud y recursos en una pantalla propia.",
         "expected_files": [
           "docs/health.html"
         ],
         "verification": {
-          "verified_at": "2026-05-09T08:19:12.042643+00:00",
+          "verified_at": "2026-05-09T09:47:17.178334+00:00",
           "ok": false,
           "expected_count": 1,
           "existing_count": 0,
@@ -757,14 +757,14 @@
         "priority": "media",
         "wave": 2,
         "status": "pending",
-        "created_at": "2026-05-09T08:19:12.042646+00:00",
+        "created_at": "2026-05-09T09:47:17.178337+00:00",
         "question": "¿Quieres que construya esto?",
         "reasoning": "Muestra historial de aprobaciones, aplicaciones y verificaciones.",
         "expected_files": [
           "docs/evolution_log.html"
         ],
         "verification": {
-          "verified_at": "2026-05-09T08:19:12.042656+00:00",
+          "verified_at": "2026-05-09T09:47:17.178347+00:00",
           "ok": false,
           "expected_count": 1,
           "existing_count": 0,
@@ -786,7 +786,7 @@
         "priority": "alta",
         "wave": 2,
         "status": "pending",
-        "created_at": "2026-05-09T08:19:12.042658+00:00",
+        "created_at": "2026-05-09T09:47:17.178350+00:00",
         "question": "¿Quieres que construya esto?",
         "reasoning": "Hace que el chat entregue diagnóstico, hipótesis y acción recomendada.",
         "expected_files": [
@@ -794,7 +794,7 @@
           "docs/data/chat_capabilities.json"
         ],
         "verification": {
-          "verified_at": "2026-05-09T08:19:12.042720+00:00",
+          "verified_at": "2026-05-09T09:47:17.178371+00:00",
           "ok": false,
           "expected_count": 2,
           "existing_count": 0,
@@ -819,7 +819,7 @@
     "history": [],
     "archived_options": [],
     "last_generation_context": {
-      "timestamp_utc": "2026-05-09T08:19:12.042728+00:00",
+      "timestamp_utc": "2026-05-09T09:47:17.178378+00:00",
       "added_options": [
         "build_lineage_view",
         "build_health_monitor",
@@ -835,6 +835,6 @@
       "verified_tools_total": 1
     },
     "last_generate_message": "Nuevas sugerencias agregadas: build_lineage_view, build_health_monitor, build_mission_manifest, build_termux_ai_probe, build_organism_dashboard_upgrade, build_chat_window, build_construction_verifier, build_health_dashboard, build_evolution_changelog, build_chat_reasoning_upgrade",
-    "updated_at": "2026-05-09T08:19:12.042732+00:00"
+    "updated_at": "2026-05-09T09:47:17.178382+00:00"
   }
 }
