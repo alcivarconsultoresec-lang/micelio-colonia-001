@@ -1,27 +1,5 @@
 [
   {
-    "timestamp_utc": "2026-05-07T03:58:36.441672+00:00",
-    "cycle": 73,
-    "genoma_id": "g_3d16eb2f",
-    "mode": "remote_ai_github_models",
-    "fitness": 0.6,
-    "children_created": 3,
-    "parent_sources": [
-      "g_408e9446",
-      "g_408e9446",
-      "g_408e9446"
-    ],
-    "virtual_spores_total": 24,
-    "active_candidates": 5,
-    "survivors": 24,
-    "extinct_last_cycle_count": 3,
-    "best_score": 0.7826,
-    "average_score": 0.7662,
-    "selection_pressure": 0.1111,
-    "max_generation": 16,
-    "decision": "seleccion_natural_controlada_v2"
-  },
-  {
     "timestamp_utc": "2026-05-07T06:36:11.061992+00:00",
     "cycle": 74,
     "genoma_id": "g_3d16eb2f",
@@ -1088,6 +1066,28 @@
       "g_081905a9",
       "g_081905a9",
       "g_081905a9"
+    ],
+    "virtual_spores_total": 24,
+    "active_candidates": 5,
+    "survivors": 24,
+    "extinct_last_cycle_count": 3,
+    "best_score": 0.7826,
+    "average_score": 0.7709,
+    "selection_pressure": 0.1111,
+    "max_generation": 18,
+    "decision": "seleccion_natural_controlada_v2"
+  },
+  {
+    "timestamp_utc": "2026-05-10T07:26:38.852188+00:00",
+    "cycle": 123,
+    "genoma_id": "g_3d16eb2f",
+    "mode": "remote_ai_github_models",
+    "fitness": 0.6,
+    "children_created": 3,
+    "parent_sources": [
+      "g_0e12c486",
+      "g_0e12c486",
+      "g_0e12c486"
     ],
     "virtual_spores_total": 24,
     "active_candidates": 5,
