@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-05-17T11:43:08.683299+00:00",
+  "timestamp_utc": "2026-05-17T12:40:13.406922+00:00",
   "phase": "fase_2_2_especializacion_de_linajes",
   "roles_available": {
     "exploradora": "Alta exploración y mutación. Busca variación genética controlada.",
@@ -11,7 +11,7 @@
   "roles_summary": {
     "analista": {
       "count": 24,
-      "avg_adjusted_score": 0.7854,
+      "avg_adjusted_score": 0.7856,
       "best_adjusted_score": 0.7946,
       "description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
     }
@@ -122,6 +122,19 @@
       "mutation_rate": 0.139
     },
     {
+      "spore_id": "g_08885980",
+      "parent_id": "g_14b5d23a",
+      "generation": 18,
+      "status": "survivor",
+      "role": "analista",
+      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
+      "selection_score": 0.7742,
+      "adjusted_score": 0.7862,
+      "temperature": 0.687,
+      "exploration": 0.525,
+      "mutation_rate": 0.141
+    },
+    {
       "spore_id": "g_8f8b27e4",
       "parent_id": "g_946b9e0b",
       "generation": 18,
@@ -159,19 +172,6 @@
       "temperature": 0.68,
       "exploration": 0.562,
       "mutation_rate": 0.146
-    },
-    {
-      "spore_id": "g_a6a88165",
-      "parent_id": "g_f7a7c0b9",
-      "generation": 14,
-      "status": "survivor",
-      "role": "analista",
-      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.7729,
-      "adjusted_score": 0.7849,
-      "temperature": 0.734,
-      "exploration": 0.588,
-      "mutation_rate": 0.137
     }
   ],
   "decision": "castas_funcionales_asignadas_sin_despliegue_externo",
