@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-05-21T23:45:24.962200+00:00",
+  "timestamp_utc": "2026-05-22T01:49:35.258870+00:00",
   "phase": "fase_3_tejidos_y_organos_virtuales",
   "tissues": [
     {
@@ -10,7 +10,7 @@
         "analista": 24
       },
       "best_score": 0.7946,
-      "average_score": 0.7864,
+      "average_score": 0.7867,
       "members": [
         {
           "spore_id": "g_eda2f998",
@@ -34,6 +34,13 @@
           "generation": 16
         },
         {
+          "spore_id": "g_cea7439b",
+          "role": "analista",
+          "status": "elite",
+          "score": 0.7903,
+          "generation": 20
+        },
+        {
           "spore_id": "g_14b5d23a",
           "role": "analista",
           "status": "elite",
@@ -43,7 +50,7 @@
         {
           "spore_id": "g_c557e5dc",
           "role": "analista",
-          "status": "elite",
+          "status": "survivor",
           "score": 0.7888,
           "generation": 18
         },
@@ -60,13 +67,6 @@
           "status": "survivor",
           "score": 0.7883,
           "generation": 19
-        },
-        {
-          "spore_id": "g_946b9e0b",
-          "role": "analista",
-          "status": "survivor",
-          "score": 0.7863,
-          "generation": 17
         }
       ]
     }
@@ -87,7 +87,7 @@
         "tejido_cognitivo"
       ],
       "spores_count": 24,
-      "operational_score": 0.7864,
+      "operational_score": 0.7867,
       "status": "virtual_ready"
     },
     {

@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-05-21T23:45:24.958181+00:00",
+  "timestamp_utc": "2026-05-22T01:49:35.254822+00:00",
   "phase": "fase_2_2_especializacion_de_linajes",
   "roles_available": {
     "exploradora": "Alta exploración y mutación. Busca variación genética controlada.",
@@ -11,7 +11,7 @@
   "roles_summary": {
     "analista": {
       "count": 24,
-      "avg_adjusted_score": 0.7864,
+      "avg_adjusted_score": 0.7867,
       "best_adjusted_score": 0.7946,
       "description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
     }
@@ -57,6 +57,19 @@
       "mutation_rate": 0.134
     },
     {
+      "spore_id": "g_cea7439b",
+      "parent_id": "g_6e4743e1",
+      "generation": 20,
+      "status": "elite",
+      "role": "analista",
+      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
+      "selection_score": 0.7783,
+      "adjusted_score": 0.7903,
+      "temperature": 0.698,
+      "exploration": 0.542,
+      "mutation_rate": 0.143
+    },
+    {
       "spore_id": "g_14b5d23a",
       "parent_id": "g_85aaa125",
       "generation": 17,
@@ -73,7 +86,7 @@
       "spore_id": "g_c557e5dc",
       "parent_id": "g_0e12c486",
       "generation": 18,
-      "status": "elite",
+      "status": "survivor",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "selection_score": 0.7768,
@@ -159,19 +172,6 @@
       "temperature": 0.687,
       "exploration": 0.525,
       "mutation_rate": 0.141
-    },
-    {
-      "spore_id": "g_8f8b27e4",
-      "parent_id": "g_946b9e0b",
-      "generation": 18,
-      "status": "survivor",
-      "role": "analista",
-      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.7737,
-      "adjusted_score": 0.7857,
-      "temperature": 0.771,
-      "exploration": 0.537,
-      "mutation_rate": 0.138
     }
   ],
   "decision": "castas_funcionales_asignadas_sin_despliegue_externo",
