@@ -1,7 +1,7 @@
 {
-  "timestamp_utc": "2026-06-17T03:43:59.835567+00:00",
+  "timestamp_utc": "2026-06-17T08:50:21.196524+00:00",
   "colony_id": "micelio-colonia-001",
-  "cycle": 538,
+  "cycle": 539,
   "runtime": "github_actions",
   "mode": "remote_ai_github_models",
   "model": "openai/gpt-4o-mini",
@@ -12,7 +12,7 @@
   "virtual_spores": 24,
   "active_candidates": 5,
   "survivors": 24,
-  "extinct_total": 1590,
+  "extinct_total": 1593,
   "children_created": 3,
   "generation": 21,
   "replication_mode": "virtual_only",
@@ -21,28 +21,6 @@
   "engine_version": "2.1",
   "charts": {
     "episodes": [
-      {
-        "timestamp_utc": "2026-06-11T20:20:46.294040+00:00",
-        "cycle": 489,
-        "genoma_id": "g_3d16eb2f",
-        "mode": "remote_ai_github_models",
-        "fitness": 0.6,
-        "children_created": 3,
-        "parent_sources": [
-          "g_85aaa125",
-          "g_85aaa125",
-          "g_85aaa125"
-        ],
-        "virtual_spores_total": 24,
-        "active_candidates": 5,
-        "survivors": 24,
-        "extinct_last_cycle_count": 3,
-        "best_score": 0.7826,
-        "average_score": 0.7756,
-        "selection_pressure": 0.1111,
-        "max_generation": 20,
-        "decision": "seleccion_natural_controlada_v2"
-      },
       {
         "timestamp_utc": "2026-06-11T22:19:51.694098+00:00",
         "cycle": 490,
@@ -1102,6 +1080,28 @@
       {
         "timestamp_utc": "2026-06-17T03:43:59.834792+00:00",
         "cycle": 538,
+        "genoma_id": "g_3d16eb2f",
+        "mode": "remote_ai_github_models",
+        "fitness": 0.6,
+        "children_created": 3,
+        "parent_sources": [
+          "g_6e4743e1",
+          "g_6e4743e1",
+          "g_6e4743e1"
+        ],
+        "virtual_spores_total": 24,
+        "active_candidates": 5,
+        "survivors": 24,
+        "extinct_last_cycle_count": 3,
+        "best_score": 0.7826,
+        "average_score": 0.7757,
+        "selection_pressure": 0.1111,
+        "max_generation": 21,
+        "decision": "seleccion_natural_controlada_v2"
+      },
+      {
+        "timestamp_utc": "2026-06-17T08:50:21.195757+00:00",
+        "cycle": 539,
         "genoma_id": "g_3d16eb2f",
         "mode": "remote_ai_github_models",
         "fitness": 0.6,
