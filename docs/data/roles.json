@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-07-05T14:53:27.527390+00:00",
+  "timestamp_utc": "2026-07-05T15:58:11.891116+00:00",
   "phase": "fase_2_2_especializacion_de_linajes",
   "roles_available": {
     "exploradora": "Alta exploración y mutación. Busca variación genética controlada.",
@@ -11,7 +11,7 @@
   "roles_summary": {
     "analista": {
       "count": 24,
-      "avg_adjusted_score": 0.7888,
+      "avg_adjusted_score": 0.7889,
       "best_adjusted_score": 0.7946,
       "description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
     }
