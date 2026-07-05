@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-07-05T10:29:02.624367+00:00",
+  "timestamp_utc": "2026-07-05T11:55:24.706800+00:00",
   "phase": "fase_3_sentidos_moviles",
   "runtime": "local",
   "platform": {
@@ -9,8 +9,8 @@
     "cpu_count": 4
   },
   "memory": {
-    "MemTotal": "16373460 kB",
-    "MemAvailable": "15203400 kB",
+    "MemTotal": "16377692 kB",
+    "MemAvailable": "15123184 kB",
     "SwapTotal": "3145724 kB",
     "SwapFree": "3145724 kB"
   },
