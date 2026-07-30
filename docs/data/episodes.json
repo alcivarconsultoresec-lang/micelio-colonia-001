@@ -1,27 +1,5 @@
 [
   {
-    "timestamp_utc": "2026-07-26T21:37:22.034701+00:00",
-    "cycle": 1053,
-    "genoma_id": "g_3d16eb2f",
-    "mode": "remote_ai_github_models",
-    "fitness": 0.6,
-    "children_created": 3,
-    "parent_sources": [
-      "g_4536dfa5",
-      "g_4536dfa5",
-      "g_4536dfa5"
-    ],
-    "virtual_spores_total": 24,
-    "active_candidates": 5,
-    "survivors": 24,
-    "extinct_last_cycle_count": 3,
-    "best_score": 0.7826,
-    "average_score": 0.7779,
-    "selection_pressure": 0.1111,
-    "max_generation": 23,
-    "decision": "seleccion_natural_controlada_v2"
-  },
-  {
     "timestamp_utc": "2026-07-26T22:37:36.306029+00:00",
     "cycle": 1054,
     "genoma_id": "g_3d16eb2f",
@@ -1095,6 +1073,28 @@
     "extinct_last_cycle_count": 3,
     "best_score": 0.7826,
     "average_score": 0.7779,
+    "selection_pressure": 0.1111,
+    "max_generation": 23,
+    "decision": "seleccion_natural_controlada_v2"
+  },
+  {
+    "timestamp_utc": "2026-07-30T17:46:35.980117+00:00",
+    "cycle": 1103,
+    "genoma_id": "g_3d16eb2f",
+    "mode": "remote_ai_github_models",
+    "fitness": 0.6,
+    "children_created": 3,
+    "parent_sources": [
+      "g_4482780b",
+      "g_4482780b",
+      "g_4482780b"
+    ],
+    "virtual_spores_total": 24,
+    "active_candidates": 5,
+    "survivors": 24,
+    "extinct_last_cycle_count": 3,
+    "best_score": 0.7826,
+    "average_score": 0.778,
     "selection_pressure": 0.1111,
     "max_generation": 23,
     "decision": "seleccion_natural_controlada_v2"
