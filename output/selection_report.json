@@ -1,7 +1,7 @@
 {
-  "timestamp_utc": "2026-08-09T01:59:36.788502+00:00",
+  "timestamp_utc": "2026-08-09T03:46:20.961258+00:00",
   "phase": "fase_2_1_seleccion_no_saturada",
-  "cycle": 1262,
+  "cycle": 1263,
   "decision": "seleccion_natural_controlada_v2",
   "selection": {
     "mode": "elitist_safe_selection_v2",
@@ -317,6 +317,20 @@
         "reason": "kept_as_viable_latent_variant"
       },
       {
+        "spore_id": "g_b5d5b968",
+        "parent_id": "g_341d62fa",
+        "parent_source": "g_341d62fa",
+        "generation": 15,
+        "status": "survivor",
+        "selection_score": 0.777,
+        "fitness": 0.99,
+        "temperature": 0.706,
+        "exploration": 0.539,
+        "mutation_rate": 0.146,
+        "deployment": "not_deployed_virtual_only",
+        "reason": "kept_as_viable_latent_variant"
+      },
+      {
         "spore_id": "g_c228b1af",
         "parent_id": "g_341d62fa",
         "parent_source": "g_341d62fa",
@@ -399,41 +413,27 @@
         "mutation_rate": 0.139,
         "deployment": "not_deployed_virtual_only",
         "reason": "kept_as_viable_latent_variant"
-      },
-      {
-        "spore_id": "g_1c31f244",
-        "parent_id": "g_6e4743e1",
-        "parent_source": "g_6e4743e1",
-        "generation": 20,
-        "status": "survivor",
-        "selection_score": 0.7764,
-        "fitness": 0.99,
-        "temperature": 0.728,
-        "exploration": 0.543,
-        "mutation_rate": 0.15,
-        "deployment": "not_deployed_virtual_only",
-        "reason": "kept_as_viable_latent_variant"
       }
     ],
     "extinct_last_cycle": [
       {
-        "spore_id": "g_17933c9c",
-        "parent_id": "g_c557e5dc",
-        "selection_score": 0.7763,
-        "generation": 19,
+        "spore_id": "g_1c31f244",
+        "parent_id": "g_6e4743e1",
+        "selection_score": 0.7764,
+        "generation": 20,
         "reason": "outcompeted_by_higher_fitness_variants"
       },
       {
-        "spore_id": "g_c7493229",
+        "spore_id": "g_78efc289",
         "parent_id": "g_341d62fa",
-        "selection_score": 0.7225,
+        "selection_score": 0.747,
         "generation": 15,
         "reason": "outcompeted_by_higher_fitness_variants"
       },
       {
-        "spore_id": "g_29f4c74e",
+        "spore_id": "g_8ccbabd2",
         "parent_id": "g_341d62fa",
-        "selection_score": 0.7131,
+        "selection_score": 0.718,
         "generation": 15,
         "reason": "outcompeted_by_higher_fitness_variants"
       }
@@ -445,43 +445,43 @@
   },
   "children_created": [
     {
-      "spore_id": "g_56d5db00",
+      "spore_id": "g_b5d5b968",
       "parent_id": "g_341d62fa",
       "parent_source": "g_341d62fa",
       "generation": 15,
       "status": "survivor",
-      "selection_score": 0.7766,
+      "selection_score": 0.777,
       "fitness": 0.99,
-      "temperature": 0.75,
-      "exploration": 0.566,
-      "mutation_rate": 0.139,
+      "temperature": 0.706,
+      "exploration": 0.539,
+      "mutation_rate": 0.146,
       "deployment": "not_deployed_virtual_only",
       "reason": "kept_as_viable_latent_variant"
     },
     {
-      "spore_id": "g_c7493229",
+      "spore_id": "g_8ccbabd2",
       "parent_id": "g_341d62fa",
       "parent_source": "g_341d62fa",
       "generation": 15,
       "status": "extinct",
-      "selection_score": 0.7225,
-      "fitness": 0.9382,
-      "temperature": 0.68,
-      "exploration": 0.637,
-      "mutation_rate": 0.159,
+      "selection_score": 0.718,
+      "fitness": 0.895,
+      "temperature": 0.711,
+      "exploration": 0.489,
+      "mutation_rate": 0.135,
       "deployment": "not_deployed_virtual_only",
       "reason": "new_child_pending_selection"
     },
     {
-      "spore_id": "g_29f4c74e",
+      "spore_id": "g_78efc289",
       "parent_id": "g_341d62fa",
       "parent_source": "g_341d62fa",
       "generation": 15,
       "status": "extinct",
-      "selection_score": 0.7131,
-      "fitness": 0.9027,
-      "temperature": 0.643,
-      "exploration": 0.515,
+      "selection_score": 0.747,
+      "fitness": 0.9529,
+      "temperature": 0.715,
+      "exploration": 0.505,
       "mutation_rate": 0.126,
       "deployment": "not_deployed_virtual_only",
       "reason": "new_child_pending_selection"
