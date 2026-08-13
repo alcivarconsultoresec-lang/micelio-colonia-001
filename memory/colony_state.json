@@ -1,9 +1,9 @@
 {
   "colony_id": "micelio-colonia-001",
   "created_at": "2026-05-02T15:57:52.626719+00:00",
-  "updated_at": "2026-08-13T12:26:31.823353+00:00",
+  "updated_at": "2026-08-13T13:55:21.620353+00:00",
   "generation": 23,
-  "cycles": 1373,
+  "cycles": 1374,
   "virtual_spores": [
     {
       "spore_id": "g_eda2f998",
@@ -12,7 +12,7 @@
       "generation": 13,
       "status": "elite",
       "created_at": "2026-05-05T00:06:53.459917+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823055+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620074+00:00",
       "genome_hash": "59677320ae17e659f3e3b81dafa0ed836acf2ea1f05e9cc6665bcb642bf11ce3",
       "genome": {
         "capacidades": [
@@ -65,7 +65,7 @@
       "generation": 14,
       "status": "elite",
       "created_at": "2026-08-07T11:24:35.851054+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823061+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620080+00:00",
       "genome_hash": "b6e701931aeceaa9c6aa88549c6a11fc74e78531ff2ee396ed7e455095d1f2e1",
       "genome": {
         "capacidades": [
@@ -118,7 +118,7 @@
       "generation": 21,
       "status": "elite",
       "created_at": "2026-06-25T16:03:31.115660+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823066+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620085+00:00",
       "genome_hash": "7e0027a033946e903cb6e93fa2d532a786380c12f07b72b0543ac075987f9383",
       "genome": {
         "capacidades": [
@@ -171,7 +171,7 @@
       "generation": 22,
       "status": "elite",
       "created_at": "2026-07-10T08:34:56.312705+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823071+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620089+00:00",
       "genome_hash": "b84bf4e79160fea819174bcdb959ee0c17723bb16928ba63d04afdad6e3fe0d7",
       "genome": {
         "capacidades": [
@@ -224,7 +224,7 @@
       "generation": 23,
       "status": "elite",
       "created_at": "2026-08-12T22:39:22.920512+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823076+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620094+00:00",
       "genome_hash": "59897de2774868716fc0111f97b7bc0be251ad6580dc07aa4c8716271b40a258",
       "genome": {
         "capacidades": [
@@ -277,7 +277,7 @@
       "generation": 14,
       "status": "survivor",
       "created_at": "2026-07-21T12:15:00.231909+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823081+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620099+00:00",
       "genome_hash": "990bab1041aa5a083638012b8a55344b07aa9b26f5e89e674e70ddb39e88adeb",
       "genome": {
         "capacidades": [
@@ -330,7 +330,7 @@
       "generation": 18,
       "status": "survivor",
       "created_at": "2026-05-24T05:39:31.936848+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823085+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620104+00:00",
       "genome_hash": "283672c5569a6fb60cc8faa6381edb6cde35dcba35eebb56cd9a87acc2279ce0",
       "genome": {
         "capacidades": [
@@ -383,7 +383,7 @@
       "generation": 19,
       "status": "survivor",
       "created_at": "2026-05-18T21:58:09.371948+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823090+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620109+00:00",
       "genome_hash": "d61501f7675e1a9b027cbd07ac45d3126d3a89b917760b841e6a41f871b2c759",
       "genome": {
         "capacidades": [
@@ -436,7 +436,7 @@
       "generation": 22,
       "status": "survivor",
       "created_at": "2026-08-07T23:45:17.900285+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823094+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620113+00:00",
       "genome_hash": "eb273746f57511da8abbf4edfb76a827e0ee6d126c09c3f41c18566a74c111d4",
       "genome": {
         "capacidades": [
@@ -489,7 +489,7 @@
       "generation": 23,
       "status": "survivor",
       "created_at": "2026-07-31T12:12:55.922035+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823099+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620118+00:00",
       "genome_hash": "b19c1dcc717e446dd43e29a993d945f0f3db16faebe1d2ce1338c8171dc06dc8",
       "genome": {
         "capacidades": [
@@ -542,7 +542,7 @@
       "generation": 16,
       "status": "survivor",
       "created_at": "2026-05-07T03:58:36.438763+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823104+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620122+00:00",
       "genome_hash": "dee6ef099480b0ee0334be2928145f4ec866c37e8ceb28643efd43942a775a6a",
       "genome": {
         "capacidades": [
@@ -595,7 +595,7 @@
       "generation": 20,
       "status": "survivor",
       "created_at": "2026-05-22T01:49:35.237059+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823108+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620127+00:00",
       "genome_hash": "983d81697f3b0dd21493e0471912ea2d3fef6f8c0c7d3397b3cef018d054bc95",
       "genome": {
         "capacidades": [
@@ -648,7 +648,7 @@
       "generation": 19,
       "status": "survivor",
       "created_at": "2026-07-06T20:24:53.290938+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823113+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620131+00:00",
       "genome_hash": "822fceceda7517ed928113278bab21a646b42ebc1e35e486d28dc418666c1259",
       "genome": {
         "capacidades": [
@@ -701,7 +701,7 @@
       "generation": 23,
       "status": "survivor",
       "created_at": "2026-07-30T17:46:35.977311+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823118+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620136+00:00",
       "genome_hash": "afbfe9052ec42a66a03cd75cb7dfecfefa715acc0a0100cfd8854c7a9a3028df",
       "genome": {
         "capacidades": [
@@ -754,7 +754,7 @@
       "generation": 21,
       "status": "survivor",
       "created_at": "2026-06-21T06:30:40.036329+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823122+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620140+00:00",
       "genome_hash": "c8241df7f4c62900dc30ef064644ae30cd362e560859ee2e99453c8e5d97b2ef",
       "genome": {
         "capacidades": [
@@ -807,7 +807,7 @@
       "generation": 20,
       "status": "survivor",
       "created_at": "2026-05-26T17:01:28.381378+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823127+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620145+00:00",
       "genome_hash": "141c2757cebab5a60bf95ffbea66eb167197f431daa68308a4dfa7cb530a94dd",
       "genome": {
         "capacidades": [
@@ -860,7 +860,7 @@
       "generation": 22,
       "status": "survivor",
       "created_at": "2026-08-11T13:23:05.448373+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823132+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620149+00:00",
       "genome_hash": "ad458890da14bbe9d01eb65792b9e425664d79b4db7d5847d00c3ad6ab05c5b2",
       "genome": {
         "capacidades": [
@@ -913,7 +913,7 @@
       "generation": 17,
       "status": "survivor",
       "created_at": "2026-05-11T00:01:31.652976+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823136+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620154+00:00",
       "genome_hash": "6e8426ac19ee7322279856bdb8d41cabbc8062848789e3b9c4fd43f60aa3e28c",
       "genome": {
         "capacidades": [
@@ -966,7 +966,7 @@
       "generation": 21,
       "status": "survivor",
       "created_at": "2026-06-24T19:20:48.281902+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823141+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620159+00:00",
       "genome_hash": "63b51ba333aa884596d964c777f72103a3f21b5374322b2890faadb0d7070064",
       "genome": {
         "capacidades": [
@@ -1019,7 +1019,7 @@
       "generation": 15,
       "status": "survivor",
       "created_at": "2026-08-09T03:46:20.956672+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823145+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620163+00:00",
       "genome_hash": "c1ae7dfd355f6b1750f97c6f65a1cac2ed2a63a6776f22b20dd0258fdf364f80",
       "genome": {
         "capacidades": [
@@ -1072,7 +1072,7 @@
       "generation": 15,
       "status": "survivor",
       "created_at": "2026-08-08T04:42:16.261317+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823150+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620167+00:00",
       "genome_hash": "52d6a2c4e46b5e65ed121e5b49101c584b00d47d2ab6a9ad2278149a4a837ca2",
       "genome": {
         "capacidades": [
@@ -1125,7 +1125,7 @@
       "generation": 18,
       "status": "survivor",
       "created_at": "2026-05-12T04:50:32.689430+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823154+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620172+00:00",
       "genome_hash": "63adf8152c1b6d62d5def0976a0c578b0eb9119085887927fa1e61809131a50f",
       "genome": {
         "capacidades": [
@@ -1178,7 +1178,7 @@
       "generation": 20,
       "status": "survivor",
       "created_at": "2026-07-17T21:28:15.038874+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823159+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620176+00:00",
       "genome_hash": "f6d75c86f70ed0093983d1bb2fed8aa6fb1065dc9db4e6aa32975a6cb2ed6af9",
       "genome": {
         "capacidades": [
@@ -1231,7 +1231,7 @@
       "generation": 18,
       "status": "survivor",
       "created_at": "2026-05-13T10:01:48.122046+00:00",
-      "last_seen_at": "2026-08-13T12:26:31.823163+00:00",
+      "last_seen_at": "2026-08-13T13:55:21.620181+00:00",
       "genome_hash": "05224eaa1c7b4c4f94f521fcafedc614bb837a912bce7bf9bf2046cfbf6d10d8",
       "genome": {
         "capacidades": [
@@ -1279,7 +1279,7 @@
     }
   ],
   "lineage": [],
-  "extinct_total": 4095,
+  "extinct_total": 4098,
   "selection": {
     "mode": "elitist_safe_selection_v2",
     "active_candidates": [
@@ -1694,24 +1694,24 @@
     ],
     "extinct_last_cycle": [
       {
-        "spore_id": "g_ff95a218",
-        "parent_id": "g_231eb12f",
-        "selection_score": 0.7685,
-        "generation": 22,
+        "spore_id": "g_7db65b31",
+        "parent_id": "g_eda2f998",
+        "selection_score": 0.7678,
+        "generation": 14,
         "reason": "outcompeted_by_higher_fitness_variants"
       },
       {
-        "spore_id": "g_4855de69",
-        "parent_id": "g_231eb12f",
-        "selection_score": 0.7531,
-        "generation": 22,
+        "spore_id": "g_12bc6134",
+        "parent_id": "g_eda2f998",
+        "selection_score": 0.7552,
+        "generation": 14,
         "reason": "outcompeted_by_higher_fitness_variants"
       },
       {
-        "spore_id": "g_42b005c1",
-        "parent_id": "g_231eb12f",
-        "selection_score": 0.7164,
-        "generation": 22,
+        "spore_id": "g_cd48ae9e",
+        "parent_id": "g_eda2f998",
+        "selection_score": 0.7423,
+        "generation": 14,
         "reason": "outcompeted_by_higher_fitness_variants"
       }
     ],
@@ -1743,7 +1743,7 @@
   "engine_version": "2.1",
   "role_system": {
     "version": "2.2",
-    "updated_at": "2026-08-13T12:26:31.834041+00:00",
+    "updated_at": "2026-08-13T13:55:21.630887+00:00",
     "roles_available": {
       "exploradora": "Alta exploración y mutación. Busca variación genética controlada.",
       "estabilizadora": "Baja mutación y alta consistencia. Conserva patrones útiles.",
