@@ -1,7 +1,7 @@
 {
-  "timestamp_utc": "2026-08-15T10:14:18.423305+00:00",
+  "timestamp_utc": "2026-08-15T10:40:43.394515+00:00",
   "colony_id": "micelio-colonia-001",
-  "cycle": 1433,
+  "cycle": 1434,
   "runtime": "github_actions",
   "mode": "local_fallback",
   "model": null,
@@ -12,7 +12,7 @@
   "virtual_spores": 24,
   "active_candidates": 5,
   "survivors": 24,
-  "extinct_total": 4275,
+  "extinct_total": 4278,
   "children_created": 3,
   "generation": 23,
   "replication_mode": "virtual_only",
@@ -21,28 +21,6 @@
   "engine_version": "2.1",
   "charts": {
     "episodes": [
-      {
-        "timestamp_utc": "2026-08-13T22:25:13.808301+00:00",
-        "cycle": 1384,
-        "genoma_id": "g_3d16eb2f",
-        "mode": "local_fallback",
-        "fitness": 0.53,
-        "children_created": 3,
-        "parent_sources": [
-          "g_4482780b",
-          "g_4482780b",
-          "g_4482780b"
-        ],
-        "virtual_spores_total": 24,
-        "active_candidates": 5,
-        "survivors": 24,
-        "extinct_last_cycle_count": 3,
-        "best_score": 0.7826,
-        "average_score": 0.7788,
-        "selection_pressure": 0.1111,
-        "max_generation": 23,
-        "decision": "seleccion_natural_controlada_v2"
-      },
       {
         "timestamp_utc": "2026-08-13T23:10:16.457546+00:00",
         "cycle": 1385,
@@ -1102,6 +1080,28 @@
       {
         "timestamp_utc": "2026-08-15T10:14:18.421597+00:00",
         "cycle": 1433,
+        "genoma_id": "g_3d16eb2f",
+        "mode": "local_fallback",
+        "fitness": 0.53,
+        "children_created": 3,
+        "parent_sources": [
+          "g_341d62fa",
+          "g_341d62fa",
+          "g_341d62fa"
+        ],
+        "virtual_spores_total": 24,
+        "active_candidates": 5,
+        "survivors": 24,
+        "extinct_last_cycle_count": 3,
+        "best_score": 0.7826,
+        "average_score": 0.7788,
+        "selection_pressure": 0.1111,
+        "max_generation": 23,
+        "decision": "seleccion_natural_controlada_v2"
+      },
+      {
+        "timestamp_utc": "2026-08-15T10:40:43.393068+00:00",
+        "cycle": 1434,
         "genoma_id": "g_3d16eb2f",
         "mode": "local_fallback",
         "fitness": 0.53,
