@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-08-19T14:18:50.855184+00:00",
+  "timestamp_utc": "2026-08-19T14:55:49.570722+00:00",
   "phase": "fase_2_2_especializacion_de_linajes",
   "roles_available": {
     "exploradora": "Alta exploración y mutación. Busca variación genética controlada.",
@@ -11,7 +11,7 @@
   "roles_summary": {
     "analista": {
       "count": 24,
-      "avg_adjusted_score": 0.7913,
+      "avg_adjusted_score": 0.7914,
       "best_adjusted_score": 0.7946,
       "description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones."
     }
@@ -57,6 +57,19 @@
       "mutation_rate": 0.141
     },
     {
+      "spore_id": "g_c08ab0ed",
+      "parent_id": "g_4482780b",
+      "generation": 23,
+      "status": "elite",
+      "role": "analista",
+      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
+      "selection_score": 0.7813,
+      "adjusted_score": 0.7933,
+      "temperature": 0.723,
+      "exploration": 0.551,
+      "mutation_rate": 0.145
+    },
+    {
       "spore_id": "g_4482780b",
       "parent_id": "g_231eb12f",
       "generation": 22,
@@ -73,7 +86,7 @@
       "spore_id": "g_0f03eb4b",
       "parent_id": "g_4482780b",
       "generation": 23,
-      "status": "elite",
+      "status": "survivor",
       "role": "analista",
       "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
       "selection_score": 0.7807,
@@ -158,19 +171,6 @@
       "adjusted_score": 0.7916,
       "temperature": 0.696,
       "exploration": 0.544,
-      "mutation_rate": 0.141
-    },
-    {
-      "spore_id": "g_44da330c",
-      "parent_id": "g_4482780b",
-      "generation": 23,
-      "status": "survivor",
-      "role": "analista",
-      "role_description": "Equilibrio de parámetros. Sirve para lectura de memoria y patrones.",
-      "selection_score": 0.7787,
-      "adjusted_score": 0.7907,
-      "temperature": 0.705,
-      "exploration": 0.566,
       "mutation_rate": 0.141
     }
   ],
