@@ -1,7 +1,7 @@
 {
-  "timestamp_utc": "2026-08-20T22:57:55.069562+00:00",
+  "timestamp_utc": "2026-08-20T23:24:33.854739+00:00",
   "phase": "fase_2_1_seleccion_no_saturada",
-  "cycle": 1705,
+  "cycle": 1706,
   "decision": "seleccion_natural_controlada_v2",
   "selection": {
     "mode": "elitist_safe_selection_v2",
@@ -417,24 +417,24 @@
     ],
     "extinct_last_cycle": [
       {
-        "spore_id": "g_f0489f13",
-        "parent_id": "g_eda2f998",
-        "selection_score": 0.77,
-        "generation": 14,
+        "spore_id": "g_a3b9e585",
+        "parent_id": "g_4482780b",
+        "selection_score": 0.756,
+        "generation": 23,
         "reason": "outcompeted_by_higher_fitness_variants"
       },
       {
-        "spore_id": "g_0ff77b30",
-        "parent_id": "g_eda2f998",
-        "selection_score": 0.7475,
-        "generation": 14,
+        "spore_id": "g_95d98a4c",
+        "parent_id": "g_4482780b",
+        "selection_score": 0.7277,
+        "generation": 23,
         "reason": "outcompeted_by_higher_fitness_variants"
       },
       {
-        "spore_id": "g_7dfa0672",
-        "parent_id": "g_eda2f998",
-        "selection_score": 0.7329,
-        "generation": 14,
+        "spore_id": "g_3e15f2bb",
+        "parent_id": "g_4482780b",
+        "selection_score": 0.7228,
+        "generation": 23,
         "reason": "outcompeted_by_higher_fitness_variants"
       }
     ],
@@ -445,44 +445,44 @@
   },
   "children_created": [
     {
-      "spore_id": "g_7dfa0672",
-      "parent_id": "g_eda2f998",
-      "parent_source": "g_eda2f998",
-      "generation": 14,
+      "spore_id": "g_3e15f2bb",
+      "parent_id": "g_4482780b",
+      "parent_source": "g_4482780b",
+      "generation": 23,
       "status": "extinct",
-      "selection_score": 0.7329,
-      "fitness": 0.9591,
-      "temperature": 0.811,
-      "exploration": 0.604,
-      "mutation_rate": 0.16,
-      "deployment": "not_deployed_virtual_only",
-      "reason": "new_child_pending_selection"
-    },
-    {
-      "spore_id": "g_f0489f13",
-      "parent_id": "g_eda2f998",
-      "parent_source": "g_eda2f998",
-      "generation": 14,
-      "status": "extinct",
-      "selection_score": 0.77,
-      "fitness": 0.99,
-      "temperature": 0.696,
-      "exploration": 0.6,
-      "mutation_rate": 0.141,
-      "deployment": "not_deployed_virtual_only",
-      "reason": "new_child_pending_selection"
-    },
-    {
-      "spore_id": "g_0ff77b30",
-      "parent_id": "g_eda2f998",
-      "parent_source": "g_eda2f998",
-      "generation": 14,
-      "status": "extinct",
-      "selection_score": 0.7475,
-      "fitness": 0.9252,
-      "temperature": 0.72,
+      "selection_score": 0.7228,
+      "fitness": 0.9016,
+      "temperature": 0.639,
       "exploration": 0.551,
-      "mutation_rate": 0.146,
+      "mutation_rate": 0.148,
+      "deployment": "not_deployed_virtual_only",
+      "reason": "new_child_pending_selection"
+    },
+    {
+      "spore_id": "g_a3b9e585",
+      "parent_id": "g_4482780b",
+      "parent_source": "g_4482780b",
+      "generation": 23,
+      "status": "extinct",
+      "selection_score": 0.756,
+      "fitness": 0.9791,
+      "temperature": 0.76,
+      "exploration": 0.506,
+      "mutation_rate": 0.154,
+      "deployment": "not_deployed_virtual_only",
+      "reason": "new_child_pending_selection"
+    },
+    {
+      "spore_id": "g_95d98a4c",
+      "parent_id": "g_4482780b",
+      "parent_source": "g_4482780b",
+      "generation": 23,
+      "status": "extinct",
+      "selection_score": 0.7277,
+      "fitness": 0.9292,
+      "temperature": 0.698,
+      "exploration": 0.632,
+      "mutation_rate": 0.148,
       "deployment": "not_deployed_virtual_only",
       "reason": "new_child_pending_selection"
     }
