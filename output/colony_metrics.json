@@ -1,7 +1,7 @@
 {
-  "timestamp_utc": "2026-08-26T00:37:41.040334+00:00",
+  "timestamp_utc": "2026-08-26T02:11:48.187965+00:00",
   "colony_id": "micelio-colonia-001",
-  "cycle": 1939,
+  "cycle": 1940,
   "runtime": "github_actions",
   "mode": "local_fallback",
   "model": null,
@@ -12,7 +12,7 @@
   "virtual_spores": 24,
   "active_candidates": 5,
   "survivors": 24,
-  "extinct_total": 5793,
+  "extinct_total": 5796,
   "children_created": 3,
   "generation": 24,
   "replication_mode": "virtual_only",
@@ -21,28 +21,6 @@
   "engine_version": "2.1",
   "charts": {
     "episodes": [
-      {
-        "timestamp_utc": "2026-08-24T20:11:20.835021+00:00",
-        "cycle": 1890,
-        "genoma_id": "g_3d16eb2f",
-        "mode": "local_fallback",
-        "fitness": 0.53,
-        "children_created": 3,
-        "parent_sources": [
-          "g_341d62fa",
-          "g_341d62fa",
-          "g_341d62fa"
-        ],
-        "virtual_spores_total": 24,
-        "active_candidates": 5,
-        "survivors": 24,
-        "extinct_last_cycle_count": 3,
-        "best_score": 0.7826,
-        "average_score": 0.7795,
-        "selection_pressure": 0.1111,
-        "max_generation": 24,
-        "decision": "seleccion_natural_controlada_v2"
-      },
       {
         "timestamp_utc": "2026-08-24T20:46:48.272664+00:00",
         "cycle": 1891,
@@ -1110,6 +1088,28 @@
           "g_4482780b",
           "g_4482780b",
           "g_4482780b"
+        ],
+        "virtual_spores_total": 24,
+        "active_candidates": 5,
+        "survivors": 24,
+        "extinct_last_cycle_count": 3,
+        "best_score": 0.7826,
+        "average_score": 0.7796,
+        "selection_pressure": 0.1111,
+        "max_generation": 24,
+        "decision": "seleccion_natural_controlada_v2"
+      },
+      {
+        "timestamp_utc": "2026-08-26T02:11:48.186113+00:00",
+        "cycle": 1940,
+        "genoma_id": "g_3d16eb2f",
+        "mode": "local_fallback",
+        "fitness": 0.53,
+        "children_created": 3,
+        "parent_sources": [
+          "g_eda2f998",
+          "g_eda2f998",
+          "g_eda2f998"
         ],
         "virtual_spores_total": 24,
         "active_candidates": 5,
