@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-09-21T13:50:21.895160+00:00",
+  "timestamp_utc": "2026-09-21T18:56:03.505342+00:00",
   "phase": "fase_4_router_ia_hibrida",
   "success": false,
   "selected_provider": null,
@@ -24,7 +24,7 @@
     },
     {
       "provider": "github_models",
-      "error": "410 Client Error: Gone for url: https://models.github.ai/inference/chat/completions"
+      "error": "Expecting value: line 1 column 1 (char 0)"
     }
   ],
   "safety": "Se usan proveedores locales o token configurado explícitamente por el administrador."
