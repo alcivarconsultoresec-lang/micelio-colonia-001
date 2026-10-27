@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-10-27T06:50:44.960223+00:00",
+  "timestamp_utc": "2026-10-27T12:45:50.396387+00:00",
   "identidad": {
     "colony_id": "micelio-colonia-001",
     "genoma_id": "g_3d16eb2f",
@@ -70,14 +70,14 @@
   },
   "fitness": 0.53,
   "estado_colonia": {
-    "ciclos": 2334,
+    "ciclos": 2335,
     "esporas_virtuales": 24,
     "replicacion": "virtual_only",
     "seleccion": "elitist_safe_selection_v2",
     "hijas_creadas_en_ciclo": 3,
     "candidatas_activas": 5,
     "supervivientes": 24,
-    "extintas_total": 6978
+    "extintas_total": 6981
   },
   "seguridad": {
     "limites": {
