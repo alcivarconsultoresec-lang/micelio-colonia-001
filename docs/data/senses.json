@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-11-28T02:58:34.937660+00:00",
+  "timestamp_utc": "2026-11-28T11:26:01.299747+00:00",
   "phase": "fase_3_sentidos_moviles",
   "runtime": "local",
   "platform": {
@@ -9,8 +9,8 @@
     "cpu_count": 4
   },
   "memory": {
-    "MemTotal": "16365616 kB",
-    "MemAvailable": "15148104 kB",
+    "MemTotal": "16366632 kB",
+    "MemAvailable": "15305620 kB",
     "SwapTotal": "3145724 kB",
     "SwapFree": "3145724 kB"
   },
@@ -19,15 +19,15 @@
       "path": "/home/runner",
       "exists": true,
       "total_mb": 147813.48,
-      "used_mb": 59547.83,
-      "free_mb": 88249.65
+      "used_mb": 59547.81,
+      "free_mb": 88249.68
     },
     "repo": {
       "path": "/home/runner/work/micelio-colonia-001/micelio-colonia-001",
       "exists": true,
       "total_mb": 147813.48,
-      "used_mb": 59547.83,
-      "free_mb": 88249.65
+      "used_mb": 59547.81,
+      "free_mb": 88249.68
     },
     "storage_download": {
       "path": "/storage/emulated/0/Download",
